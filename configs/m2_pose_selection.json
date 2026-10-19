@@ -1,0 +1,8 @@
+{
+  "train": [
+    "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination"
+  ],
+  "holdout": [
+    "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening"
+  ]
+}

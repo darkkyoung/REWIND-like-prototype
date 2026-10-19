@@ -1,0 +1,7 @@
+{
+  "checkpoint_step": 300,
+  "resume_next_update": "bitwise_identical",
+  "extra_validation_updates_saved_to_last": false,
+  "actual_data": true,
+  "device": "cuda"
+}

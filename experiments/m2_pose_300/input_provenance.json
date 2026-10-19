@@ -1,0 +1,11 @@
+{
+  "mode": "verified_5step_result_reuse",
+  "bundle_sha256": "f4c9c2d9ed06a76385ec949b94c447a8f0751602ce82a36bb0f2fa5611debb1f",
+  "baseline_revision": "5e52aa3b0b1e27e7d0cb2697629e8acfc63d38c3",
+  "fresh_archive_read_this_run": false,
+  "source_files": 148,
+  "same_input_manifest": true,
+  "same_config_seed_model": true,
+  "train_frames": 18,
+  "holdout_frames": 130
+}
