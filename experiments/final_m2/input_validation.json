@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "source": "preserved_real_result_ZIPs_no_new_Drive_read",
+  "zip300_crc": "PASS",
+  "zip300_checksums_verified": 224,
+  "raw_joint_count_histogram": {
+    "87": 148
+  },
+  "body_field_vectors_checked": {
+    "camera_left_pts2d": 3256,
+    "camera_right_pts2d": 3256,
+    "device_pts3d": 3256
+  },
+  "unique_pose_sha256": 148,
+  "manifest_sha256": "f83ad651b0762cf5d7e0a644132c6ff5314260f75a1a5f30fa3dcc710d89c9a0",
+  "regenerated_manifest_equals_checkpoint": true,
+  "strict_original_extractor_code_check": true,
+  "historical_extractor_bypass": false,
+  "train_ready_changed": false,
+  "whole_source_archive_integrity": "NOT VERIFIED",
+  "frames": {
+    "train_Brutal_Assassination": 18,
+    "historical_holdout_Opening": 130
+  },
+  "coordinate": "stored_device_pts3d",
+  "distance_unit": "raw_annotation_unit_unverified",
+  "rgb_used": false,
+  "input_source": "gt_stereo_2d",
+  "original_motion_independence": "NOT VERIFIED",
+  "timestamp_fps": "NOT VERIFIED",
+  "source_scope": "ArchVisInterior / Day / rp_adanna"
+}

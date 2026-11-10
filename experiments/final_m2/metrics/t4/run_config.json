@@ -1,0 +1,17 @@
+{
+  "checkpoint_sha256": "6acd1fd96a2dbfe1e681710a6286c3d9d0177ce69402a0b488f8fcce7a4a5c9d",
+  "input_bundle_sha256": "184967a9732702fc0459350974b87e67f6499144dcfdbec48b18cb657805d74d",
+  "manifest_sha256": "f83ad651b0762cf5d7e0a644132c6ff5314260f75a1a5f30fa3dcc710d89c9a0",
+  "noise_seed": 10043,
+  "batch_size": 1,
+  "precision": "float32",
+  "warmup_frames": 8,
+  "repeats": 3,
+  "max_inference_seconds": 300,
+  "sampling_steps": [
+    5,
+    10
+  ],
+  "reproduction_joint_error_tolerance_raw": 0.0001,
+  "reproduction_max_coordinate_tolerance_raw": 0.001
+}

@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "result_zip_sha256": "f65bc5cbf543cb014f457aa95b994544c0f9d46d0432f5d38b498ebce4ca06f9",
+  "result_zip_crc": "PASS",
+  "notebook_recorded_zip_hash_match": true,
+  "saved_runner_hash_match": true,
+  "cpu_t4_noise_hash_match": true,
+  "results": {
+    "train_5": {
+      "status": "PASS",
+      "prediction_shape": [
+        18,
+        22,
+        3
+      ],
+      "prediction_dtype": "float32",
+      "valid_all": true,
+      "metric_recomputed_from_saved_arrays": true
+    },
+    "train_10": {
+      "status": "PASS",
+      "prediction_shape": [
+        18,
+        22,
+        3
+      ],
+      "prediction_dtype": "float32",
+      "valid_all": true,
+      "metric_recomputed_from_saved_arrays": true
+    },
+    "holdout_5": {
+      "status": "PASS",
+      "prediction_shape": [
+        130,
+        22,
+        3
+      ],
+      "prediction_dtype": "float32",
+      "valid_all": true,
+      "metric_recomputed_from_saved_arrays": true
+    },
+    "holdout_10": {
+      "status": "PASS",
+      "prediction_shape": [
+        130,
+        22,
+        3
+      ],
+      "prediction_dtype": "float32",
+      "valid_all": true,
+      "metric_recomputed_from_saved_arrays": true
+    }
+  }
+}

@@ -2,6 +2,16 @@
 
 기존 300-update 가중치와 M2 코어를 재사용한 실제 데이터 추론 비교다. 새 학습0회. GT stereo2D / raw device_pts3d / zero-camera / Body22 / window8 조건이다. Train18은 train-fit, Opening130은 historical holdout이며 공식 독립 test가 아니다.
 
+## 최종 T4 결과 (실제 실행 완료)
+
+Opening130 historical holdout: DDIM5 **12.228817raw / 30.6249ms**, DDIM10 **12.232006raw / 64.5317ms**. Motion ratio는40.5589% /40.3147%다. GT2D 기반 진단이며 일반화 성능이나 전체 RGB pipeline 속도가 아니다. 재학습0회.
+
+[완료 보고서·한계·후속 작업](conclusion.md) · [T4 CSV](metrics/t4/comparison.csv) · [T4 평가 근거](metrics/t4/evaluation.json) · [입력 검사](input_validation.json) · [결과 재계산 검사](result_validation.json).
+
+![위치 오차](figures/joint_error.png)
+![움직임 복원](figures/motion_fidelity.png)
+![지연](figures/latency.png)
+
 ## 복구·검증 근거
 
 Fresh remote: upstream main `5b390a8459a674b378ada4305a647e6fd3e53178`, fork main `4571f30f6bac17d21e775a3a16488c98d44d117d`, 기존 실험 `74851d8c05933c135bf784c15f29dbf684987687`. 이전 로컬 `728449c`와 delivery ZIP/bundle은 작업 공간 정리 후 복구하지 못했고 원격에도 없다. 이전 보고서와 이 대화의 지표 정의를 복구했다. 기존 모델·DDIM·streaming 구현은 재개발하지 않았다. 원본 main과 과거 실험의 해당4개 core 파일은 byte 동일하다.

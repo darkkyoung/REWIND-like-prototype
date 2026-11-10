@@ -1,0 +1,123 @@
+{
+  "status": "completed",
+  "data_kind": "real_unrealego2_pose",
+  "new_optimizer_updates": 0,
+  "checkpoint_sha256": "6acd1fd96a2dbfe1e681710a6286c3d9d0177ce69402a0b488f8fcce7a4a5c9d",
+  "manifest_sha256": "f83ad651b0762cf5d7e0a644132c6ff5314260f75a1a5f30fa3dcc710d89c9a0",
+  "input_bundle_sha256": "184967a9732702fc0459350974b87e67f6499144dcfdbec48b18cb657805d74d",
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "device": "cuda",
+    "gpu": "Tesla T4",
+    "cuda": "13.0",
+    "cpu_threads": 1,
+    "precision": "float32",
+    "batch_size": 1,
+    "cpu": "x86_64"
+  },
+  "code_revision": "093e480af527094aeffa449d129220fa77fa7c82",
+  "core_code_sha256": {
+    "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+    "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+    "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+    "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+  },
+  "runner_sha256": "ddf36ab43beb53552c7cfb4e98a8717b4fe74297b9862c038f3a4eb1c5b3f0ad",
+  "initial_noise_sha256": {
+    "train": "a01a7b58bdd6abfe08004a6f602e501c4fd2f0cea7bd3656052eab5308efaf7f",
+    "holdout": "e2b0f71f2b0d7cd5f51f5b1b7aa6c81ed45e3c3e826121eaf87e0e59840d58c1"
+  },
+  "results": {
+    "train_5": {
+      "split": "train",
+      "sampling_steps": 5,
+      "frames": 18,
+      "joint_position_error_raw": 7.5129792202253265,
+      "frame_displacement_error_raw": 1.8265662009330317,
+      "motion_magnitude_ratio": 0.3283213998836385,
+      "predicted_mean_displacement_raw": 0.7963812858549962,
+      "gt_mean_displacement_raw": 2.425614919214052,
+      "valid_joint_count": 396,
+      "adjacent_valid_joint_pairs": 374,
+      "mean_latency_ms_per_frame": 31.306499925925923,
+      "p95_latency_ms_per_frame": 38.06973804999999,
+      "latency_sample_count": 54
+    },
+    "train_10": {
+      "split": "train",
+      "sampling_steps": 10,
+      "frames": 18,
+      "joint_position_error_raw": 7.513105191226683,
+      "frame_displacement_error_raw": 1.8255933562397995,
+      "motion_magnitude_ratio": 0.3283850064151388,
+      "predicted_mean_displacement_raw": 0.7965355708067628,
+      "gt_mean_displacement_raw": 2.425614919214052,
+      "valid_joint_count": 396,
+      "adjacent_valid_joint_pairs": 374,
+      "mean_latency_ms_per_frame": 59.29833187037037,
+      "p95_latency_ms_per_frame": 66.66789799999997,
+      "latency_sample_count": 54
+    },
+    "holdout_5": {
+      "split": "holdout",
+      "sampling_steps": 5,
+      "frames": 130,
+      "joint_position_error_raw": 12.2288174264216,
+      "frame_displacement_error_raw": 0.5051084702239091,
+      "motion_magnitude_ratio": 0.4055891767468056,
+      "predicted_mean_displacement_raw": 0.28580796654792073,
+      "gt_mean_displacement_raw": 0.7046735537677824,
+      "valid_joint_count": 2860,
+      "adjacent_valid_joint_pairs": 2838,
+      "mean_latency_ms_per_frame": 30.624853684615385,
+      "p95_latency_ms_per_frame": 38.88964534999998,
+      "latency_sample_count": 390
+    },
+    "holdout_10": {
+      "split": "holdout",
+      "sampling_steps": 10,
+      "frames": 130,
+      "joint_position_error_raw": 12.232005531847644,
+      "frame_displacement_error_raw": 0.5034995270180372,
+      "motion_magnitude_ratio": 0.40314740201031474,
+      "predicted_mean_displacement_raw": 0.2840873124668573,
+      "gt_mean_displacement_raw": 0.7046735537677824,
+      "valid_joint_count": 2860,
+      "adjacent_valid_joint_pairs": 2838,
+      "mean_latency_ms_per_frame": 64.53169264615386,
+      "p95_latency_ms_per_frame": 84.5967233,
+      "latency_sample_count": 390
+    }
+  },
+  "baseline_reproduction": {
+    "train": {
+      "stored_joint_error_raw": 7.513105392456055,
+      "recomputed_joint_error_raw": 7.513105191226683,
+      "absolute_joint_error_difference_raw": 2.0122937183231215e-07,
+      "max_coordinate_difference_raw": 5.340576171875e-05,
+      "stored_motion_ratio_recomputed": 0.328384902234453,
+      "status": "PASS"
+    },
+    "holdout": {
+      "stored_joint_error_raw": 12.232001304626465,
+      "recomputed_joint_error_raw": 12.232005531847644,
+      "absolute_joint_error_difference_raw": 4.227221179320395e-06,
+      "max_coordinate_difference_raw": 5.340576171875e-05,
+      "stored_motion_ratio_recomputed": 0.4031474740157704,
+      "status": "PASS"
+    }
+  },
+  "evaluation_seconds": 44.537007912000036,
+  "peak_vram_bytes": 34880512,
+  "timing_scope": "B1 streaming emitted frame; CPU keyed noise, H2D, history packing, DDIM, scaling, sync included; disk, RGB frontend, D2H, metrics excluded",
+  "measurement": "8 warmups/arm/split,3 repeats,alternating arm order,perf_counter_ns,CUDA synchronize before/after,linear P95 of individual frames",
+  "limitations": [
+    "GT stereo 2D, no RGB frontend",
+    "raw units and capture FPS unverified",
+    "zero camera ablation",
+    "train-fit18, historical holdout130, not official independent test",
+    "no routing",
+    "CPU timing is not T4 timing"
+  ]
+}

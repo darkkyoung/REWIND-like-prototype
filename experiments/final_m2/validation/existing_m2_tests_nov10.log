@@ -1,0 +1,15 @@
+test_camera_skeleton_contract_and_mask_packing (test_m2.M2Tests.test_camera_skeleton_contract_and_mask_packing) ... ok
+test_checkpoint_exact_resume_full_state_and_identity_guards (test_m2.M2Tests.test_checkpoint_exact_resume_full_state_and_identity_guards) ... ok
+test_cli_periodic_resume_evaluation_and_recovery (test_m2.M2Tests.test_cli_periodic_resume_evaluation_and_recovery) ... ok
+test_config_and_test_gates (test_m2.M2Tests.test_config_and_test_gates) ... ok
+test_denoiser_and_sampler_future_perturbation_padding_rope_shift (test_m2.M2Tests.test_denoiser_and_sampler_future_perturbation_padding_rope_shift) ... ok
+test_frame_keyed_noise_independent_of_future_order_and_anchor (test_m2.M2Tests.test_frame_keyed_noise_independent_of_future_order_and_anchor) ... ok
+test_masked_nan_before_q_sample_and_loss_gradient (test_m2.M2Tests.test_masked_nan_before_q_sample_and_loss_gradient) ... ok
+test_schedule_q_sample_endpoints_and_oracle_ddim (test_m2.M2Tests.test_schedule_q_sample_endpoints_and_oracle_ddim) ... ok
+test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history (test_m2.M2Tests.test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history) ... ok
+test_synthetic_overfit_gradient_and_eval_does_not_consume_rng (test_m2.M2Tests.test_synthetic_overfit_gradient_and_eval_does_not_consume_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 3.040s
+
+OK
