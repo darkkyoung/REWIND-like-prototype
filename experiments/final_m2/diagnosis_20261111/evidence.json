@@ -1,0 +1,170 @@
+{
+  "status": "PASS",
+  "source_bundle_sha256": "ebf6c18a053d53d5309a73a17ed146f1c4690e92ca89f09f0b69b54fc378c2f3",
+  "source_result_commit": "b5d88b7368066d454c9e2b647cd7dd83508f0b19",
+  "source_file_sha256": {
+    "t4/data_manifest.json": "d872e8690acdd7979819aea90f51f2bdf84157630e057ec7165eedc188c86a98",
+    "t4/evaluation.json": "fdf8f6513e362bc71f730badecebb299fb747af19f45ec008ae1a8cedfff2b48",
+    "t4/train_5_predictions.npz": "2779d9cff80b11347b4665b7ea208e0e2933f9034b60ce0e9ec80101aadd0dc8",
+    "t4/train_10_predictions.npz": "f201c086a50556721375605e6c4d8df6d929866a17ff0bfcf637197a81839872",
+    "t4/holdout_5_predictions.npz": "fcfde347670e9989686572bfb413d775530c2b85d342a2db26022f0356d867bb",
+    "t4/holdout_10_predictions.npz": "d06acff586215f03326ead8de1bc2e779c6b77392293941b40db6145dd91a887"
+  },
+  "script_sha256": "3d2bc2a8b8acafb72729db4396b08e5d9ce2f725e39cba26757ece24547e3861",
+  "original_metrics_recomputed": "PASS",
+  "gt_mask_frame_identity_between_arms": "PASS",
+  "new_model_inference_calls": 0,
+  "new_optimizer_updates": 0,
+  "root_index": 0,
+  "joint_names": [
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "neck_01",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      0,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      0,
+      18
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ]
+  ],
+  "coordinate_frame": "stored_device_pts3d",
+  "distance_unit": "raw; physical unit unverified",
+  "figure_limits": {
+    "global": [
+      [
+        -83.19532012939453,
+        71.99396514892578
+      ],
+      [
+        -66.92631530761719,
+        88.26296997070312
+      ],
+      [
+        -2.3418045043945312,
+        152.84747314453125
+      ]
+    ],
+    "pelvis_relative": [
+      [
+        -81.73908996582031,
+        73.47941589355469
+      ],
+      [
+        -59.63480758666992,
+        95.58369445800781
+      ],
+      [
+        -66.29489135742188,
+        88.92361450195312
+      ]
+    ]
+  },
+  "relative_transform": "each skeleton subtracts its own pelvis; no fitted transform",
+  "all_masks_valid": true,
+  "peer_reference_commit": "e94c64d8689adc6186979b56906e1008b53fb76c",
+  "peer_body_joint_names_equal": true,
+  "tests": "4 analytic metric tests PASS",
+  "visual_qa": "4 PNGs reviewed; no pose-fitting transforms",
+  "independent_scalar_loop_bone_root_check": "PASS",
+  "original_bundle_unchanged_after_analysis": "PASS",
+  "existing_tracked_files_changed": []
+}
