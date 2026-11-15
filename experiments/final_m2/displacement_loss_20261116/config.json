@@ -1,0 +1,17 @@
+{
+  "parent_checkpoint_sha256": "6acd1fd96a2dbfe1e681710a6286c3d9d0177ce69402a0b488f8fcce7a4a5c9d",
+  "input_bundle_sha256": "184967a9732702fc0459350974b87e67f6499144dcfdbec48b18cb657805d74d",
+  "baseline_updates": 300,
+  "additional_updates_per_arm": 100,
+  "lambda": 0.1,
+  "s_delta_raw": 4.1444875,
+  "window_size": 8,
+  "batch_size": 8,
+  "sampling_steps": 10,
+  "evaluation_noise_seed": 10043,
+  "precision": "FP32",
+  "device": "Tesla T4",
+  "max_train_seconds_per_arm": 300,
+  "shape_screen_min_ratio_pct": 50,
+  "shape_screen_interpretation": "보수적인 전신/국소 심각 붕괴 선별값. 정상 체형 기준 아님; 시각 검수 별도"
+}

@@ -1,0 +1,14 @@
+test_checkpoint_optimizer_scheduler_exact_restore (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_checkpoint_optimizer_scheduler_exact_restore) ... ok
+test_identical_displacement_translation_zero (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_identical_displacement_translation_zero) ... ok
+test_mask_padding_gap_sequence (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_mask_padding_gap_sequence) ... ok
+test_masked_nan_and_empty_pairs_backward (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_masked_nan_and_empty_pairs_backward) ... ok
+test_metadata_checks_actual_slots_and_gaps (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_metadata_checks_actual_slots_and_gaps) ... ok
+test_nonfinite_rejected_before_update (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_nonfinite_rejected_before_update) ... ok
+test_real_model_gradient_and_future_causality (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_real_model_gradient_and_future_causality) ... ok
+test_static_output_not_motion_match (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_static_output_not_motion_match) ... ok
+test_xyz_sum_reduction_and_raw_scale (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_xyz_sum_reduction_and_raw_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.302s
+
+OK
