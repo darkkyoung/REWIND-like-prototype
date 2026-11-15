@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "checksum_files": 22,
+  "actual_updates": {
+    "control": 100,
+    "improved": 100
+  },
+  "baseline_matches_previous_T4_bitwise": {
+    "train": true,
+    "holdout": true
+  },
+  "recalculated_metric_rows": 6,
+  "metric_absolute_tolerance": 1e-12,
+  "pilot_status": "FAIL",
+  "checks": [
+    "SHA and CRC checked on acquisition",
+    "optimizer step400 and scheduler epoch400",
+    "all model parameters finite",
+    "original full initial state hashes equal",
+    "all100 batch/timestep/noise records equal",
+    "six NPZ share GT, masks, frame and sequence identities within each split",
+    "all summary metrics recalculated"
+  ],
+  "new_inference_or_training_updates": 0
+}

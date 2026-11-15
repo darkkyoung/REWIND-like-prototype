@@ -1,0 +1,45 @@
+test_checkpoint_optimizer_scheduler_exact_restore (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_checkpoint_optimizer_scheduler_exact_restore) ... ok
+test_identical_displacement_translation_zero (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_identical_displacement_translation_zero) ... ok
+test_mask_padding_gap_sequence (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_mask_padding_gap_sequence) ... ok
+test_masked_nan_and_empty_pairs_backward (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_masked_nan_and_empty_pairs_backward) ... ok
+test_metadata_checks_actual_slots_and_gaps (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_metadata_checks_actual_slots_and_gaps) ... ok
+test_nonfinite_rejected_before_update (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_nonfinite_rejected_before_update) ... ok
+test_real_model_gradient_and_future_causality (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_real_model_gradient_and_future_causality) ... ok
+test_static_output_not_motion_match (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_static_output_not_motion_match) ... ok
+test_xyz_sum_reduction_and_raw_scale (experiments.final_m2.displacement_loss_20261116.test_displacement.DisplacementTests.test_xyz_sum_reduction_and_raw_scale) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.226s
+
+OK
+test_camera_skeleton_contract_and_mask_packing (test_m2.M2Tests.test_camera_skeleton_contract_and_mask_packing) ... ok
+test_checkpoint_exact_resume_full_state_and_identity_guards (test_m2.M2Tests.test_checkpoint_exact_resume_full_state_and_identity_guards) ... ok
+test_cli_periodic_resume_evaluation_and_recovery (test_m2.M2Tests.test_cli_periodic_resume_evaluation_and_recovery) ... ok
+test_config_and_test_gates (test_m2.M2Tests.test_config_and_test_gates) ... ok
+test_denoiser_and_sampler_future_perturbation_padding_rope_shift (test_m2.M2Tests.test_denoiser_and_sampler_future_perturbation_padding_rope_shift) ... ok
+test_frame_keyed_noise_independent_of_future_order_and_anchor (test_m2.M2Tests.test_frame_keyed_noise_independent_of_future_order_and_anchor) ... ok
+test_masked_nan_before_q_sample_and_loss_gradient (test_m2.M2Tests.test_masked_nan_before_q_sample_and_loss_gradient) ... ok
+test_schedule_q_sample_endpoints_and_oracle_ddim (test_m2.M2Tests.test_schedule_q_sample_endpoints_and_oracle_ddim) ... ok
+test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history (test_m2.M2Tests.test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history) ... ok
+test_synthetic_overfit_gradient_and_eval_does_not_consume_rng (test_m2.M2Tests.test_synthetic_overfit_gradient_and_eval_does_not_consume_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 7.615s
+
+OK
+test_direction_mask_gap (test_final_metrics.FinalMetrics.test_direction_mask_gap) ... ok
+test_p95_stationary (test_final_metrics.FinalMetrics.test_p95_stationary) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.032s
+
+OK
+test_half_scale_halves_length_and_spread (test_diagnose.DiagnosisMetricsTests.test_half_scale_halves_length_and_spread) ... ok
+test_invalid_joint_and_frame_gap_excluded (test_diagnose.DiagnosisMetricsTests.test_invalid_joint_and_frame_gap_excluded) ... ok
+test_rigid_translation_does_not_change_shape (test_diagnose.DiagnosisMetricsTests.test_rigid_translation_does_not_change_shape) ... ok
+test_static_pose_is_temporal_not_spatial_collapse (test_diagnose.DiagnosisMetricsTests.test_static_pose_is_temporal_not_spatial_collapse) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK

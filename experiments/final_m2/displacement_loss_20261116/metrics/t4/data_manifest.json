@@ -1,0 +1,920 @@
+{
+  "schema_version": "m2_raw_pose_diagnostic_v1",
+  "data_kind": "unrealego2_archive_pose",
+  "source_scope": "user_drive",
+  "input_source": "gt_2d",
+  "camera_policy": "zero_features_ablation_not_extrinsics",
+  "coordinate_frame": "stored_device_pts3d",
+  "distance_unit": "raw_annotation_unit_unverified",
+  "pixel_scale": 1024.0,
+  "target_scale_raw": 100.0,
+  "skeleton_policy": "existing_development_22_body_joints_not_official_benchmark",
+  "joint_names": [
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "spine_03",
+    "neck_01",
+    "head",
+    "clavicle_l",
+    "upperarm_l",
+    "lowerarm_l",
+    "hand_l",
+    "clavicle_r",
+    "upperarm_r",
+    "lowerarm_r",
+    "hand_r",
+    "thigh_l",
+    "calf_l",
+    "foot_l",
+    "ball_l",
+    "thigh_r",
+    "calf_r",
+    "foot_r",
+    "ball_r"
+  ],
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      0,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      17
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      0,
+      18
+    ],
+    [
+      18,
+      19
+    ],
+    [
+      19,
+      20
+    ],
+    [
+      20,
+      21
+    ]
+  ],
+  "selection": {
+    "train": [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination"
+    ],
+    "holdout": [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening"
+    ]
+  },
+  "sequences": {
+    "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination": {
+      "split": "train",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "runs": [
+        [
+          0,
+          17
+        ]
+      ],
+      "sequence_complete": false,
+      "official_split": "not_revalidated_in_this_run",
+      "motion_group": "brutal_assassination"
+    },
+    "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening": {
+      "split": "holdout",
+      "frames": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129
+      ],
+      "runs": [
+        [
+          0,
+          129
+        ]
+      ],
+      "sequence_complete": false,
+      "official_split": "not_revalidated_in_this_run",
+      "motion_group": "opening"
+    }
+  },
+  "payloads": [
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_0.json",
+      "sha256": "7d872db6674ff7bd1eb3f7e09c838fbf12772d7cd03dc2f848fc72b15727eb69"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_1.json",
+      "sha256": "f9915b4aec2eca23a97f30e568e0f3416b96cc201002a5d6534aca8d9d97ce8d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_10.json",
+      "sha256": "105b7e4620633d00a9c075a172d586a0d3ba4d7a6f6e74088c4f2cf4279ea36b"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_100.json",
+      "sha256": "8a08b34da79128bdc701f26df04267d90bb9d2523c7ef926c38153d327669eb0"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_101.json",
+      "sha256": "fd059ff5ba47f9015ed0ce0719cd8ce1403166638648f10e4d14e1c8cc02a476"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_102.json",
+      "sha256": "5deb6a148eae584fc6efb2ad3f7ca872801c626a3a044d18b55a4367e2ee5d79"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_103.json",
+      "sha256": "5699163329ea0e4ce8a09a58c8c31c51100ffd14e89983a65d49797ee6efaaf5"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_104.json",
+      "sha256": "d7801a8244b29b96c29fe8f235774f1d1f61411a1a66788f57331e9de89b9f7e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_105.json",
+      "sha256": "19da1bce664cea15ba70c4f507e47ba9e1e807abf715088b3454925f90501a9f"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_106.json",
+      "sha256": "11531d696c4aa5cdcaa828bbda1db68e15d6672f5013a5f981cd598f98813803"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_107.json",
+      "sha256": "37c5ea2941701ec749b1993a5a87c374288a24cbc4f3d6deb9857b7716000fd7"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_108.json",
+      "sha256": "911de844d98002dc6af75d3a2034f1fa051886bc18758a7db657e23975ab564e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_109.json",
+      "sha256": "00f9c6c0cde8059c76723baf19e25b109b8ac682565c7d16e8c1ba7d71469caf"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_11.json",
+      "sha256": "ec1812ec0dd95dd6c1aa00c2bbf4a209de86fad6c9cc8a94435bbcd1df51d6b5"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_110.json",
+      "sha256": "4ea40768de501b88ca3337c3625d9fb57e980457209b77aab4d4ab64a1a24039"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_111.json",
+      "sha256": "7a78cde6d021322b904c371f3f3b7c45133ce6d0411e1fc057eae8af5aa2078d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_112.json",
+      "sha256": "6a05600a6983e44be60077d5dad36761ab107b4c64ff8ea7bef859fb534e711a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_113.json",
+      "sha256": "a2c6d7ed20d0645b64f48d023b113206236653a9bd91d5c11c8497c0483b4422"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_114.json",
+      "sha256": "628593b39245dc66c371e8353de110b4799cfa9ee09123f19e358eb1f34c91ea"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_115.json",
+      "sha256": "ff91302dba3008353337de95309d2277495f3495de1641abbcc7db4be51ed3b0"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_116.json",
+      "sha256": "89a830d7d824fe7191ee4b1695146f96a1c866e459c9b95b19675a7a0c973e88"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_117.json",
+      "sha256": "cf158d189333e43e1f92478a7211f6fea429e49993de03cd8576965c7328b47a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_118.json",
+      "sha256": "a70ef85abde31534b87ec447b5843c5567d4ba9cabe5b4dc4dbc0d19f094da25"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_119.json",
+      "sha256": "fc4aa1c31c99f07046823ce26637c1b02a687cefc597b4a2eccec7dcd2186f75"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_12.json",
+      "sha256": "38f5b8ced368e76ceea9d52e9d82d0fc8ef44bf3247ee3578010cf564b1181dc"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_120.json",
+      "sha256": "1925e0b52ab143deab37a49b169b09652044520ed9d39942783575b8bcdf9c70"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_121.json",
+      "sha256": "d274de83a7e8de0b2356fb863da70d189a508a6fc46ec43e7fd40399d5d2aa9e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_122.json",
+      "sha256": "5019385a720fd3b47b7b13c6f569b4e1dd0dd32f3cd3ecabe56f25e7a4996f07"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_123.json",
+      "sha256": "a3314f089ac0dd2df08507af096b15a629dce95680daff0b597e3e8ca33fa3df"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_124.json",
+      "sha256": "6caceb9eae7d8e3dcb7bcd17de4d7a396160c1f706a5a00b1a16a3de24aefb25"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_125.json",
+      "sha256": "7ecc2e6cd41b53b2d75f15b5fad0dc8a28c42d74acdd3e95bac63030b00889f5"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_126.json",
+      "sha256": "9a4fd63a57d8fc1dc3b2a11930731a894a1975e57b04d95b1f67e8c396e86602"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_127.json",
+      "sha256": "d5f64e778819a2257f42879c661505858ac897ce906ea01ae87b452c36ee0e1e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_128.json",
+      "sha256": "f3afaec671c02ad96f104da1555ebbeab6d2889c02f89407d0d06a3c2da87037"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_129.json",
+      "sha256": "fd1a6302ef086865c3a8204d4b0db6985fae470ee9fac87b2352bbb7a9322b0d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_13.json",
+      "sha256": "39271928cc3a5001994331752b65ae1c72839c4eaf4d6948087e7365d87b6ef1"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_14.json",
+      "sha256": "1d9f4b413416b16303b2fb7d1b91432baf2ad66aead3fca2caba0177fbfd705a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_15.json",
+      "sha256": "884d64b43d79e6708e33caba00a5590c461d20190a069515f9d9a788bed66d83"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_16.json",
+      "sha256": "44813579286a132a23925925d0fceb0e4a1ae5ac58d3a9d13de58ce25973c868"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_17.json",
+      "sha256": "597b7213e20815a1ab7fcf098a252c26568152b401ac15ecfc5f6d07ee70e4b7"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_18.json",
+      "sha256": "cee4e1ddaebee15aef341fe0378b912d1888b094b47dff01510322a5671cf030"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_19.json",
+      "sha256": "42fff92eb4e17f1fd7b0328a5715e2cdae03aab9eead5ae79c5735b00e72303a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_2.json",
+      "sha256": "4b5d8c23aa2ba3859afa57813f450539e67729dba77e805f514687d1e37af759"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_20.json",
+      "sha256": "363ad47c928f8c7960ac1e7ec6b8a17b2064a42d97ba7e83e057c359d1684eb1"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_21.json",
+      "sha256": "da85393de8f2bf4fa8def062b0dbbe9e20a966a1b4bdd7c28015792ad1b418db"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_22.json",
+      "sha256": "a9db490182851b1e201789d1ea47ff1af641595a0dfcfc769677666209e73b3b"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_23.json",
+      "sha256": "5e1f1f688d14f7c169d3e74750e14c0afcda3babbd3c3fcb48c0d27f8a4e6869"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_24.json",
+      "sha256": "9f3c510a49e474d9fbc6fb80e33217ac22ce6afca1c7a8e7cca6d2acf9986f0e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_25.json",
+      "sha256": "1753cb2a9d5ea81c8e5e0aa8caee62bc9f2a578ec19f8f74fea194f4db615471"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_26.json",
+      "sha256": "cbbb13f5da114dccbfc85b278ff9a3e55e32fd09b1698b991d489122abe88e5d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_27.json",
+      "sha256": "96a9f6bfde66d62e7c7aa28c8b0f476324446d04f868ca7c2f4dc5c211a68ead"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_28.json",
+      "sha256": "5c623648ccf09066bb3d51dd64d9550800ef9112c31bc2eb43e67fc630586047"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_29.json",
+      "sha256": "c914977edf45df6f7196556453266ff1c26ed61ce62270d799c907ecd722107d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_3.json",
+      "sha256": "21c187dace115d3438b999642b3956d21efb92599e29da782c928ac58557a3e1"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_30.json",
+      "sha256": "03ba65f1941d7e98c8b714b5a6f415c79b5410691cab9b8671844d7a9cc380eb"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_31.json",
+      "sha256": "873de0a5683693df49459e848431ac101316a77910eb830224f253fd65ccde93"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_32.json",
+      "sha256": "4b6a12e1595e143f24a4eed90b97b80912df4307df2121b11418bc8eb75a8131"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_33.json",
+      "sha256": "9dd2b6d0ec24d422709465e2684d356b5a5d7d203e7c58bfdcf9782a53315966"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_34.json",
+      "sha256": "0474577581fefade4659050f7856624abd326aa414822f751508181fe015e429"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_35.json",
+      "sha256": "5823fa92e635a6e002946b775b74571a32f2ba1fe099c21ae4e8fba9832cd0c6"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_36.json",
+      "sha256": "ba3b63b690ef3b5648b6a1896d82f5c510b2dd593310b83d0080e6886ba969e5"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_37.json",
+      "sha256": "e9c387694bd889e60f93585791adde419999da732828102758fcfffd74629c8b"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_38.json",
+      "sha256": "ec62c99c2e994a5c05473ffc844738350b57393af3b4881cbc5d0cf7e007cbc3"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_39.json",
+      "sha256": "88247ae1bd5372f5d2eadf07f175225f3f51facd1326ed2a8bdba64bc2aa413a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_4.json",
+      "sha256": "9f23528a3750cd8e3bf65e1e6b745a5b9d76ef84424bb74973a00f4af6fd49fe"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_40.json",
+      "sha256": "3168c23b3d24bea1aa9fcabd8bb71927d32dd37d6c7956b95a59c2bd2165092c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_41.json",
+      "sha256": "46fa90d031977ed0c1a514e08c6de79d3fa3d531e779b272bdcb2789d7f9408f"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_42.json",
+      "sha256": "e8eb75e1a7ee3563b11fd47d7091e3db74afb92ee9669a700f715292d404f95c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_43.json",
+      "sha256": "44997df0559c429669a0dca3cdb48b659de63c7757dd5a72a54c7996aa8e19cd"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_44.json",
+      "sha256": "52a6ee11320d29b2dacec2cbabf9baac8b3713c83c05dfd0760465dd40da4dd6"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_45.json",
+      "sha256": "baab53320bae9cef0766bfd4a4bfbfa70199a9f6dfac440a12a4faa06c69de89"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_46.json",
+      "sha256": "bed8224b73a85b82fd6a1c34faf540e0584804f2a9f032f71bd35d7011e4d04e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_47.json",
+      "sha256": "43b2c8eb257f79b5b5d3a12c931983adfedc55e4ebe9d09a53ba94649d2249a9"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_48.json",
+      "sha256": "5c5271868056544fb1420447d7448f311bfb407c286f93fa1942302b5988ecc5"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_49.json",
+      "sha256": "017e2e0c3fec58a596a1eae805f2e427bfc5ba7fa5f68aa1294f1f70b582d976"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_5.json",
+      "sha256": "063e4183cb1090067a55da966849f9157808b1fce72ffceb8baef5cfd6367582"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_50.json",
+      "sha256": "90748cdfdd54a15cf46a95e5cf222917ea70495ca8e5954add7d27b964d7321a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_51.json",
+      "sha256": "caa532a35819f6917a6d92d9a1379e5dc01eb084ed0c9ffb0666454ccf1e8a30"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_52.json",
+      "sha256": "91bedbe1cb7ac953eb4a4734d852e2a68136c3f4f7704f8edacb0f29acc26e91"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_53.json",
+      "sha256": "c327e323af9104db0dd4e734bc9a255b94116901a254b1e7761f6da94a448697"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_54.json",
+      "sha256": "917432a6a849e3509f5da5cc4a4dacf47709e7bd1b36996e0df5bb6b40a871bd"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_55.json",
+      "sha256": "a147d784d1781a6a7b5848cbbc76f461dddb1c0350e3f358a4e65297e4e9e321"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_56.json",
+      "sha256": "b7ff5cc0477a1478f34bb6a8909f6c50f4eede97c4821de8e7582b2a13f82399"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_57.json",
+      "sha256": "37caeabdd2f9976e7541094fcbe83654e4e5a238e7bd0ac388c54c48c6babbe3"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_58.json",
+      "sha256": "ef893c8b270e5506b59d6b46b309318a216a5fc692c731a3aaef964def6c38ef"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_59.json",
+      "sha256": "95fa15c3c9eee606e411bef3c81ee6f16a585858b6908ef29b66f1fc29a4ed96"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_6.json",
+      "sha256": "2ca5ba268fa3f787c0bfaf988a2afa9930062343e926ad52cf449c4fc9082dfd"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_60.json",
+      "sha256": "52e7a55a6bc2c6d4eb6630d147f7f9b93048ecb70d49e1a34a77fe26f7d95197"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_61.json",
+      "sha256": "589ed40a4f219df8bab153fe151d4d4d13a89fe593ca62daa7535601c09e1d8e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_62.json",
+      "sha256": "59328c02d6fb8b34f741fb58113982c45103711edb31277606091a4e835fba49"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_63.json",
+      "sha256": "d25648fcf5828774a75f305f08f070f5f00c5b80b7297d34be34c6e261e5f61f"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_64.json",
+      "sha256": "bed25026dbbf64c9b08609b4d3aef7a90a8d543e2fe199c926627502d1e76cc3"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_65.json",
+      "sha256": "0196a6a6b5657dce66d88b643246ff8e5dacd1276f8620a2d8c9a0b1e67e6f34"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_66.json",
+      "sha256": "243e4daa971b320b54003d4e146b25d9f9a06395f32823b308352186d508515c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_67.json",
+      "sha256": "0fb2c219eea4609df236de58d746982d1ea7ef2686c93924a3d73234be7b8084"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_68.json",
+      "sha256": "c5201931800f76809a00d1e0a56cdcd1ca2d4ce60a2b02807fd24cfe144a8b30"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_69.json",
+      "sha256": "a259745084c7bb907a0a0f5aa5f3e9201e4832042fec2e547dcea15df3ebf032"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_7.json",
+      "sha256": "0a3079c3b029dc93254f2487e707d84d7ba56a12c36759bb12ff9801c9fea1fc"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_70.json",
+      "sha256": "b09725d20ac9b27671a7e524ca0442b8bc0ba7adf2585bc54292f79ac8b3786a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_71.json",
+      "sha256": "5e673ecf18a3cd5f1cf84bcf9e2cf0a840aba8a60998391286af5a7e86af8a52"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_72.json",
+      "sha256": "8aa626ded08da1673af9cb0b849c273ffc2d1b25c670a23d45e3830ab835c18e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_73.json",
+      "sha256": "4e856080d9e5ffe816c2b1d35ab23bb1318a39acd55cd9f090268481d02bcccd"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_74.json",
+      "sha256": "69f37ca3d3efcd8732689409d707961dc507ce75f87a369a45f399dcf1153c76"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_75.json",
+      "sha256": "10529cd3532eb7688b052e8760838bb629707f978fae3ee3952f03ccdc2b0976"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_76.json",
+      "sha256": "8f82e027ac0eacd9b76f58c6fe0d9f7ac96e3c6f00d6166e0d666255a0a153f7"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_77.json",
+      "sha256": "63372842286d505483c80fc573bcf1774c6c8f4290bfa7d55cadb1cb20e5bf8e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_78.json",
+      "sha256": "dfbfbdc34b878de75d33d657bea8329917fc8c97e8f079aefcd460ea5d66ca35"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_79.json",
+      "sha256": "6c107bfc4b436e8a16dbedb4e70ca2c27c290d1f3b11b7e8111cb8f13ec884ff"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_8.json",
+      "sha256": "23c18bb04fc36a1ff55e831af913af3100f1c536858e2740af1653c0f2236892"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_80.json",
+      "sha256": "7e73bcd8fc33c1358b71442e612651f2ecb6ff93498e4653693881da842bed85"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_81.json",
+      "sha256": "ef521246f2de63679b8057297697afcfea351d961ebb15ada798f7db4aeff1cc"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_82.json",
+      "sha256": "91d345293429f5db0ca4698cad775fea19a8fe263847031a908d2a61bc24e10c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_83.json",
+      "sha256": "ae129adf233a2df1e082ca17158189c5b6608141f3610be28c13f88a7d821dc8"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_84.json",
+      "sha256": "92534bebe4122b480696bfcdece53da0d34cfe493553bba1e556ba8a02a2371e"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_85.json",
+      "sha256": "97c3e83ac089c7ca018e4989765fcaf75284df94ce364cd79f9bd75350385a00"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_86.json",
+      "sha256": "c7bb68b49bf6842c499a3fcfa551a3da0d70d14aabb348b8f24cd8b7d16c06fb"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_87.json",
+      "sha256": "6b9e9d160ae099298b81e6c7ece78e2d9b9620bad5ecd7ca3d621174a9b1e597"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_88.json",
+      "sha256": "77f3638e533c5cec75a03b29ecc8a41c641010086223e06f7015ca02ca965fbe"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_89.json",
+      "sha256": "fbc6d81d7bc8bc5c4c1a798db50a187d614383460cdbd02cdcfe5f478a9fe39b"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_9.json",
+      "sha256": "faa0496a30fb74a160628ccef383a2dab2b8291763915350683fdeb1f1293752"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_90.json",
+      "sha256": "ac4202a922ff84aa2f715a681d6dad969eb0f64891637939cd7504cdc75f8dd9"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_91.json",
+      "sha256": "b8833f4aec4c6fe643d0683651894c28ad8968239e5c1901ee1692c36d64db7a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_92.json",
+      "sha256": "76982df1f6ceaadf14720e9355c31f6fd1751ec66972198bfcc5c355f9a5512c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_93.json",
+      "sha256": "ab2b467a776005307a84b17276daf9a1cd937314c72d09f599ea2a77d4fead16"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_94.json",
+      "sha256": "67b8e5c0cd328516b824380113f419a7729ef6aba58683acacc4fb9092ec1f4a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_95.json",
+      "sha256": "86f29c23ba2b68e2627c7bdd7bd2aa3ecce3ab35c40bcb571585e8152b7b35fb"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_96.json",
+      "sha256": "ae125e4387ee41faca342da996664b1e3bb6f7648c313e4753e11fee7a4232f9"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_97.json",
+      "sha256": "b680ca655d854f7f05a5cbcc9ef007c32e7a2b5b58fcba634b0748ab3231ab57"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_98.json",
+      "sha256": "0a9c0984cb7a1c1a99c27b15bbf7b66b3aecc49670471585a3d9b3236aa1a071"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Opening/json/frame_99.json",
+      "sha256": "b59b4ef8cc6199bbd1e21414f9bfe745bb759fd24cf9fde799bb8a3c7389af00"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_0.json",
+      "sha256": "3fd55791ab0a06fd17cd09f3b599ccba34d710bed8f00802aaacb180c09afb41"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_1.json",
+      "sha256": "8632b5760685778fa91a19c2f93a99274f3afa946e30d317f979ee74c4ba3bca"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_10.json",
+      "sha256": "788efbeaac5e132dac098af1484f0b80aa7b0653da47334bd6285b667718a689"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_11.json",
+      "sha256": "e9963c7f6440bea6e272a8493f56df50f2c900414eacd38d34dfba40b1a531e0"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_12.json",
+      "sha256": "21bfbefaeb97566671ea54b58ff0c82bf1d86b9f28f1c1aaca73ee51c76e077a"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_13.json",
+      "sha256": "239db43af1790fd9ac1ac25c26bc386dc8379dc0c6be21b0db0cea42c81781d3"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_14.json",
+      "sha256": "cfe34f0bc588a4c1b40cc732d2503ec541573e63bd94b4fcc476117f530d536c"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_15.json",
+      "sha256": "51b4becda96cc22b30389a8b35ab176b49debdda4191c03e8fb63aa8a6d1f9f3"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_16.json",
+      "sha256": "31aa060e0b9e07deb2dd739db0a024d8601650d06f75e8aebe741b4e7f402050"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_17.json",
+      "sha256": "57de91b745102a0f451ff0193d37dc13e66091d87cf1e2a84a12dbb3b42ff46b"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_2.json",
+      "sha256": "707fee550d76c6c44df4662e33a58850c7f9730c51232f4ac5d5fd83557637a8"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_3.json",
+      "sha256": "ab397aece87a4547c025af808092d46ba54694ac9a2b81b943624f23fdf86bdf"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_4.json",
+      "sha256": "48e5d282e4a66f3ba86020fdbb9c25760fdbbdc15f020ecb9644ff45ed5c9413"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_5.json",
+      "sha256": "2211e92e0854cb4580e94a6554dda78e3a8b4ae1fa0b5b92c97658cdb0f3add6"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_6.json",
+      "sha256": "be582233877133c2c761c5ad0282f22f5d5cd8e10d8e60cd9fa73254ce6ba5e1"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_7.json",
+      "sha256": "7a482a2a5ab2cfc9a62ed5ec381be9504aaddbcb0674ec68cfb2dcaaee1f4dd0"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_8.json",
+      "sha256": "851919421f4ae61afcd55110049121a6e9ba33f2b8badc385e6860faf2ccd44d"
+    },
+    {
+      "member": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/025/Brutal_Assassination/json/frame_9.json",
+      "sha256": "29dca64634c857c60d3e84f65af6976d58e7166e95871166c955777f5cce10e4"
+    }
+  ],
+  "extraction_manifest_sha256": "20ebd1211dafda4ebbc269728baa83deafbb46a8fb11f24f55bb75ecfd3402b6",
+  "historical_extractor_accepted": false,
+  "extractor_code_hashes": {
+    "__init__.py": "9578f9c1db59475d64f5276d0186ca1d10e2648aa239ec3f1ff88c99788936a4",
+    "__main__.py": "dea112198bd813ec9b33d0efbc4426c3b53b8ca281da93f6679ee82308bcbfb8",
+    "contracts.py": "446f8a0b16007fcb58b3251934d2ae5ed5773adfa036d0ce1fbd41af6080d141",
+    "drive_metadata.py": "b9f7dfa7113648780f75dab51f1c440db096ae74e9cf167f02d7d98701592201",
+    "extraction.py": "d76259a63353a2363a6c47440c12fed4ed8d18e50d882b155192a480c65e7318",
+    "fixture.py": "5f730982d487a7e7be04bc3330b3579432c99776b312a6cfee008bfa23eb2fd7",
+    "matching.py": "eaaa369f3ceb6219225bb1b6d145aeca5e5d0bad519bd7aa61155ef54dacbaae",
+    "pilot.py": "c379fea52a8d0f0eaf8acb07fc6f68d4ab96aefe0c14b9ae5f5b224f6b31c92b",
+    "sources.py": "20d33fb9faca1d95a5c112d71996e581da9680c455f7dac891d38cd75c433fd7"
+  },
+  "original_motion_independence": "unverified",
+  "rgb_alignment": "not_evaluated_pose_only",
+  "full_m2_dataset_gate_passed": false,
+  "whole_archive_integrity_verified": false,
+  "sha256": "f83ad651b0762cf5d7e0a644132c6ff5314260f75a1a5f30fa3dcc710d89c9a0"
+}

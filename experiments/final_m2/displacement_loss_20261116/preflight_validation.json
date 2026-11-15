@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-15T16:43:59.387385+00:00",
+  "baseline_checkpoint_sha256": "6acd1fd96a2dbfe1e681710a6286c3d9d0177ce69402a0b488f8fcce7a4a5c9d",
+  "input_bundle_sha256": "184967a9732702fc0459350974b87e67f6499144dcfdbec48b18cb657805d74d",
+  "source_revision": "c5d09511ac1c7a88156440e861a4719f85b6510a",
+  "new_unit_tests": 9,
+  "existing_m2_tests": 10,
+  "metric_tests": 6,
+  "window_slots_verified": {
+    "train": 116,
+    "holdout": 1012
+  },
+  "cpu_cuda_training_updates": 0,
+  "prior_T4_sha256": "ebf6c18a053d53d5309a73a17ed146f1c4690e92ca89f09f0b69b54fc378c2f3",
+  "prior_diagnosis_sha256": "ad43cc0a208f845800ec4c6f433ada05bbf640a724dbc7a3252af3284bcd20f1"
+}

@@ -1,0 +1,300 @@
+{
+  "execution_status": "PASS",
+  "quality": {
+    "pilot_status": "FAIL",
+    "comparisons": {
+      "baseline": {
+        "displacement_reduction_pct": 13.036106058633967,
+        "displacement_10pct_pass": true,
+        "motion_closer_to_100_pass": true,
+        "global_within_2pct_pass": true,
+        "root_relative_within_2pct_pass": true
+      },
+      "control": {
+        "displacement_reduction_pct": 7.649593552263201,
+        "displacement_10pct_pass": false,
+        "motion_closer_to_100_pass": true,
+        "global_within_2pct_pass": true,
+        "root_relative_within_2pct_pass": true
+      }
+    },
+    "shape_screen_pass": true,
+    "min_frame_spread_ratio_pct": 100.38257627484471,
+    "min_frame_edge_ratio_pct": 72.38122188191463,
+    "shape_screen": "All improved frames spread and each bone >=50% GT; inspect plots separately; exploratory not anatomical norm"
+  },
+  "identity": {
+    "format": "m2_displacement_pilot_v1",
+    "parent_checkpoint_sha256": "6acd1fd96a2dbfe1e681710a6286c3d9d0177ce69402a0b488f8fcce7a4a5c9d",
+    "input_bundle_sha256": "184967a9732702fc0459350974b87e67f6499144dcfdbec48b18cb657805d74d",
+    "source": {
+      "git_revision": "c5d09511ac1c7a88156440e861a4719f85b6510a",
+      "core_code_sha256": {
+        "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+        "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+        "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+        "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+      },
+      "experiment_files_sha256": {
+        "plot_results.py": "b4af8189830fc1600f56ada2d9d6e66887d6000e051772f50bb5d5fa8c0b6775",
+        "run_experiment.py": "9b3553049407cf4ae713438456a6dd11634b8c712f8bf9b73ca18d7acde50627",
+        "loss.py": "4528757bc6ca7f5e23d9231906ce2dacd43089b5e9e818f6d00021c299c85d49",
+        "test_displacement.py": "a2fa3ea2134ff2056aa4584b1d03a226d9d1ee168d98f78cb015091ed14b6211"
+      }
+    },
+    "environment": {
+      "python": "3.13.16",
+      "torch": "2.14.1+cu130",
+      "cuda": "13.0",
+      "gpu": "Tesla T4",
+      "gpu_total_memory_bytes": 15637086208,
+      "precision": "FP32",
+      "device": "cuda",
+      "threads": 1
+    },
+    "parent_environment": {
+      "python": "3.13.15",
+      "torch": "2.11.0+cu130",
+      "device": "cuda",
+      "cuda_runtime": "13.0",
+      "precision": "float32",
+      "threads": 1,
+      "gpu": "Tesla T4",
+      "gpu_total_memory_bytes": 15637086208
+    },
+    "additional_updates_per_arm": 100,
+    "lambda": 0.1,
+    "s_delta_raw": 4.1444875,
+    "measured_train_s_delta_raw": 4.144487503561436,
+    "sampling_steps": 10,
+    "noise_seed": 10043,
+    "training_contract": "GT2D / Body22 / zero-camera / raw / train18 only",
+    "branching_policy": "New experiment derived from immutable parent; original resume guard untouched",
+    "shape_screen_min_pct": 50
+  },
+  "arms": [
+    {
+      "arm": "control",
+      "checkpoint_sha256": "1981b7ff9a5b7069629f5de2dc265014fcdd30d3d1744dea39b1d4aebeb02333",
+      "step": 400,
+      "additional_optimizer_updates": 100,
+      "initial_state_sha256": {
+        "model": "29421214a975ce8c4ea48bebcc9d85d6b1f6c068ec99dd94407e4634fe024517",
+        "optimizer": "fa566b109864687fdf5eacb2166587d9740e655e0b0ef1e4aca0310d88c65d79",
+        "scheduler": "c3d2bf3ec7b44ea164ca8679a69c76680358a732e620bdd384ada5d576e548da",
+        "scaler": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rng": "5f95729219bc511ea6a7e513a7cb9a804a034bb6163d5e496069440d82f08fa5"
+      },
+      "random_trace_sha256": "48336d80a7ff2743d94905bdfc2ac2644733f2b75ee731fac5e80aab8b4132ac",
+      "end_rng_sha256": "30c0e65abdb02b5a81516307b0bb7d05c02f168ee2a241226d26f0e5feabf08f",
+      "seconds": 8.743621999000027
+    },
+    {
+      "arm": "improved",
+      "checkpoint_sha256": "e96c5fcb7d610714359d3e9cae1de0786bb4accc5719c465677c28236fe64fe3",
+      "step": 400,
+      "additional_optimizer_updates": 100,
+      "initial_state_sha256": {
+        "model": "29421214a975ce8c4ea48bebcc9d85d6b1f6c068ec99dd94407e4634fe024517",
+        "optimizer": "fa566b109864687fdf5eacb2166587d9740e655e0b0ef1e4aca0310d88c65d79",
+        "scheduler": "c3d2bf3ec7b44ea164ca8679a69c76680358a732e620bdd384ada5d576e548da",
+        "scaler": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rng": "5f95729219bc511ea6a7e513a7cb9a804a034bb6163d5e496069440d82f08fa5"
+      },
+      "random_trace_sha256": "48336d80a7ff2743d94905bdfc2ac2644733f2b75ee731fac5e80aab8b4132ac",
+      "end_rng_sha256": "30c0e65abdb02b5a81516307b0bb7d05c02f168ee2a241226d26f0e5feabf08f",
+      "seconds": 7.50904015399999
+    }
+  ],
+  "results": [
+    {
+      "split": "train",
+      "model": "baseline",
+      "frames": 18,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.52788659025139,
+      "pred_mean_bone_length_raw": 17.389674950883634,
+      "bone_length_ratio_pct": 93.8567648618562,
+      "mean_individual_bone_ratio_pct": 96.56149132638079,
+      "gt_joint_spread_rms_raw": 46.32113187603804,
+      "pred_joint_spread_rms_raw": 44.90748967576524,
+      "joint_spread_ratio_pct": 96.94816999710649,
+      "mean_frame_spread_ratio_pct": 96.95375203412294,
+      "global_joint_error_raw": 7.513105191226683,
+      "root_relative_error_22_raw": 5.8661515724106135,
+      "root_relative_error_nonroot_21_raw": 6.145492123477785,
+      "pelvis_position_error_raw": 5.410768680735043,
+      "gt_mean_displacement_raw": 2.425614919214052,
+      "pred_mean_displacement_raw": 0.7965355708067628,
+      "motion_magnitude_ratio_pct": 32.83850064151388,
+      "frame_displacement_error_raw": 1.8255933562397995,
+      "root_relative_motion_ratio_pct": 30.593690915314216,
+      "gt_displacement_rms_raw": 4.144487503561436,
+      "valid_bone_observations": 378,
+      "valid_adjacent_joint_pairs": 374
+    },
+    {
+      "split": "holdout",
+      "model": "baseline",
+      "frames": 130,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.527898824960616,
+      "pred_mean_bone_length_raw": 17.34311987948663,
+      "bone_length_ratio_pct": 93.60543277644703,
+      "mean_individual_bone_ratio_pct": 96.69939661910034,
+      "gt_joint_spread_rms_raw": 47.09965787192727,
+      "pred_joint_spread_rms_raw": 44.33601845992307,
+      "joint_spread_ratio_pct": 94.13235777737695,
+      "mean_frame_spread_ratio_pct": 94.1327328811036,
+      "global_joint_error_raw": 12.232005531847644,
+      "root_relative_error_22_raw": 11.35419077914608,
+      "root_relative_error_nonroot_21_raw": 11.894866530533989,
+      "pelvis_position_error_raw": 3.675858589676118,
+      "gt_mean_displacement_raw": 0.7046735537677824,
+      "pred_mean_displacement_raw": 0.2840873124668573,
+      "motion_magnitude_ratio_pct": 40.314740201031476,
+      "frame_displacement_error_raw": 0.5034995270180372,
+      "root_relative_motion_ratio_pct": 26.12742342351399,
+      "gt_displacement_rms_raw": 1.035933370066571,
+      "valid_bone_observations": 2730,
+      "valid_adjacent_joint_pairs": 2838
+    },
+    {
+      "split": "train",
+      "model": "control",
+      "frames": 18,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.52788659025139,
+      "pred_mean_bone_length_raw": 17.99523064315576,
+      "bone_length_ratio_pct": 97.1251122220497,
+      "mean_individual_bone_ratio_pct": 99.65713988719641,
+      "gt_joint_spread_rms_raw": 46.32113187603804,
+      "pred_joint_spread_rms_raw": 45.578705121525225,
+      "joint_spread_ratio_pct": 98.39721802027711,
+      "mean_frame_spread_ratio_pct": 98.40139128883548,
+      "global_joint_error_raw": 6.30703422531544,
+      "root_relative_error_22_raw": 4.726227668238818,
+      "root_relative_error_nonroot_21_raw": 4.951286128631142,
+      "pelvis_position_error_raw": 3.7946891035957253,
+      "gt_mean_displacement_raw": 2.425614919214052,
+      "pred_mean_displacement_raw": 1.1663532276073316,
+      "motion_magnitude_ratio_pct": 48.084847201766614,
+      "frame_displacement_error_raw": 1.6696880274544756,
+      "root_relative_motion_ratio_pct": 45.57203069724499,
+      "gt_displacement_rms_raw": 4.144487503561436,
+      "valid_bone_observations": 378,
+      "valid_adjacent_joint_pairs": 374
+    },
+    {
+      "split": "holdout",
+      "model": "control",
+      "frames": 130,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.527898824960616,
+      "pred_mean_bone_length_raw": 18.171271864821385,
+      "bone_length_ratio_pct": 98.07518940216369,
+      "mean_individual_bone_ratio_pct": 102.54373509791428,
+      "gt_joint_spread_rms_raw": 47.09965787192727,
+      "pred_joint_spread_rms_raw": 45.64821474652711,
+      "joint_spread_ratio_pct": 96.91835739158253,
+      "mean_frame_spread_ratio_pct": 96.91855716503457,
+      "global_joint_error_raw": 11.262095337846159,
+      "root_relative_error_22_raw": 10.195808570171597,
+      "root_relative_error_nonroot_21_raw": 10.68132326398929,
+      "pelvis_position_error_raw": 5.399482039565052,
+      "gt_mean_displacement_raw": 0.7046735537677824,
+      "pred_mean_displacement_raw": 0.4117114750466139,
+      "motion_magnitude_ratio_pct": 58.42584454110066,
+      "frame_displacement_error_raw": 0.47413196272075103,
+      "root_relative_motion_ratio_pct": 35.6354605147021,
+      "gt_displacement_rms_raw": 1.035933370066571,
+      "valid_bone_observations": 2730,
+      "valid_adjacent_joint_pairs": 2838
+    },
+    {
+      "split": "train",
+      "model": "improved",
+      "frames": 18,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.52788659025139,
+      "pred_mean_bone_length_raw": 18.592147493842823,
+      "bone_length_ratio_pct": 100.34683342473201,
+      "mean_individual_bone_ratio_pct": 104.73312552173475,
+      "gt_joint_spread_rms_raw": 46.32113187603804,
+      "pred_joint_spread_rms_raw": 48.595934767256594,
+      "joint_spread_ratio_pct": 104.91093977864412,
+      "mean_frame_spread_ratio_pct": 104.91513666754739,
+      "global_joint_error_raw": 5.344632519407109,
+      "root_relative_error_22_raw": 5.282717660961421,
+      "root_relative_error_nonroot_21_raw": 5.534275644816727,
+      "pelvis_position_error_raw": 2.454304689136179,
+      "gt_mean_displacement_raw": 2.425614919214052,
+      "pred_mean_displacement_raw": 1.8272131160541398,
+      "motion_magnitude_ratio_pct": 75.32989270391664,
+      "frame_displacement_error_raw": 1.4508269534760088,
+      "root_relative_motion_ratio_pct": 70.69906277852951,
+      "gt_displacement_rms_raw": 4.144487503561436,
+      "valid_bone_observations": 378,
+      "valid_adjacent_joint_pairs": 374
+    },
+    {
+      "split": "holdout",
+      "model": "improved",
+      "frames": 130,
+      "joints": 22,
+      "edges": 21,
+      "gt_mean_bone_length_raw": 18.527898824960616,
+      "pred_mean_bone_length_raw": 18.82157433395018,
+      "bone_length_ratio_pct": 101.5850448653893,
+      "mean_individual_bone_ratio_pct": 108.51875808607308,
+      "gt_joint_spread_rms_raw": 47.09965787192727,
+      "pred_joint_spread_rms_raw": 48.747811845092166,
+      "joint_spread_ratio_pct": 103.49929075418454,
+      "mean_frame_spread_ratio_pct": 103.49932600595974,
+      "global_joint_error_raw": 11.140966427296918,
+      "root_relative_error_22_raw": 10.167561947210485,
+      "root_relative_error_nonroot_21_raw": 10.651731563744317,
+      "pelvis_position_error_raw": 6.580614457610461,
+      "gt_mean_displacement_raw": 0.7046735537677824,
+      "pred_mean_displacement_raw": 0.6660816195040538,
+      "motion_magnitude_ratio_pct": 94.52343087698077,
+      "frame_displacement_error_raw": 0.4378627946712455,
+      "root_relative_motion_ratio_pct": 58.64325343117828,
+      "gt_displacement_rms_raw": 1.035933370066571,
+      "valid_bone_observations": 2730,
+      "valid_adjacent_joint_pairs": 2838
+    }
+  ],
+  "baseline_reproduction": {
+    "train": {
+      "max_coordinate_difference_raw": 5.340576171875e-05,
+      "global_error_difference_raw": 5.855380713626346e-08,
+      "status": "PASS"
+    },
+    "holdout": {
+      "max_coordinate_difference_raw": 5.340576171875e-05,
+      "global_error_difference_raw": 3.0776833046530783e-06,
+      "status": "PASS"
+    }
+  },
+  "evaluation_noise_sha256": {
+    "baseline": {
+      "train": "ff97a35f88e9924fb8c0bf3927f654f9278611c3f890ed5c26019d833044926f",
+      "holdout": "2558934249cba514023b1c2e153afea9eb23ea76b0dc15f0b19da8d09ee1067c"
+    },
+    "control": {
+      "train": "ff97a35f88e9924fb8c0bf3927f654f9278611c3f890ed5c26019d833044926f",
+      "holdout": "2558934249cba514023b1c2e153afea9eb23ea76b0dc15f0b19da8d09ee1067c"
+    },
+    "improved": {
+      "train": "ff97a35f88e9924fb8c0bf3927f654f9278611c3f890ed5c26019d833044926f",
+      "holdout": "2558934249cba514023b1c2e153afea9eb23ea76b0dc15f0b19da8d09ee1067c"
+    }
+  },
+  "baseline_unchanged": true
+}

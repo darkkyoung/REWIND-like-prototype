@@ -1,0 +1,16 @@
+{
+  "arm": "control",
+  "checkpoint_sha256": "1981b7ff9a5b7069629f5de2dc265014fcdd30d3d1744dea39b1d4aebeb02333",
+  "step": 400,
+  "additional_optimizer_updates": 100,
+  "initial_state_sha256": {
+    "model": "29421214a975ce8c4ea48bebcc9d85d6b1f6c068ec99dd94407e4634fe024517",
+    "optimizer": "fa566b109864687fdf5eacb2166587d9740e655e0b0ef1e4aca0310d88c65d79",
+    "scheduler": "c3d2bf3ec7b44ea164ca8679a69c76680358a732e620bdd384ada5d576e548da",
+    "scaler": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rng": "5f95729219bc511ea6a7e513a7cb9a804a034bb6163d5e496069440d82f08fa5"
+  },
+  "random_trace_sha256": "48336d80a7ff2743d94905bdfc2ac2644733f2b75ee731fac5e80aab8b4132ac",
+  "end_rng_sha256": "30c0e65abdb02b5a81516307b0bb7d05c02f168ee2a241226d26f0e5feabf08f",
+  "seconds": 8.743621999000027
+}
