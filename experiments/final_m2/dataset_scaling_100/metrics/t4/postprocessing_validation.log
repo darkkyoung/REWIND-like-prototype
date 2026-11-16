@@ -1,0 +1,9 @@
+Full T4 archive size, SHA-256 and ZIP CRC: PASS (31 entries)
+Original result checksums: 29/29 PASS
+Prediction metric recomputation: 8/8 groups, 36 metrics per group PASS
+Checkpoint SHA-256, step, optimizer and scheduler state: 8/8 PASS
+Full random traces: 2 x 400 PASS
+Original training CSV/JSONL correspondence: 2 x 400 PASS
+Prior Control400 published NPZ SHA-256: MATCH
+Prior Control400 separate NPZ comparison: NOT VERIFIED
+Figure and GIF byte-for-byte regeneration: 10/10 PASS

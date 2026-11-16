@@ -1,0 +1,47 @@
+{
+  "opening_comparison_motion.gif": {
+    "frames": 130,
+    "size": [
+      1020,
+      340
+    ],
+    "display_duration_ms": 100
+  },
+  "opening_train18_motion.gif": {
+    "frames": 130,
+    "size": [
+      340,
+      340
+    ],
+    "display_duration_ms": 100
+  },
+  "opening_train100_motion.gif": {
+    "frames": 130,
+    "size": [
+      340,
+      340
+    ],
+    "display_duration_ms": 100
+  },
+  "training_loss.png": {
+    "status": "decoded"
+  },
+  "skeleton_visualization.png": {
+    "status": "decoded"
+  },
+  "bone_length_comparison.png": {
+    "status": "decoded"
+  },
+  "joint_spread_comparison.png": {
+    "status": "decoded"
+  },
+  "root_relative_comparison.png": {
+    "status": "decoded"
+  },
+  "per_motion_comparison.png": {
+    "status": "decoded"
+  },
+  "frame_displacement_comparison.png": {
+    "status": "decoded"
+  }
+}

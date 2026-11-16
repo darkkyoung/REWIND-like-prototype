@@ -1,0 +1,15 @@
+test_causal_no_future (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_causal_no_future) ... ok
+test_coordinate_mismatch_rejected (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_coordinate_mismatch_rejected) ... ok
+test_direction_vs_magnitude (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_direction_vs_magnitude) ... ok
+test_exact_prefix_and_cardinality (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_exact_prefix_and_cardinality) ... ok
+test_gap_and_sequence_reset (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_gap_and_sequence_reset) ... ok
+test_initial_weights_rng_exact (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_initial_weights_rng_exact) ... ok
+test_missing_2d_mask_and_invalid_3d (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_missing_2d_mask_and_invalid_3d) ... ok
+test_no_holdout_leakage (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_no_holdout_leakage) ... ok
+test_real_parameter_update_finite (experiments.final_m2.dataset_scaling_100.test_scaling.ScalingTests.test_real_parameter_update_finite) ... {"model": "cpu_unit", "step": 2, "loss": 0.7178763151168823, "x0_loss": 0.5885155200958252, "aux_position_loss": 0.12936082482337952, "lr_used": 0.001, "lr_next": 0.001, "elapsed_seconds": 0.21748990700052673}
+ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.000s
+
+OK

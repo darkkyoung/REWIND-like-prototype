@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "source": "existing Colab notebook final output link",
+  "archive": "REWIND_M2_Scaling100_T4_raw.zip",
+  "expected_archive_bytes": 12373875,
+  "verified_archive_bytes": 12373875,
+  "expected_archive_sha256": "4ee135ed64654aa563c975fdca748eba102615ccda633b050166b9f93793c024",
+  "verified_archive_sha256": "4ee135ed64654aa563c975fdca748eba102615ccda633b050166b9f93793c024",
+  "full_archive_sha_verified": true,
+  "complete_entries_crc_verified": 32,
+  "original_checksums_verified": 29,
+  "recovered": [
+    {
+      "file": "bone_length_by_edge.csv",
+      "bytes": 22963,
+      "sha256": "10776de58078d0501551e8646afcca24e889a9f43834834087c39b19b610807b"
+    },
+    {
+      "file": "checksums.json",
+      "bytes": 2809,
+      "sha256": "260b572f30edae986d1b7c758b2e2ecdc37dfb0d410fb5c56fb459a92629b348"
+    },
+    {
+      "file": "colab_regression_tests.log",
+      "bytes": 1721,
+      "sha256": "42405e23466022581ba2c0ddf436afe2e7d29dee4e74f25cce02aa674511f5a9"
+    },
+    {
+      "file": "comparison.csv",
+      "bytes": 5838,
+      "sha256": "07dc1a1f4194cabbbb642dc3b61478d62a6af9537e56a132eaaaae3822c3dc71"
+    },
+    {
+      "file": "console.log",
+      "bytes": 10773,
+      "sha256": "5c2f24583ecbfa8b07fc2f909211312ce2b4e11842d80988056a4dad1957b229"
+    },
+    {
+      "file": "dodging32_train100_predictions.npz",
+      "bytes": 16991,
+      "sha256": "7750e9ffdd3a24e067943f8abe93cee04c04d2f77dcef56b18aaa36c5de8efb1"
+    },
+    {
+      "file": "dodging32_train18_predictions.npz",
+      "bytes": 17020,
+      "sha256": "a649044734cb1985a7b7bf680ce0142816663b26aaea14a90e4d286c10363d0c"
+    },
+    {
+      "file": "evaluation.json",
+      "bytes": 22988,
+      "sha256": "dce2ec34ec6553770a2b5319b82275f588fce156b333266481b59d655ce78fd9"
+    },
+    {
+      "file": "experiment_identity.json",
+      "bytes": 1380,
+      "sha256": "ed12c7d29d7491d928936e9a24eeecc8bc3fca5ff58ae5e4ef06f2d87c8f5e01"
+    },
+    {
+      "file": "frame_comparison.csv",
+      "bytes": 94537,
+      "sha256": "55583bef14f5338ec64c9e12a942e96a3cc4098c2b31ae97fce20e1134daddb0"
+    },
+    {
+      "file": "opening130_train100_predictions.npz",
+      "bytes": 65181,
+      "sha256": "4ee2d4d14b258a8977d5e24c1d854e7907a3f1ec1cf55fa81b1e29d2c73cc5c7"
+    },
+    {
+      "file": "opening130_train18_predictions.npz",
+      "bytes": 65351,
+      "sha256": "73813c7c3dd4e5593144fac45b29189922c2030c1fae25b1bdce5862edc25190"
+    },
+    {
+      "file": "standing50_train100_predictions.npz",
+      "bytes": 25889,
+      "sha256": "b9166bc0d576891be9649367c45e2218a187306ba6cd7689d5f64eba06c4e82c"
+    },
+    {
+      "file": "standing50_train18_predictions.npz",
+      "bytes": 25824,
+      "sha256": "30c60a355c03568c2e1943fd2b84a78ba9e1a3bec3411f324d76bacb084ab813"
+    },
+    {
+      "file": "train100_100.pt",
+      "bytes": 1737222,
+      "sha256": "0eda641ce7555dbcfa6b287bce9ba3c866fa0d097d30c7115bd40d9c4d29eb62"
+    },
+    {
+      "file": "train100_200.pt",
+      "bytes": 1737222,
+      "sha256": "59a1cac5f6a582b7fa2ab64c57fc8fe30164e5d4fd4542f9e75bf0448303b5d3"
+    },
+    {
+      "file": "train100_300.pt",
+      "bytes": 1737222,
+      "sha256": "432066e0d6631e048fe2ab5d7620a31d0161b1bb11263b43a132305625d4d66c"
+    },
+    {
+      "file": "train100_400.pt",
+      "bytes": 1737222,
+      "sha256": "a88d8787d4f9a6cb7851367253a70254915d4040f5b90332cf3a181953a28b40"
+    },
+    {
+      "file": "train100_identity.json",
+      "bytes": 2217,
+      "sha256": "49e2e78abc8da0a6c1260c54ac959de42aca4c2059f8530da1e801defd4fc561"
+    },
+    {
+      "file": "train100_random_trace.json",
+      "bytes": 130831,
+      "sha256": "18a7dd4c27394fc5b7aaebd1d067b42a50d250fedafcc07ae715d446d9f8a4c4"
+    },
+    {
+      "file": "train100_training.csv",
+      "bytes": 42548,
+      "sha256": "26cf5fb1f70331ba7c178f9f7636a12a2c4a192c6ce184b6d512144a03ec85de"
+    },
+    {
+      "file": "train100_training.jsonl",
+      "bytes": 86074,
+      "sha256": "c2d50ca92ace372ba99e98ded098c9879005aedc5515b703a29ae0534382ff01"
+    },
+    {
+      "file": "train18_100.pt",
+      "bytes": 1736989,
+      "sha256": "112fdc300ac069728c48f51e2ba7c98e7a3185765a5192e6cbed4109ff59c988"
+    },
+    {
+      "file": "train18_200.pt",
+      "bytes": 1736989,
+      "sha256": "7833c7122d07359441ed2f5b036d0670dc5efe666857745b9f14e3facf7e6e3a"
+    },
+    {
+      "file": "train18_300.pt",
+      "bytes": 1736989,
+      "sha256": "cfe91c0633c109ef296b2bc4fec4a8526eb37b5ee33937a3d28575c1a7983ef7"
+    },
+    {
+      "file": "train18_400.pt",
+      "bytes": 1736989,
+      "sha256": "d65d326b1ca565d450d9c2dfb82e60283981f850bd77257482230f16fc2b045a"
+    },
+    {
+      "file": "train18_identity.json",
+      "bytes": 1573,
+      "sha256": "2c92187f87e43a65a4a65a4d479887bb7e7bb6c5a53f3d7beb1857998fbef8e1"
+    },
+    {
+      "file": "train18_random_trace.json",
+      "bytes": 129402,
+      "sha256": "249bee5afbafae5db1ccd7e93d30b026fa7e4582043bd64326a2d2201892d947"
+    },
+    {
+      "file": "train18_train100_predictions.npz",
+      "bytes": 10110,
+      "sha256": "a847917dfce6208388b0101865590ad619db39f680c0897f01c1cdc1950241a3"
+    },
+    {
+      "file": "train18_train18_predictions.npz",
+      "bytes": 10114,
+      "sha256": "b11d614ef4a244f2374469a2eaf25154fa6bc6fe606f3d425031d457ae63454c"
+    },
+    {
+      "file": "train18_training.csv",
+      "bytes": 42704,
+      "sha256": "9c5a94ccb45c351990d5683c5c2390ab4631668770bb2128d4d9625bf98f5199"
+    },
+    {
+      "file": "train18_training.jsonl",
+      "bytes": 86230,
+      "sha256": "63efc60554691a7cbebdfbba51f1526037083e02b85f9bd012208d1ff96b74bf"
+    }
+  ],
+  "missing_files": [],
+  "additional_entries_recovered_since_partial": [
+    "console.log",
+    "train100_400.pt",
+    "train100_identity.json",
+    "train100_random_trace.json",
+    "train100_training.csv",
+    "train100_training.jsonl",
+    "train18_100.pt",
+    "train18_200.pt",
+    "train18_300.pt",
+    "train18_400.pt",
+    "train18_identity.json",
+    "train18_random_trace.json",
+    "train18_train100_predictions.npz",
+    "train18_train18_predictions.npz",
+    "train18_training.csv",
+    "train18_training.jsonl"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "fde_improved_segments": 121,
+  "fde_worsened_segments": 8,
+  "best_frames": [
+    {
+      "frame": 62,
+      "control_fde": 1.1860686832812244,
+      "expanded_fde": 0.6984187347909562
+    },
+    {
+      "frame": 45,
+      "control_fde": 1.2673923357646422,
+      "expanded_fde": 0.8254263187276956
+    },
+    {
+      "frame": 61,
+      "control_fde": 1.0568118024506867,
+      "expanded_fde": 0.6732784703726828
+    },
+    {
+      "frame": 63,
+      "control_fde": 0.8685106454191458,
+      "expanded_fde": 0.49165817613520363
+    },
+    {
+      "frame": 91,
+      "control_fde": 0.7677234220679862,
+      "expanded_fde": 0.39311085003650964
+    }
+  ],
+  "worst_frames": [
+    {
+      "frame": 106,
+      "control_fde": 0.35283307539097025,
+      "expanded_fde": 0.4080577496655822
+    },
+    {
+      "frame": 105,
+      "control_fde": 0.36352237798757264,
+      "expanded_fde": 0.4150283576913058
+    },
+    {
+      "frame": 107,
+      "control_fde": 0.3742038775964268,
+      "expanded_fde": 0.4184158056572484
+    },
+    {
+      "frame": 104,
+      "control_fde": 0.40498331749201577,
+      "expanded_fde": 0.43058569115402906
+    },
+    {
+      "frame": 108,
+      "control_fde": 0.37099992627480366,
+      "expanded_fde": 0.3958308838585994
+    }
+  ],
+  "root_relative_mean_pose_bias_raw": {
+    "train18": 9.23151554274347,
+    "train100": 7.327887571342419
+  },
+  "bone_rows": [
+    {
+      "bone": "pelvis -> spine_01",
+      "mean_ratio_pct": 78.62611934594231,
+      "min_ratio_pct": 77.36983607958597,
+      "min_frame": 88
+    },
+    {
+      "bone": "spine_01 -> spine_02",
+      "mean_ratio_pct": 79.93211489851397,
+      "min_ratio_pct": 78.46962101460247,
+      "min_frame": 94
+    },
+    {
+      "bone": "spine_02 -> spine_03",
+      "mean_ratio_pct": 115.00770231801938,
+      "min_ratio_pct": 110.9123583124769,
+      "min_frame": 91
+    },
+    {
+      "bone": "spine_03 -> neck_01",
+      "mean_ratio_pct": 91.81411547279828,
+      "min_ratio_pct": 88.40814204945019,
+      "min_frame": 92
+    },
+    {
+      "bone": "neck_01 -> head",
+      "mean_ratio_pct": 78.65832827675575,
+      "min_ratio_pct": 72.81548348248286,
+      "min_frame": 89
+    },
+    {
+      "bone": "spine_03 -> clavicle_l",
+      "mean_ratio_pct": 94.84272390285278,
+      "min_ratio_pct": 89.25374587655021,
+      "min_frame": 115
+    },
+    {
+      "bone": "clavicle_l -> upperarm_l",
+      "mean_ratio_pct": 79.69484820201878,
+      "min_ratio_pct": 74.14016660392984,
+      "min_frame": 125
+    },
+    {
+      "bone": "upperarm_l -> lowerarm_l",
+      "mean_ratio_pct": 73.335418766789,
+      "min_ratio_pct": 70.6692011669595,
+      "min_frame": 92
+    },
+    {
+      "bone": "lowerarm_l -> hand_l",
+      "mean_ratio_pct": 62.2871152183555,
+      "min_ratio_pct": 59.103559452564305,
+      "min_frame": 24
+    },
+    {
+      "bone": "pelvis -> thigh_l",
+      "mean_ratio_pct": 137.26977458327858,
+      "min_ratio_pct": 133.24180019963262,
+      "min_frame": 115
+    },
+    {
+      "bone": "thigh_l -> calf_l",
+      "mean_ratio_pct": 71.44016672598362,
+      "min_ratio_pct": 68.87269187030151,
+      "min_frame": 119
+    },
+    {
+      "bone": "calf_l -> foot_l",
+      "mean_ratio_pct": 124.5601930761522,
+      "min_ratio_pct": 123.10772443441029,
+      "min_frame": 116
+    },
+    {
+      "bone": "foot_l -> ball_l",
+      "mean_ratio_pct": 104.39906675805324,
+      "min_ratio_pct": 101.51850307444624,
+      "min_frame": 8
+    },
+    {
+      "bone": "spine_03 -> clavicle_r",
+      "mean_ratio_pct": 103.18129493816583,
+      "min_ratio_pct": 96.41980602108126,
+      "min_frame": 108
+    },
+    {
+      "bone": "clavicle_r -> upperarm_r",
+      "mean_ratio_pct": 85.08659748892444,
+      "min_ratio_pct": 76.29294868681092,
+      "min_frame": 4
+    },
+    {
+      "bone": "upperarm_r -> lowerarm_r",
+      "mean_ratio_pct": 78.46562613876903,
+      "min_ratio_pct": 70.90467517893453,
+      "min_frame": 101
+    },
+    {
+      "bone": "lowerarm_r -> hand_r",
+      "mean_ratio_pct": 76.84391936321072,
+      "min_ratio_pct": 50.84789415151152,
+      "min_frame": 104
+    },
+    {
+      "bone": "pelvis -> thigh_r",
+      "mean_ratio_pct": 117.40488636441198,
+      "min_ratio_pct": 112.1977878656447,
+      "min_frame": 76
+    },
+    {
+      "bone": "thigh_r -> calf_r",
+      "mean_ratio_pct": 73.18994755868475,
+      "min_ratio_pct": 71.99066849342195,
+      "min_frame": 108
+    },
+    {
+      "bone": "calf_r -> foot_r",
+      "mean_ratio_pct": 117.53854903148833,
+      "min_ratio_pct": 114.37007866702145,
+      "min_frame": 116
+    },
+    {
+      "bone": "foot_r -> ball_r",
+      "mean_ratio_pct": 103.87790795876128,
+      "min_ratio_pct": 100.42001956762356,
+      "min_frame": 79
+    }
+  ]
+}

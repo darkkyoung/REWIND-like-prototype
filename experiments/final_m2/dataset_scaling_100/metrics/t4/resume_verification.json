@@ -1,0 +1,312 @@
+{
+  "date_kst": "2026-11-16",
+  "execution_source_sha": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+  "previous_reported_local_commit": "0b75b9a974f4e0ac00b4534df0561055ec09912f",
+  "previous_reported_local_commit_access": "NOT VERIFIED in fresh clone",
+  "artifact_recovery_status": "PASS",
+  "input_partial_zip_sha256": "c04092dc73eb6b5affb3bb1fd73fd5a7c5c8b1bf0d7a09c1370685f9dbc0ed0f",
+  "input_partial_zip_crc_entries": 186,
+  "input_partial_package_member_sha256_checks": 185,
+  "input_partial_original_t4_member_sha256_checks": 14,
+  "attached_report_sha256": "b9a86453e5489c5aec0e9055ba8f9fe713a06e1d55f6f33bf1a0a18ef103fd3f",
+  "standalone_report_matches_package": true,
+  "input_file_sha_checks": 9,
+  "raw_pose_sha_checks": 100,
+  "cpu_unit_and_regression_tests": 30,
+  "prediction_groups_recomputed": 8,
+  "metrics_per_prediction_group": 36,
+  "metric_tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-12
+  },
+  "checkpoints_byte_and_state_verified": 8,
+  "prior_control400_npz_digest_match": "73813c7c3dd4e5593144fac45b29189922c2030c1fae25b1bdce5862edc25190",
+  "prior_control400_direct_array_comparison": "NOT VERIFIED",
+  "figures_reproduced_byte_identically": 10,
+  "new_full_training_runs": 0,
+  "new_inference_runs": 0,
+  "missing_checksummed_files": [],
+  "independent_checks": {
+    "input_rows_verified": 100,
+    "prior_train_pose_sha_count": 18,
+    "reference_holdout_hashes_compared_for_overlap": 130,
+    "input_coordinate_maxima_raw": {
+      "world_camera_max_abs_raw": 9.947598300641403e-14,
+      "camera_device_max_abs_raw": 2.842170943040401e-14,
+      "metadata_max_abs_raw": 2.6645352591003757e-15
+    },
+    "tensor_sets_rebuilt_from_raw_train_pose": [
+      "train18",
+      "train100",
+      "standing50",
+      "dodging32"
+    ],
+    "prediction_metadata_and_gt_checks": 8,
+    "prediction_gt_vs_cpu_fp32_roundtrip_max_abs_raw": 7.62939453125e-06,
+    "pinned_execution_code_files": 7,
+    "notebook_sha256": "4a96ee3c60de73cdb15b74a6043ac8e8954b83695e87f60f3dd19ad59cc6b6d4",
+    "console_observations_matched_to_exact_loss_rows": 8,
+    "training_rows_per_format_per_arm": 400,
+    "random_trace_rows_per_arm": 400,
+    "checkpoint_verification": {
+      "train18_100.pt": {
+        "step": 100,
+        "optimizer_parameter_states": 55,
+        "sha256": "112fdc300ac069728c48f51e2ba7c98e7a3185765a5192e6cbed4109ff59c988"
+      },
+      "train18_200.pt": {
+        "step": 200,
+        "optimizer_parameter_states": 55,
+        "sha256": "7833c7122d07359441ed2f5b036d0670dc5efe666857745b9f14e3facf7e6e3a"
+      },
+      "train18_300.pt": {
+        "step": 300,
+        "optimizer_parameter_states": 55,
+        "sha256": "cfe91c0633c109ef296b2bc4fec4a8526eb37b5ee33937a3d28575c1a7983ef7"
+      },
+      "train18_400.pt": {
+        "step": 400,
+        "optimizer_parameter_states": 55,
+        "sha256": "d65d326b1ca565d450d9c2dfb82e60283981f850bd77257482230f16fc2b045a"
+      },
+      "train100_100.pt": {
+        "step": 100,
+        "optimizer_parameter_states": 55,
+        "sha256": "0eda641ce7555dbcfa6b287bce9ba3c866fa0d097d30c7115bd40d9c4d29eb62"
+      },
+      "train100_200.pt": {
+        "step": 200,
+        "optimizer_parameter_states": 55,
+        "sha256": "59a1cac5f6a582b7fa2ab64c57fc8fe30164e5d4fd4542f9e75bf0448303b5d3"
+      },
+      "train100_300.pt": {
+        "step": 300,
+        "optimizer_parameter_states": 55,
+        "sha256": "432066e0d6631e048fe2ab5d7620a31d0161b1bb11263b43a132305625d4d66c"
+      },
+      "train100_400.pt": {
+        "step": 400,
+        "optimizer_parameter_states": 55,
+        "sha256": "a88d8787d4f9a6cb7851367253a70254915d4040f5b90332cf3a181953a28b40"
+      }
+    },
+    "figures": {
+      "bone_length_comparison.png": {
+        "frame_count": 1,
+        "size_px": [
+          1540,
+          1120
+        ],
+        "sha256": "aa2734723007147b2a3eb5880f5f57d93add9802c44d631db1bb6f0702116a2e"
+      },
+      "frame_displacement_comparison.png": {
+        "frame_count": 1,
+        "size_px": [
+          1820,
+          1120
+        ],
+        "sha256": "5b57278aae91178eae20791d484c73b33d5df5f59bc0b53653b23bb289869d49"
+      },
+      "joint_spread_comparison.png": {
+        "frame_count": 1,
+        "size_px": [
+          1400,
+          560
+        ],
+        "sha256": "69cb9bfcc08b5e803ede029c40b8ab8f616b889374a4e3465c6282806d9724fc"
+      },
+      "opening_comparison_motion.gif": {
+        "frame_count": 130,
+        "size_px": [
+          1020,
+          340
+        ],
+        "sha256": "ff85ee10b018867357fb7b26c0746886cc6b71dd45b06ab4ad92f4b8e9d7ef11"
+      },
+      "opening_train100_motion.gif": {
+        "frame_count": 130,
+        "size_px": [
+          340,
+          340
+        ],
+        "sha256": "1ff6fd96024b37c98bc81430c6d32f97cc8784666382c667288ff4e8d20292e0"
+      },
+      "opening_train18_motion.gif": {
+        "frame_count": 130,
+        "size_px": [
+          340,
+          340
+        ],
+        "sha256": "8b68e92f4e7ca1ec26791d4b74ea88ccf050f285017e31d7664c4dd2639cb5f9"
+      },
+      "per_motion_comparison.png": {
+        "frame_count": 1,
+        "size_px": [
+          1820,
+          560
+        ],
+        "sha256": "462e0baeb749bf2ac44c03e70370014ba532fc509452e0c076b57cfc734f3e92"
+      },
+      "root_relative_comparison.png": {
+        "frame_count": 1,
+        "size_px": [
+          1440,
+          1920
+        ],
+        "sha256": "026029ef33bea0ac737cf80402bb32daffe83a464d594719e9a2d90b18e00bc1"
+      },
+      "skeleton_visualization.png": {
+        "frame_count": 1,
+        "size_px": [
+          1440,
+          1920
+        ],
+        "sha256": "f9896dbc94b73b344decfa7d60f2b5922963b1bf851097fb8b3ed4ca92ac7e34"
+      },
+      "training_loss.png": {
+        "frame_count": 1,
+        "size_px": [
+          1260,
+          560
+        ],
+        "sha256": "b63497294b25558b5498b41667fe248f0520566dd9da4d0e6e56381f3de18408"
+      }
+    },
+    "recomputed_shared_axes": {
+      "skeleton_visualization.png": [
+        [
+          -86.96507263183594,
+          71.82536315917969
+        ],
+        [
+          -66.19335174560547,
+          92.59708404541016
+        ],
+        [
+          -4.993690490722656,
+          153.7967529296875
+        ]
+      ],
+      "root_relative_comparison.png": [
+        [
+          -86.08573913574219,
+          70.97248840332031
+        ],
+        [
+          -59.997947692871094,
+          97.0602798461914
+        ],
+        [
+          -66.73799133300781,
+          90.32023620605469
+        ]
+      ]
+    }
+  },
+  "previous_partial_verification": {
+    "date_kst": "2026-11-16",
+    "fresh_fetch_completed": true,
+    "execution_source_sha": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+    "preserved_result_commit": "0b75b9a974f4e0ac00b4534df0561055ec09912f",
+    "input_file_sha_checks": 9,
+    "raw_pose_sha_checks": 100,
+    "prediction_groups_recomputed": 6,
+    "checkpoints_byte_verified": 3,
+    "input_unit_tests": 9,
+    "new_full_training_runs": 0,
+    "new_inference_runs": 0,
+    "artifact_recovery_status": "PARTIAL",
+    "browser_recovery_status": "existing tab belongs to previous session; new connection approval session failed",
+    "saved_notebook_size_bytes": 333695,
+    "missing_checksummed_files": [
+      "train100_400.pt",
+      "train100_identity.json",
+      "train100_random_trace.json",
+      "train100_training.csv",
+      "train100_training.jsonl",
+      "train18_100.pt",
+      "train18_200.pt",
+      "train18_300.pt",
+      "train18_400.pt",
+      "train18_identity.json",
+      "train18_random_trace.json",
+      "train18_train100_predictions.npz",
+      "train18_train18_predictions.npz",
+      "train18_training.csv",
+      "train18_training.jsonl"
+    ],
+    "figures": {
+      "training_loss.png": {
+        "size": [
+          1260,
+          560
+        ],
+        "frames": 1
+      },
+      "skeleton_visualization.png": {
+        "size": [
+          1440,
+          1920
+        ],
+        "frames": 1
+      },
+      "bone_length_comparison.png": {
+        "size": [
+          1540,
+          1120
+        ],
+        "frames": 1
+      },
+      "joint_spread_comparison.png": {
+        "size": [
+          1400,
+          560
+        ],
+        "frames": 1
+      },
+      "opening_comparison_motion.gif": {
+        "size": [
+          1020,
+          340
+        ],
+        "frames": 130
+      },
+      "root_relative_comparison.png": {
+        "size": [
+          1440,
+          1920
+        ],
+        "frames": 1
+      },
+      "opening_train18_motion.gif": {
+        "size": [
+          340,
+          340
+        ],
+        "frames": 130
+      },
+      "per_motion_comparison.png": {
+        "size": [
+          1820,
+          560
+        ],
+        "frames": 1
+      },
+      "frame_displacement_comparison.png": {
+        "size": [
+          1820,
+          1120
+        ],
+        "frames": 1
+      },
+      "opening_train100_motion.gif": {
+        "size": [
+          340,
+          340
+        ],
+        "frames": 130
+      }
+    },
+    "korean_git_commit_skill": "not installed; repository fallback Korean commit format used"
+  }
+}
