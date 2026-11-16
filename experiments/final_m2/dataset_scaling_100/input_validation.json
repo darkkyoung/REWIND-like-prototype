@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "train18_exact_tensor_equality": true,
+  "train18_file_sha256": "2eab2d6426aea0340a5f0d8624ae9e199ad66c917fe2f2905c5d928186f1d1ef",
+  "unique_train_frames": 100,
+  "unique_payload_hashes": 100,
+  "new_train_frames": 82,
+  "holdout_overlap_keys": 0,
+  "holdout_overlap_payload_sha": 0,
+  "holdout_overlap_exact_pose": 0,
+  "motion_name_overlap": false,
+  "body22_complete_finite": true,
+  "stereo_native_resolution": [
+    1024,
+    1024
+  ],
+  "coordinate_tolerance_raw": 0.001,
+  "coordinate_maxima": {
+    "world_camera_max_abs_raw": 9.947598300641403e-14,
+    "camera_device_max_abs_raw": 5.684341886080802e-14,
+    "metadata_max_abs_raw": 3.9968028886505635e-15,
+    "baseline_raw": 12.001048662512815
+  },
+  "raw_coordinates_modified": false,
+  "train18_original_split_revalidation": "not available in this cache; historical explicit train18 retained",
+  "original_mocap_independence": "NOT VERIFIED; names/keys/hash/pose equality checked",
+  "physical_unit": "raw only; not mm",
+  "capture_fps": "unknown",
+  "full_dataset_train_ready": false,
+  "cache_original_blockers": [
+    "timestamp_and_stereo_sync_unverified",
+    "camera_transform_and_coordinate_evidence_unverified",
+    "image_pose_alignment_unverified",
+    "original_motion_independence_unverified"
+  ]
+}

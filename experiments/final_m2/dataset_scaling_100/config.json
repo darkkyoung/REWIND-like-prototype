@@ -1,0 +1,55 @@
+{
+  "experiment": "dataset_scaling_100_20261116",
+  "base_commit": "635d9424878cae2a031efc14588eb80a45b25391",
+  "model": {
+    "hidden": 64,
+    "heads": 4,
+    "graph_layers": 1,
+    "temporal_layers": 2,
+    "window_size": 8,
+    "attention_past_frames": 7,
+    "dropout": 0.0,
+    "diffusion_steps": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "sampling_steps": 10,
+    "diagnostic_k": 400,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "seed": 43,
+    "target_scale_raw": 100.0,
+    "pixel_scale": 1024.0,
+    "frame_loss_weight": 1.0,
+    "scheduler_step": 200,
+    "scheduler_gamma": 0.5,
+    "max_train_seconds": 300
+  },
+  "updates_each": 400,
+  "loss": "existing position_losses only",
+  "arms": [
+    "train18",
+    "train100"
+  ],
+  "checkpoint_updates": [
+    100,
+    200,
+    300,
+    400
+  ],
+  "final_selection": 400,
+  "noise_seed": 10043,
+  "sampling_steps": 10,
+  "quality_rule": "Opening: JPE/RR22/FDE strictly decrease; both motion ratios closer100; pelvis <=1.02 control; mean absolute bone distortion <= control+2pp; spread distance100 <= control+2pp. All gates PASS; any primary improvement PARTIAL; otherwise FAIL. Fixed before results.",
+  "max_seconds_per_arm": 300,
+  "max_total_gpu_seconds": 1200,
+  "max_private_input_bytes": 20000000,
+  "max_source_download_bytes": 250000000,
+  "future_experiments": "Frozen 100-frame manifest prefix; no automatic expansion.",
+  "input_checksums_sha256": "8b466adaa818e4b354678a223121a3bda22e8d12ad88b6287b72bdc28201b9c8",
+  "core_code_sha256": {
+    "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+    "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+    "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+    "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+  }
+}
