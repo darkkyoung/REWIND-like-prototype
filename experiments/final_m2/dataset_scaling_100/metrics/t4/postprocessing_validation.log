@@ -1,4 +1,4 @@
-Full T4 archive size, SHA-256 and ZIP CRC: PASS (31 entries)
+Full T4 archive size, SHA-256 and ZIP CRC: PASS (32 entries)
 Original result checksums: 29/29 PASS
 Prediction metric recomputation: 8/8 groups, 36 metrics per group PASS
 Checkpoint SHA-256, step, optimizer and scheduler state: 8/8 PASS

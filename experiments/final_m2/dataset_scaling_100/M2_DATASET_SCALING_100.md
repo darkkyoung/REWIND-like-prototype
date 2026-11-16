@@ -13,7 +13,7 @@
 | 실제 Opening 평가 | PASS | DDIM10/seed10043, 두 실제 예측 NPZ 확보·SHA 검증·36개 지표씩 재계산 일치 |
 | 과거 Control400 대비 Opening Train18 | PASS (파일 SHA-256) | 신규 NPZ의 SHA-256이 기준 커밋의 Control400 NPZ 기록과 일치. 별도 원본 NPZ를 연 배열 대조는 NOT VERIFIED |
 | 사전 고정 품질 판정 | PARTIAL | 8개 조건 중5개 통과, Pelvis·bone distortion·spread 조건3개 실패 |
-| 전체 T4 원본 결과 회수 | PASS | 원본 ZIP 31개 항목 CRC 및 29개 내부 SHA 검증. 양쪽 400-update checkpoint, 전체 로그·trace와 8개 NPZ 회수 |
+| 전체 T4 원본 결과 회수 | PASS | 원본 ZIP 32개 항목 CRC 및 29개 내부 SHA 검증. 양쪽 400-update checkpoint, 전체 로그·trace와 8개 NPZ 회수 |
 | 독립 Test 일반화·통계적 유의성 | NOT VERIFIED | 단일 seed, 반복 분석된 Historical Holdout, 독립 motion 검증 미실시 |
 
 Colab의 기존 출력에서 전체 원본 ZIP을 회수했다. 저장된 예측으로 지표를 재계산했고 체크포인트를 CPU에서 읽어 상태를 확인했다. 항목별 증거는 [결과 검증 JSON](metrics/t4/result_validation.json)에 기록했다.
@@ -186,7 +186,7 @@ GIF는 `opening_comparison_motion.gif`, `opening_train18_motion.gif`, `opening_t
 - 파일명 `REWIND_M2_Scaling100_T4_raw.zip`
 - 검증 크기 `12,373,875 bytes`
 - 검증 SHA-256 `4ee135ed64654aa563c975fdca748eba102615ccda633b050166b9f93793c024`
-- ZIP CRC 31개와 원본 내부 SHA-256 29개 통과
+- ZIP CRC 32개와 원본 내부 SHA-256 29개 통과
 - 이전 PARTIAL에 없던 checksum 대상 15개와 `console.log` 회수
 
 최종 checkpoint 2개, Train18 중간 checkpoint 3개, 양쪽 전체 training CSV/JSONL과 random trace·identity, Brutal18 예측 NPZ 2개를 원본에서 추가 확보했다. 회수 내역은 [recovery_status.json](metrics/t4/recovery_status.json)에 있다.
