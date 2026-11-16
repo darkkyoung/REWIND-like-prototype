@@ -11,7 +11,7 @@
 | 입력 100개·호환성 검증 | PASS | 고유 frame key 100개, 서로 다른 pose SHA 100개, 기존18 텐서 완전 일치 |
 | 실제 T4 학습 | PASS | Tesla T4, FP32, 두 군 각각 정확히400 updates·3200 anchor samples, 실행 종료 코드0 |
 | 실제 Opening 평가 | PASS | DDIM10/seed10043, 두 실제 예측 NPZ 확보·SHA 검증·36개 지표씩 재계산 일치 |
-| 과거 Control400 대비 Opening Train18 | PASS (파일 SHA-256) | 신규 NPZ의 SHA-256이 기준 커밋의 Control400 NPZ 기록과 일치. 별도 원본 NPZ를 연 배열 대조는 NOT VERIFIED |
+| 과거 Control400 대비 Opening Train18 | PASS (원본 직접 비교) | 후속 인계 검증에서 별도 원본 NPZ를 확보해 SHA 및 prediction/GT dtype·shape·바이트 일치 확인. [새 검증](HANDOFF_REVERIFICATION_20261116.md) |
 | 사전 고정 품질 판정 | PARTIAL | 8개 조건 중5개 통과, Pelvis·bone distortion·spread 조건3개 실패 |
 | 전체 T4 원본 결과 회수 | PASS | 원본 ZIP 32개 항목 CRC 및 29개 내부 SHA 검증. 양쪽 400-update checkpoint, 전체 로그·trace와 8개 NPZ 회수 |
 | 독립 Test 일반화·통계적 유의성 | NOT VERIFIED | 단일 seed, 반복 분석된 Historical Holdout, 독립 motion 검증 미실시 |
@@ -216,3 +216,7 @@ python experiments/final_m2/dataset_scaling_100/validate_results.py --input /pat
 - 그림 7개와 GIF 3개를 저장 예측에서 재생성했고 보존본과 바이트 단위로 일치했다. 각 GIF는 130프레임이며 비교 패널에 동일한 범위와 1:1:1 축척을 적용했다.
 
 검증 상세는 [resume_verification.json](metrics/t4/resume_verification.json)과 [CPU 검사 로그](metrics/t4/recovery_unit_tests.log)에 있다.
+
+## 12. 후속 인계 검증 — 2026-11-16 KST
+
+[인계 후 독립 재검증 보고서](HANDOFF_REVERIFICATION_20261116.md)와 [새 검증 JSON](metrics/t4/handoff_verification.json)을 추가했다. 위 과거 기록 중 별도 Control400 원본 배열 및 과거 148-frame 입력 ZIP의 미검증 항목은 이번 직접 비교로 PASS가 됐다. Opening 원본 Pose JSON·RGB/cache·원본 mocap 독립성은 계속 미검증이다. 이전 검증 JSON은 당시 이력으로 보존한다. 학습·추론은 다시 실행하지 않았다.

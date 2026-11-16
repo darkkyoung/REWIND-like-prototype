@@ -26,3 +26,5 @@ python experiments/final_m2/dataset_scaling_100/plot_results.py --input /path/re
 원본 Control400 배열을 직접 비교하려면 검증 명령에 `--previous /path/prior_displacement_results`를 추가한다.
 
 GT Stereo2D / stored device_pts3d / raw 단위 / zero-camera 진단 계약이다. Opening130은 Historical Holdout이다. 원본 mocap 독립성·물리 단위·capture FPS는 미검증이다. 데이터 수와 동작·인물 다양성이 함께 바뀌며 고정400 updates에서 프레임당 노출은 줄어든다. 전체 데이터셋 준비 완료나 통계적 유의성을 주장하지 않는다.
+
+2026-11-16 후속 인계: [독립 재검증 보고서](HANDOFF_REVERIFICATION_20261116.md). 원본 전체 ZIP·checkpoint 8개·예측 8개 및 과거 Control400 원본 배열 직접 비교 PASS. `verify_handoff.py`는 저장 파일만 검사하며 재학습·추론을 하지 않는다.

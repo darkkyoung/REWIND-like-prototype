@@ -1,0 +1,15 @@
+{
+  "partial": {
+    "manifest_entries": 185,
+    "mismatches": []
+  },
+  "verified": {
+    "manifest_entries": 165,
+    "mismatches": []
+  },
+  "verified_experiment_vs_remote_head": {
+    "files": 47,
+    "differences": []
+  },
+  "training_preparation_files_unchanged": true
+}

@@ -1,0 +1,410 @@
+{
+  "schema": "scaling100_handoff_audit_v1",
+  "audit_date_kst": "2026-11-16",
+  "verification_environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "torch": "2.15.0+cpu",
+    "device": "CPU"
+  },
+  "new_model_inference_calls": 0,
+  "new_optimizer_updates": 0,
+  "package_sha256_verified_files": 165,
+  "raw_archive": {
+    "bytes": 12373875,
+    "sha256": "4ee135ed64654aa563c975fdca748eba102615ccda633b050166b9f93793c024",
+    "crc_entries": 32
+  },
+  "raw_checksummed_files": 29,
+  "missing_raw_files": [],
+  "source_at_execution": {
+    "source_commit": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+    "verified_code_files": 7,
+    "config_sha256": "341676c0ac58b188f0949f84b8bc88964a814225a21220aacd0fc0750d0986fb"
+  },
+  "original_execution_environment": {
+    "device": "Tesla T4",
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "updates_each": 400,
+    "evaluation_steps": 10,
+    "evaluation_noise_seed": 10043
+  },
+  "input_audit": {
+    "unique_train_frames": 100,
+    "motion_counts": {
+      "Brutal_Assassination": 18,
+      "Standing_Up__1_": 50,
+      "Dodging": 32
+    },
+    "raw_pose_hashes": 100,
+    "coordinate_maxima": {
+      "world_camera_max_abs_raw": 9.947598300641403e-14,
+      "camera_device_max_abs_raw": 2.842170943040401e-14,
+      "metadata_max_abs_raw": 2.6645352591003757e-15,
+      "baseline_raw": 12.001038038436528
+    },
+    "reconstructed_tensor_equality": "PASS",
+    "historical_train18_and_holdout_file_equality": "PASS",
+    "observable_holdout_overlap": 0,
+    "original_mocap_independence": "NOT VERIFIED"
+  },
+  "existing_validator": {
+    "execution_observed": "PASS",
+    "opening_array_recomputation": "PASS",
+    "prior_control400_direct_array_comparison": "PASS",
+    "prior_control400_opening_prediction_bitwise_identical": true,
+    "full_random_traces_local_check": "PASS",
+    "complete_artifact_recovery": "PASS",
+    "quality": {
+      "status": "PARTIAL",
+      "all_predeclared_gates_pass": false,
+      "primary_three_errors_improved": true,
+      "gates": {
+        "global_joint_error_raw": true,
+        "root_relative_error_22_raw": true,
+        "frame_displacement_error_raw": true,
+        "motion_magnitude_ratio_pct": true,
+        "root_relative_motion_ratio_pct": true,
+        "pelvis_no_more_than_2pct_worse": false,
+        "bone_distortion_no_more_than_2pp_worse": false,
+        "spread_no_more_than_2pp_farther": false
+      },
+      "interpretation": "Exploratory single seed; no statistical significance claim; all metrics reported."
+    }
+  },
+  "verified_prediction_groups": [
+    {
+      "model": "train18",
+      "split": "train18",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train18",
+      "split": "standing50",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train18",
+      "split": "dodging32",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train18",
+      "split": "opening130",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train100",
+      "split": "train18",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train100",
+      "split": "standing50",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train100",
+      "split": "dodging32",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    },
+    {
+      "model": "train100",
+      "split": "opening130",
+      "recomputed_metrics": 36,
+      "status": "PASS"
+    }
+  ],
+  "checkpoint_verification": [
+    {
+      "model": "train18",
+      "step": 100,
+      "file": "train18_100.pt",
+      "sha256": "112fdc300ac069728c48f51e2ba7c98e7a3185765a5192e6cbed4109ff59c988",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train18",
+      "step": 200,
+      "file": "train18_200.pt",
+      "sha256": "7833c7122d07359441ed2f5b036d0670dc5efe666857745b9f14e3facf7e6e3a",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train18",
+      "step": 300,
+      "file": "train18_300.pt",
+      "sha256": "cfe91c0633c109ef296b2bc4fec4a8526eb37b5ee33937a3d28575c1a7983ef7",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train18",
+      "step": 400,
+      "file": "train18_400.pt",
+      "sha256": "d65d326b1ca565d450d9c2dfb82e60283981f850bd77257482230f16fc2b045a",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train100",
+      "step": 100,
+      "file": "train100_100.pt",
+      "sha256": "0eda641ce7555dbcfa6b287bce9ba3c866fa0d097d30c7115bd40d9c4d29eb62",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train100",
+      "step": 200,
+      "file": "train100_200.pt",
+      "sha256": "59a1cac5f6a582b7fa2ab64c57fc8fe30164e5d4fd4542f9e75bf0448303b5d3",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train100",
+      "step": 300,
+      "file": "train100_300.pt",
+      "sha256": "432066e0d6631e048fe2ab5d7620a31d0161b1bb11263b43a132305625d4d66c",
+      "local_byte_verification": "PASS"
+    },
+    {
+      "model": "train100",
+      "step": 400,
+      "file": "train100_400.pt",
+      "sha256": "a88d8787d4f9a6cb7851367253a70254915d4040f5b90332cf3a181953a28b40",
+      "local_byte_verification": "PASS"
+    }
+  ],
+  "independent_metrics": [
+    {
+      "split": "train18",
+      "model": "train18",
+      "global_joint_error_raw": 6.30703422531544,
+      "root_relative_error_22_raw": 4.726227668238818,
+      "frame_displacement_error_raw": 1.6696880274544756,
+      "motion_magnitude_ratio_pct": 48.084847201766614,
+      "root_relative_motion_ratio_pct": 45.57203069724499,
+      "bone_length_ratio_pct": 97.12511222204971,
+      "joint_spread_ratio_pct": 98.3972180202771,
+      "pelvis_position_error_raw": 3.7946891035957253,
+      "direction_angle_deg": 34.89286647217994,
+      "mean_abs_bone_ratio_deviation_pp": 7.583200909305117
+    },
+    {
+      "split": "standing50",
+      "model": "train18",
+      "global_joint_error_raw": 34.470594405317506,
+      "root_relative_error_22_raw": 33.461264475489536,
+      "frame_displacement_error_raw": 1.223765287038231,
+      "motion_magnitude_ratio_pct": 52.13392382162828,
+      "root_relative_motion_ratio_pct": 43.415414677732905,
+      "bone_length_ratio_pct": 101.12147316323609,
+      "joint_spread_ratio_pct": 123.8536963777295,
+      "pelvis_position_error_raw": 9.379724190459704,
+      "direction_angle_deg": 46.832750668101546,
+      "mean_abs_bone_ratio_deviation_pp": 15.459349709594623
+    },
+    {
+      "split": "dodging32",
+      "model": "train18",
+      "global_joint_error_raw": 15.284226350984547,
+      "root_relative_error_22_raw": 14.65033920051822,
+      "frame_displacement_error_raw": 2.2892524286603844,
+      "motion_magnitude_ratio_pct": 63.31265916626356,
+      "root_relative_motion_ratio_pct": 53.5635472053106,
+      "bone_length_ratio_pct": 92.53990083057624,
+      "joint_spread_ratio_pct": 102.6742194525811,
+      "pelvis_position_error_raw": 7.120367902535284,
+      "direction_angle_deg": 43.38620073822502,
+      "mean_abs_bone_ratio_deviation_pp": 17.508921207971408
+    },
+    {
+      "split": "opening130",
+      "model": "train18",
+      "global_joint_error_raw": 11.262095337846159,
+      "root_relative_error_22_raw": 10.195808570171597,
+      "frame_displacement_error_raw": 0.47413196272075103,
+      "motion_magnitude_ratio_pct": 58.42584454110065,
+      "root_relative_motion_ratio_pct": 35.6354605147021,
+      "bone_length_ratio_pct": 98.07518940216369,
+      "joint_spread_ratio_pct": 96.91835739158253,
+      "pelvis_position_error_raw": 5.399482039565052,
+      "direction_angle_deg": 34.89012536191382,
+      "mean_abs_bone_ratio_deviation_pp": 13.546024554982164
+    },
+    {
+      "split": "train18",
+      "model": "train100",
+      "global_joint_error_raw": 8.545860830967804,
+      "root_relative_error_22_raw": 9.015605435594637,
+      "frame_displacement_error_raw": 1.50497617767992,
+      "motion_magnitude_ratio_pct": 55.92622543495398,
+      "root_relative_motion_ratio_pct": 52.0401289460616,
+      "bone_length_ratio_pct": 86.5122292142819,
+      "joint_spread_ratio_pct": 93.82394310367188,
+      "pelvis_position_error_raw": 6.90084800640652,
+      "direction_angle_deg": 31.804891271203445,
+      "mean_abs_bone_ratio_deviation_pp": 18.906348320266606
+    },
+    {
+      "split": "standing50",
+      "model": "train100",
+      "global_joint_error_raw": 7.917012586912657,
+      "root_relative_error_22_raw": 8.911261776250573,
+      "frame_displacement_error_raw": 0.9864158783398498,
+      "motion_magnitude_ratio_pct": 87.10899080403766,
+      "root_relative_motion_ratio_pct": 80.60155599697073,
+      "bone_length_ratio_pct": 87.61611395179767,
+      "joint_spread_ratio_pct": 95.80522183336157,
+      "pelvis_position_error_raw": 5.483205689510117,
+      "direction_angle_deg": 38.75543650557692,
+      "mean_abs_bone_ratio_deviation_pp": 20.90769044828025
+    },
+    {
+      "split": "dodging32",
+      "model": "train100",
+      "global_joint_error_raw": 9.517806947612245,
+      "root_relative_error_22_raw": 10.090561572179288,
+      "frame_displacement_error_raw": 1.9445135285260224,
+      "motion_magnitude_ratio_pct": 70.05052250942906,
+      "root_relative_motion_ratio_pct": 57.13772292643977,
+      "bone_length_ratio_pct": 83.71228558002159,
+      "joint_spread_ratio_pct": 98.8648658045837,
+      "pelvis_position_error_raw": 6.311199564460836,
+      "direction_angle_deg": 36.7881920952011,
+      "mean_abs_bone_ratio_deviation_pp": 19.738845812142017
+    },
+    {
+      "split": "opening130",
+      "model": "train100",
+      "global_joint_error_raw": 9.286698052302624,
+      "root_relative_error_22_raw": 8.286240459059396,
+      "frame_displacement_error_raw": 0.33889475954775444,
+      "motion_magnitude_ratio_pct": 73.07760144277196,
+      "root_relative_motion_ratio_pct": 54.08065638187203,
+      "bone_length_ratio_pct": 88.77999442158463,
+      "joint_spread_ratio_pct": 92.78600194718702,
+      "pelvis_position_error_raw": 7.370927696338137,
+      "direction_angle_deg": 27.568661622855938,
+      "mean_abs_bone_ratio_deviation_pp": 19.077246529209262
+    }
+  ],
+  "notebook_execution_audit": {
+    "initial_preflight_import_failure_preserved": true,
+    "failed_cell_zero_based": 2,
+    "completed_wrapper_cell_zero_based": 3,
+    "completed_wrapper_return_code": 0,
+    "interpretation": "Initial unittest import failed before training; discover wrapper later passed and completed both arms."
+  },
+  "training_log_audit": [
+    {
+      "model": "train18",
+      "csv_rows": 400,
+      "jsonl_rows": 400,
+      "notebook_checkpoints_matched": 4
+    },
+    {
+      "model": "train100",
+      "csv_rows": 400,
+      "jsonl_rows": 400,
+      "notebook_checkpoints_matched": 4
+    }
+  ],
+  "figure_decode": {
+    "bone_length_comparison.png": {
+      "frames": 1,
+      "size": [
+        1540,
+        1120
+      ],
+      "decoded": "PASS"
+    },
+    "frame_displacement_comparison.png": {
+      "frames": 1,
+      "size": [
+        1820,
+        1120
+      ],
+      "decoded": "PASS"
+    },
+    "joint_spread_comparison.png": {
+      "frames": 1,
+      "size": [
+        1400,
+        560
+      ],
+      "decoded": "PASS"
+    },
+    "opening_comparison_motion.gif": {
+      "frames": 130,
+      "size": [
+        1020,
+        340
+      ],
+      "decoded": "PASS"
+    },
+    "opening_train100_motion.gif": {
+      "frames": 130,
+      "size": [
+        340,
+        340
+      ],
+      "decoded": "PASS"
+    },
+    "opening_train18_motion.gif": {
+      "frames": 130,
+      "size": [
+        340,
+        340
+      ],
+      "decoded": "PASS"
+    },
+    "per_motion_comparison.png": {
+      "frames": 1,
+      "size": [
+        1820,
+        560
+      ],
+      "decoded": "PASS"
+    },
+    "root_relative_comparison.png": {
+      "frames": 1,
+      "size": [
+        1440,
+        1920
+      ],
+      "decoded": "PASS"
+    },
+    "skeleton_visualization.png": {
+      "frames": 1,
+      "size": [
+        1440,
+        1920
+      ],
+      "decoded": "PASS"
+    },
+    "training_loss.png": {
+      "frames": 1,
+      "size": [
+        1260,
+        560
+      ],
+      "decoded": "PASS"
+    }
+  },
+  "shared_axes_recomputed": "PASS; original plot code shares limits and 1:1:1 box aspect",
+  "limits": [
+    "Single seed; no statistical significance",
+    "Historical holdout repeatedly examined",
+    "GT Stereo2D and zero camera, not end-to-end RGB",
+    "Physical distance unit and capture FPS unverified",
+    "No fresh GPU training or inference; saved execution evidence audited"
+  ]
+}
