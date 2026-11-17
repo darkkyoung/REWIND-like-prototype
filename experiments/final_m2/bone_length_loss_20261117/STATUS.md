@@ -6,3 +6,10 @@
 - 실제 Train300 checkpoint와 NPZ는 Git에 없으므로 이 환경에서 실물 재개 및 T4 학습 미실행.
 - 미사용 평가 동작 NPZ는 실행 전에 고정·검증 필요.
 - 성능 개선: **NOT VERIFIED**.
+
+## 독립 재검토 후 수정
+
+- 원본 `8b9d341`의 checkpoint schema 오류와 입력/상태/지표 검증 누락을 수정했다. 상세 근거는 [REVIEW.md](REVIEW.md).
+- 수정본 CPU 20개 검사 통과(신규/확장 10 + 기존 M2 10). 로그는 `cpu_review_tests.log`.
+- T4 준비 상태: 실행 코드 수정 완료, 실물 checkpoint/NPZ 및 미사용 동작 사전 고정·검증은 미완료.
+- 실제 T4 실행과 성능 개선: **NOT VERIFIED**. 이번 수정은 로컬 커밋만 수행한다.

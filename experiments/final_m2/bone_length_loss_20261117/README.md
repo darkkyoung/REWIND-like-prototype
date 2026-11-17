@@ -24,3 +24,5 @@ python experiments/final_m2/bone_length_loss_20261117/run_experiment.py \
 ## 연구 근거 및 판정
 
 이전 [Train300 보고서](../dataset_scaling_300/M2_DATASET_SCALING_300.md)는 평균 길이뿐 아니라 특정 edge의 큰 비율 왜곡을 보고했다. 길이 제약은 회전·방향 또는 운동량을 직접 규제하지 않으므로 성능은 평가로 확인해야 한다. 사전 판정은 두 평가 동작과 미사용 동작 모두에서 edge별 절대 길이 비율 편차의 평균이 Control보다 낮아야 하며, Joint Error, Root-relative Error, Pelvis Error가 각 2%를 초과해 악화되지 않고 Motion Ratio와 Joint Spread의 100% 편차도 2%p를 초과해 악화되지 않아야 한다. 미사용 동작의 독립성 확인이 없으면 일반화 결론은 유보한다. 단일 seed 결과는 통계적 유의성 근거가 아니다.
+
+재검토에서 원본 커밋의 checkpoint schema 오류를 수정했다. 현재 준비 범위와 남은 입력 조건은 [REVIEW.md](REVIEW.md)를 따른다. Opening/Gunplay SHA 검증과 미사용 sequence/motion·동일 pose 검사를 실행 전에 적용한다. 사전 판정 결과는 `evaluation.json`의 `quality`에 기록하며 미정의 지표는 통과로 간주하지 않는다.
