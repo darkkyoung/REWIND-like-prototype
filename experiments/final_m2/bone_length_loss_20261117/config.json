@@ -1,0 +1,12 @@
+{
+  "parent_commit": "cf767233172e2fe7c9514954f177bcfd56c41d17",
+  "parent_checkpoint": "train300_400.pt",
+  "parent_checkpoint_sha256": "8a4a137cb8db7173e557773e13a43385f159fbcea11badba18de7a3631f9e481",
+  "train_input_sha256": "9a777472eaaea62ffa617d377e9f32ff14dffc3c7511ef55a725282eb637be5a",
+  "selection_sha256": "a117627d81be1d716cbffe6fe1c94fbcc8fb430246d23ddeef2776c54eb069a3",
+  "additional_updates": 400,
+  "weight_rule": "0.1 * median(position gradient norm / bone gradient norm) on first 8 deterministic Train300 draws, frozen before arm training and evaluation",
+  "calibration_batches": 8,
+  "calibration_fraction": 0.1,
+  "evaluation": ["opening130", "gunplay47", "unused_motion_preselected"]
+}
