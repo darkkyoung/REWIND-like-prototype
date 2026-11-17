@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "unique_train_frames": 300,
+  "new_train_frames": 200,
+  "validation_frames": 47,
+  "train100_prefix_tensor_bitwise_identical": true,
+  "train100_prefix_manifest_identical": true,
+  "train100_npz_sha256": "a97320546e8e716a36a776df9f89e05beb0a93df49ca09aec8acc2807100eed9",
+  "new_pose_sha_and_size_verified": 247,
+  "cache_manifest_sha256": "caa0956d4432e93fa2f257a7176f568fd50863819b1d2ada93b040ca8e8cee7e",
+  "known_cache_nontrain_key_or_sha_overlap": 0,
+  "opening_and_gunplay_key_or_exact_tensor_overlap": 0,
+  "body22_finite": true,
+  "sequence_boundary_reset_verified": true,
+  "consecutive_native_frame_ids": true,
+  "future_leakage": "causal inherited converter; regression tests required",
+  "coordinate_maxima": {
+    "world_camera_max_abs_raw": 1.0302869668521453e-13,
+    "camera_device_max_abs_raw": 5.684341886080802e-14,
+    "metadata_max_abs_raw": 3.566591466608315e-15,
+    "baseline_raw": 12.000961794789612
+  },
+  "pixel_scale": 1024,
+  "target_scale_raw": 100,
+  "camera": "zero",
+  "rgb_downloaded": false,
+  "stereo_image_alignment": "NOT VERIFIED in this run; GT Stereo2D only",
+  "original_mocap_independence": "NOT VERIFIED; distinct names, keys, SHA and exact poses checked",
+  "prior_train18_split": "historical assignment retained; no new split proof",
+  "fps": "NOT VERIFIED",
+  "physical_units": "raw; NOT VERIFIED as mm",
+  "person_confound": "four added persons; Carla already in Train100, Janna/Joyce/Serena are additional; Gunplay person Adanna is already trained",
+  "cache_blockers": [
+    "timestamp_and_stereo_sync_unverified",
+    "camera_transform_and_coordinate_evidence_unverified",
+    "image_pose_alignment_unverified",
+    "original_motion_independence_unverified"
+  ]
+}

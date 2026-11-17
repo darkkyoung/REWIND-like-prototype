@@ -1,0 +1,79 @@
+{
+  "experiment": "dataset_scaling_300_20261117",
+  "base_commit": "d54e3f84acb42e029082bb8058b9c229ade75a83",
+  "model": {
+    "hidden": 64,
+    "heads": 4,
+    "graph_layers": 1,
+    "temporal_layers": 2,
+    "window_size": 8,
+    "attention_past_frames": 7,
+    "dropout": 0,
+    "diffusion_steps": 1000,
+    "beta_start": 0.0001,
+    "beta_end": 0.02,
+    "sampling_steps": 10,
+    "diagnostic_k": 400,
+    "batch_size": 8,
+    "learning_rate": 0.001,
+    "seed": 43,
+    "target_scale_raw": 100,
+    "pixel_scale": 1024,
+    "frame_loss_weight": 1,
+    "scheduler_step": 200,
+    "scheduler_gamma": 0.5,
+    "max_train_seconds": 300
+  },
+  "updates_each": 400,
+  "loss": "existing position_losses only",
+  "arms": [
+    "train300"
+  ],
+  "checkpoint_updates": [
+    100,
+    200,
+    300,
+    400
+  ],
+  "final_selection": 400,
+  "noise_seed": 10043,
+  "sampling_steps": 10,
+  "quality_rule": "Opening: JPE/RR22/FDE strictly decrease; both motion ratios closer100; pelvis <=1.02 Train100; mean absolute bone distortion <= Train100+2pp; spread distance100 <= Train100+2pp. All gates PASS; any primary improvement PARTIAL; otherwise FAIL. Fixed before results.",
+  "max_seconds_per_arm": 300,
+  "max_total_gpu_seconds": 1200,
+  "max_private_input_bytes": 30000000,
+  "max_source_download_bytes": 30000000,
+  "future_experiments": "No automatic expansion. 400 updates = 3200 anchors; expected10.67/frame vs32/frame for100.",
+  "input_checksums_sha256": "ee1da682b2e0d71ecf6996d9b13ff0f26bf8ab2fa7a5d97ffe36940ccdbdf705",
+  "core_code_sha256": {
+    "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+    "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+    "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+    "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+  },
+  "training_source_100": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+  "comparison_arms": [
+    "train18",
+    "train100",
+    "train300"
+  ],
+  "train_frames": 300,
+  "additional_validation": "gunplay47",
+  "selection_sha256": "a117627d81be1d716cbffe6fe1c94fbcc8fb430246d23ddeef2776c54eb069a3",
+  "expected_initial_state_sha256": {
+    "model": "87c94306fe535428ec1576a9121ad56e014175cd590dc1c799f10a119bb43ba9",
+    "optimizer": "c1d59bbacfd423ae8b490ea853665437933e4b7000736e22489df9abf9b892a9",
+    "scheduler": "56cf47199b0cb7d7c0b962614d142d6e56a9e739309f4e60d9f795dcf0131362",
+    "rng": "87cb43afff125c4ad3a89dec4e7c8cb34361454043b78cc3c159dd268bafe2cf"
+  },
+  "baseline_files": {
+    "train18_400.pt": "d65d326b1ca565d450d9c2dfb82e60283981f850bd77257482230f16fc2b045a",
+    "train100_400.pt": "a88d8787d4f9a6cb7851367253a70254915d4040f5b90332cf3a181953a28b40",
+    "opening130_train18_predictions.npz": "73813c7c3dd4e5593144fac45b29189922c2030c1fae25b1bdce5862edc25190",
+    "opening130_train100_predictions.npz": "4ee2d4d14b258a8977d5e24c1d854e7907a3f1ec1cf55fa81b1e29d2c73cc5c7",
+    "evaluation.json": "dce2ec34ec6553770a2b5319b82275f588fce156b333266481b59d655ce78fd9",
+    "experiment_identity.json": "ed12c7d29d7491d928936e9a24eeecc8bc3fca5ff58ae5e4ef06f2d87c8f5e01",
+    "train18_identity.json": "2c92187f87e43a65a4a65a4d479887bb7e7bb6c5a53f3d7beb1857998fbef8e1",
+    "train100_identity.json": "49e2e78abc8da0a6c1260c54ac959de42aca4c2059f8530da1e801defd4fc561"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "coordinate_audit.csv": "2e76fa558c59040d1561382fa3140664bc9b5de5ff44381a408c03ad7901e52c",
+  "data_selection_manifest.json": "a117627d81be1d716cbffe6fe1c94fbcc8fb430246d23ddeef2776c54eb069a3",
+  "evaluation_frames.csv": "dcadeeb101713891ba7e60ce4457bed9364d1ba2b0fad698490c049a13b99f66",
+  "gunplay47.npz": "4c0f3c2ce5064c3bd09a4a517fdfa2a6d2f971704091ed27e592f8231b167a5c",
+  "input_validation.json": "4f6fe0e9aadef5efa7c246f564f7a71eec410c990fc6262c6ddddf62c8991d9b",
+  "opening130.npz": "5aaf61938292ea6db9259b625ef94b7762dc171bbc12d7a74916dbc55baa208c",
+  "selected_frames.csv": "2640658c45b629562de35a5bd85e11a32c2453dd84699f07b46f82a226c0736a",
+  "train100.npz": "a97320546e8e716a36a776df9f89e05beb0a93df49ca09aec8acc2807100eed9",
+  "train18.npz": "2eab2d6426aea0340a5f0d8624ae9e199ad66c917fe2f2905c5d928186f1d1ef",
+  "train300.npz": "9a777472eaaea62ffa617d377e9f32ff14dffc3c7511ef55a725282eb637be5a"
+}
