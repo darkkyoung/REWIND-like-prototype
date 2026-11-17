@@ -1,0 +1,85 @@
+{
+  "images": 14,
+  "axes": {
+    "opening130_skeleton": {
+      "limits": [
+        [
+          -91.81813049316406,
+          76.67843627929688
+        ],
+        [
+          -70.11247253417969,
+          98.38409423828125
+        ],
+        [
+          -5.513664245605469,
+          162.98291015625
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "opening130_root_relative": {
+      "limits": [
+        [
+          -91.04827117919922,
+          75.93502044677734
+        ],
+        [
+          -65.00885009765625,
+          101.97444152832031
+        ],
+        [
+          -67.26968383789062,
+          99.71360778808594
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "gunplay47_skeleton": {
+      "limits": [
+        [
+          -97.43309783935547,
+          87.3866958618164
+        ],
+        [
+          -100.68441772460938,
+          84.1353759765625
+        ],
+        [
+          -21.273056030273438,
+          163.54673767089844
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "gunplay47_root_relative": {
+      "limits": [
+        [
+          -89.6744155883789,
+          94.25470733642578
+        ],
+        [
+          -77.76405334472656,
+          106.16506958007812
+        ],
+        [
+          -84.52587127685547,
+          99.40325164794922
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    }
+  }
+}

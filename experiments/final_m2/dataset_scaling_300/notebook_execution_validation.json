@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "initial_preflight_failure_preserved": true,
+  "initial_failure": "tests.test_m2 import collision before training",
+  "resolution": "unittest discover for tests/test_m2.py; model and training source unchanged",
+  "successful_cell_zero_based": 5,
+  "completed_wrapper_returncode": 0,
+  "colab_regression_tests": 15,
+  "checkpoint_console_rows_matched": 4,
+  "raw_archive_receipt": {
+    "bytes": 6453141,
+    "sha256": "b2aadfa73796da5292cf31f98c76497ffedbc714aef318824848e540a7ffaecc",
+    "crc_entries": 22,
+    "checksummed_files": 21
+  },
+  "notebook_id": "1N-kTJAOm_hRybasf7eXaQl6YIAfw0ufA"
+}

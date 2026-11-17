@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "audit_date_kst": "2026-11-17",
+  "execution_status": "PASS",
+  "quality": {
+    "status": "PARTIAL",
+    "all_predeclared_gates_pass": false,
+    "primary_three_errors_improved": true,
+    "gates": {
+      "global_joint_error_raw": true,
+      "root_relative_error_22_raw": true,
+      "frame_displacement_error_raw": true,
+      "motion_magnitude_ratio_pct": true,
+      "root_relative_motion_ratio_pct": true,
+      "pelvis_no_more_than_2pct_worse": true,
+      "bone_distortion_no_more_than_2pp_worse": false,
+      "spread_no_more_than_2pp_farther": true
+    },
+    "interpretation": "Exploratory single seed; no statistical significance claim; all metrics reported."
+  },
+  "additional_validation_quality": {
+    "status": "PARTIAL",
+    "all_predeclared_gates_pass": false,
+    "primary_three_errors_improved": false,
+    "gates": {
+      "global_joint_error_raw": false,
+      "root_relative_error_22_raw": false,
+      "frame_displacement_error_raw": true,
+      "motion_magnitude_ratio_pct": true,
+      "root_relative_motion_ratio_pct": true,
+      "pelvis_no_more_than_2pct_worse": true,
+      "bone_distortion_no_more_than_2pp_worse": true,
+      "spread_no_more_than_2pp_farther": false
+    },
+    "interpretation": "Exploratory single seed; no statistical significance claim; all metrics reported."
+  },
+  "archive": {
+    "bytes": 6453141,
+    "sha256": "b2aadfa73796da5292cf31f98c76497ffedbc714aef318824848e540a7ffaecc",
+    "crc_entries": 22,
+    "checksummed_files": 21
+  },
+  "source_commit": "ea762262507b79999b69b37ff9f421e9bc0be94e",
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "gpu": "Tesla T4",
+    "precision": "FP32"
+  },
+  "fairness": {
+    "initial_state": {
+      "model": true,
+      "optimizer": true,
+      "scheduler": true,
+      "rng": true
+    },
+    "diffusion_trace_matches_train100": true
+  },
+  "prediction_groups": 6,
+  "metric_max_absolute_difference": 0.0,
+  "independent_metrics": [
+    {
+      "split": "opening130",
+      "model": "train18",
+      "global_joint_error_raw": 11.262095337846159,
+      "root_relative_error_22_raw": 10.195808570171597,
+      "frame_displacement_error_raw": 0.47413196272075103,
+      "motion_magnitude_ratio_pct": 58.42584454110065,
+      "root_relative_motion_ratio_pct": 35.6354605147021,
+      "bone_length_ratio_pct": 98.07518940216369,
+      "joint_spread_ratio_pct": 96.91835739158253,
+      "pelvis_position_error_raw": 5.399482039565052,
+      "direction_angle_deg": 34.89012536191382,
+      "mean_abs_bone_ratio_deviation_pp": 13.546024554982164,
+      "rr_temporal_pose_rms_ratio_pct": 44.82386659816159
+    },
+    {
+      "split": "opening130",
+      "model": "train100",
+      "global_joint_error_raw": 9.286698052302624,
+      "root_relative_error_22_raw": 8.286240459059396,
+      "frame_displacement_error_raw": 0.33889475954775444,
+      "motion_magnitude_ratio_pct": 73.07760144277196,
+      "root_relative_motion_ratio_pct": 54.08065638187203,
+      "bone_length_ratio_pct": 88.77999442158463,
+      "joint_spread_ratio_pct": 92.78600194718702,
+      "pelvis_position_error_raw": 7.370927696338137,
+      "direction_angle_deg": 27.568661622855938,
+      "mean_abs_bone_ratio_deviation_pp": 19.077246529209262,
+      "rr_temporal_pose_rms_ratio_pct": 60.39716418237047
+    },
+    {
+      "split": "opening130",
+      "model": "train300",
+      "global_joint_error_raw": 7.907848734085485,
+      "root_relative_error_22_raw": 7.665293447027585,
+      "frame_displacement_error_raw": 0.24949269682369188,
+      "motion_magnitude_ratio_pct": 91.9098242002808,
+      "root_relative_motion_ratio_pct": 71.10799069334071,
+      "bone_length_ratio_pct": 91.88208091815397,
+      "joint_spread_ratio_pct": 102.84219947686258,
+      "pelvis_position_error_raw": 3.4216884092321274,
+      "direction_angle_deg": 23.572418236774343,
+      "mean_abs_bone_ratio_deviation_pp": 22.159960065091834,
+      "rr_temporal_pose_rms_ratio_pct": 75.31802805173218
+    },
+    {
+      "split": "gunplay47",
+      "model": "train18",
+      "global_joint_error_raw": 19.914658823878202,
+      "root_relative_error_22_raw": 19.59147905828285,
+      "frame_displacement_error_raw": 1.2059962688710562,
+      "motion_magnitude_ratio_pct": 64.4390678927224,
+      "root_relative_motion_ratio_pct": 58.0512651229966,
+      "bone_length_ratio_pct": 101.11813871052655,
+      "joint_spread_ratio_pct": 106.01980868160803,
+      "pelvis_position_error_raw": 9.246535206873457,
+      "direction_angle_deg": 45.018979936131025,
+      "mean_abs_bone_ratio_deviation_pp": 15.301802473862178,
+      "rr_temporal_pose_rms_ratio_pct": 76.7633160881353
+    },
+    {
+      "split": "gunplay47",
+      "model": "train100",
+      "global_joint_error_raw": 14.728635032859113,
+      "root_relative_error_22_raw": 16.84583184297457,
+      "frame_displacement_error_raw": 0.9941247199959338,
+      "motion_magnitude_ratio_pct": 73.11800663437646,
+      "root_relative_motion_ratio_pct": 62.06218369889553,
+      "bone_length_ratio_pct": 87.1708330729454,
+      "joint_spread_ratio_pct": 100.16063145389714,
+      "pelvis_position_error_raw": 6.724727504788472,
+      "direction_angle_deg": 36.76950355662195,
+      "mean_abs_bone_ratio_deviation_pp": 22.74178066929389,
+      "rr_temporal_pose_rms_ratio_pct": 73.29851136991695
+    },
+    {
+      "split": "gunplay47",
+      "model": "train300",
+      "global_joint_error_raw": 17.994550651733515,
+      "root_relative_error_22_raw": 17.12577856767618,
+      "frame_displacement_error_raw": 0.9064632729275861,
+      "motion_magnitude_ratio_pct": 90.91755542562805,
+      "root_relative_motion_ratio_pct": 77.74499474453948,
+      "bone_length_ratio_pct": 96.37797129497199,
+      "joint_spread_ratio_pct": 120.24704053672117,
+      "pelvis_position_error_raw": 4.252886653733615,
+      "direction_angle_deg": 36.31685873632021,
+      "mean_abs_bone_ratio_deviation_pp": 24.122198910284403,
+      "rr_temporal_pose_rms_ratio_pct": 84.58527849063906
+    }
+  ],
+  "checkpoint_verification": [
+    {
+      "file": "train300_100.pt",
+      "sha256": "208be0afd2fabbf75c00e3e13d0e7942be21c631f08a9c72517d5d34623d5ee2",
+      "step": 100,
+      "optimizer_state_count": 55,
+      "status": "PASS"
+    },
+    {
+      "file": "train300_200.pt",
+      "sha256": "7d78e1cda42a5c83c64e7d58ce6fa5545eed3d76a80af0f5308b2f7ec524cefa",
+      "step": 200,
+      "optimizer_state_count": 55,
+      "status": "PASS"
+    },
+    {
+      "file": "train300_300.pt",
+      "sha256": "199f1aa3a0ed0e87927cdb11ac5da12cc316272f8e4119b313a5bbbf7cceb981",
+      "step": 300,
+      "optimizer_state_count": 55,
+      "status": "PASS"
+    },
+    {
+      "file": "train300_400.pt",
+      "sha256": "8a4a137cb8db7173e557773e13a43385f159fbcea11badba18de7a3631f9e481",
+      "step": 400,
+      "optimizer_state_count": 55,
+      "status": "PASS"
+    }
+  ],
+  "training_log_rows": 400,
+  "trace_anchor_draws": 3200,
+  "distinct_anchors": 300,
+  "baseline_opening_npz_byte_identity": true,
+  "new_inference_calls": 0,
+  "new_optimizer_updates": 0,
+  "missing_files": []
+}

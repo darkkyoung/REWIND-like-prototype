@@ -1,0 +1,23 @@
+{
+  "comparison.csv": "163fe5eeca099303b01d2b440edcc9bc81b28d56a091204be9c8f7c3abfd65e7",
+  "console.log": "39067438906dd1fdd255cdc3f0b6cefce5b3f1dd8018aa62a060e55aca045aab",
+  "train300_100.pt": "208be0afd2fabbf75c00e3e13d0e7942be21c631f08a9c72517d5d34623d5ee2",
+  "experiment_identity.json": "49dbb48461e88b6077f161d06e7b9247971bc1e53bdd155cc17d7f480898c141",
+  "frame_comparison.csv": "9a30a5cd8ecb03e8679db48f8315f53db484a6707ba30d472c62d58ec656286b",
+  "train300_200.pt": "7d78e1cda42a5c83c64e7d58ce6fa5545eed3d76a80af0f5308b2f7ec524cefa",
+  "train300_training.csv": "86748ac75d71cc779f4a9f7dc85df2743472b2c9cfc18acf71c5c0520c0ea5d4",
+  "opening130_train100_predictions.npz": "4ee2d4d14b258a8977d5e24c1d854e7907a3f1ec1cf55fa81b1e29d2c73cc5c7",
+  "train300_300.pt": "199f1aa3a0ed0e87927cdb11ac5da12cc316272f8e4119b313a5bbbf7cceb981",
+  "gunplay47_train300_predictions.npz": "7b528249b15dad6fa78a32fc26fa61e3f41454e39fb30115a53f0a6d6ce7c49f",
+  "colab_regression_tests.log": "3530147e97c5d6378f0a144104d7f43c1284501e5154fdc29f122b666c6a8b00",
+  "opening130_train18_predictions.npz": "73813c7c3dd4e5593144fac45b29189922c2030c1fae25b1bdce5862edc25190",
+  "opening130_train300_predictions.npz": "b54a9c73b7695cec1c51c53c994185af8ff36d7f72443430d4e07271d8588270",
+  "train300_random_trace.json": "49479c7ba36708ae272cb837b80e0ca3056b96e5ec1e0b24df2768b7bbfd6720",
+  "train300_training.jsonl": "b6dfb824c7f097caa452724020504fe1af253bc57538fd4a811bd0e94bf504f6",
+  "train300_identity.json": "42247782c1558a69c8681c652f27cf904b5559a0f140dacecf830c2690acb620",
+  "gunplay47_train18_predictions.npz": "fc490a5cf4db23ad38c4f3702cef0419283ef31c6266d82029847eb5f8a62bb9",
+  "evaluation.json": "a8c1fca7eac4e6dcb91e9c29e0562d2bb07083b97bf7be0c0baf8bacaf861391",
+  "bone_length_by_edge.csv": "97a05c9c6ba98d133e26eebced64fe8b2b4800a512cb1ca93e5497611573d5a8",
+  "gunplay47_train100_predictions.npz": "af272d22f285d5c439a6c54a48bb2770bd9da1760af63a0fa1e227be89f50465",
+  "train300_400.pt": "8a4a137cb8db7173e557773e13a43385f159fbcea11badba18de7a3631f9e481"
+}

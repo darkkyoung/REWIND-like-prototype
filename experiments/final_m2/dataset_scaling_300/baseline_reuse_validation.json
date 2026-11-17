@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "prior_source_commit": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+  "current_source_commit": "ea762262507b79999b69b37ff9f421e9bc0be94e",
+  "core_code_sha256": {
+    "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+    "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+    "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+    "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+  },
+  "prior_trainer_sha256": "46c8c79d0204ded32c573b544cc6d66d87dd2b8e4e461a4543cb65ecc38b8af0",
+  "initial_state_matches": {
+    "model": true,
+    "optimizer": true,
+    "scheduler": true,
+    "rng": true
+  },
+  "diffusion_trace_matches": true,
+  "old_opening_npz_byte_identical": true,
+  "baseline_files": {
+    "train18_400.pt": "d65d326b1ca565d450d9c2dfb82e60283981f850bd77257482230f16fc2b045a",
+    "train100_400.pt": "a88d8787d4f9a6cb7851367253a70254915d4040f5b90332cf3a181953a28b40",
+    "opening130_train18_predictions.npz": "73813c7c3dd4e5593144fac45b29189922c2030c1fae25b1bdce5862edc25190",
+    "opening130_train100_predictions.npz": "4ee2d4d14b258a8977d5e24c1d854e7907a3f1ec1cf55fa81b1e29d2c73cc5c7",
+    "evaluation.json": "dce2ec34ec6553770a2b5319b82275f588fce156b333266481b59d655ce78fd9",
+    "experiment_identity.json": "ed12c7d29d7491d928936e9a24eeecc8bc3fca5ff58ae5e4ef06f2d87c8f5e01",
+    "train18_identity.json": "2c92187f87e43a65a4a65a4d479887bb7e7bb6c5a53f3d7beb1857998fbef8e1",
+    "train100_identity.json": "49e2e78abc8da0a6c1260c54ac959de42aca4c2059f8530da1e801defd4fc561"
+  },
+  "training_configuration_changed_keys": [],
+  "changed_training_variable": "dataset size and composition only",
+  "budget_note": "400 updates; expected10.67 anchor draws per frame vs32 for Train100"
+}

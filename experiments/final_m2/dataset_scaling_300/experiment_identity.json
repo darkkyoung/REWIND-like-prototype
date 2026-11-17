@@ -1,0 +1,69 @@
+{
+  "source_commit": "ea762262507b79999b69b37ff9f421e9bc0be94e",
+  "code_sha256": {
+    "experiments/final_m2/dataset_scaling_300/prepare_data.py": "78ee7ff15b666d33c0342dbfe25b50f2551e39bdb72cbe92c8ae0875f998d506",
+    "experiments/final_m2/dataset_scaling_300/run_experiment.py": "85324e42de4e6c033c93cc62c39cd531a891cdeeca2d1066b53d052dfc930f14",
+    "experiments/final_m2/dataset_scaling_300/test_scaling.py": "750c242f36d9bddd533b993dcc00b16bbbcbb6ab88e1f0d7fda9abdcdbb5965d",
+    "experiments/final_m2/dataset_scaling_100/run_experiment.py": "46c8c79d0204ded32c573b544cc6d66d87dd2b8e4e461a4543cb65ecc38b8af0",
+    "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+    "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+    "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4",
+    "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c"
+  },
+  "config_sha256": "97f4b339b250de7266e7e2aa464e740aaeaf062660f4ccfc1ba294115af53afa",
+  "input_checksums_sha256": "ee1da682b2e0d71ecf6996d9b13ff0f26bf8ab2fa7a5d97ffe36940ccdbdf705",
+  "environment": {
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "gpu": "Tesla T4",
+    "precision": "FP32"
+  },
+  "baseline_environment": {
+    "source_commit": "6ccf0ab650a225ec0c823b9ff030ce19c5a7dc84",
+    "code_sha256": {
+      "experiments/final_m2/dataset_scaling_100/run_experiment.py": "46c8c79d0204ded32c573b544cc6d66d87dd2b8e4e461a4543cb65ecc38b8af0",
+      "experiments/final_m2/dataset_scaling_100/test_scaling.py": "dc406c4b6bd749e71eb1d1d3352b867d8f43b9c9f68d995b225672e0679ebd8d",
+      "experiments/final_m2/dataset_scaling_100/prepare_data.py": "2efcd7491473aafb358d73b061eaed0f30e35ce75e9f9815aa062fc06c176684",
+      "rewind_m2/models.py": "4c08b1c0d8b7f27e2a2efc8422617560bd5ca8fb9bda81be5de95da04fa4fa5e",
+      "rewind_m2/diffusion.py": "9ed2df0195ac26b9582cff096b92430e935222abd7f38206db09e6b0002a19ae",
+      "rewind_m2/training.py": "8a91305491b1f5ab22c73d6cad42fa9a8952ec0b6bcb019f00009fc8fde62f1c",
+      "rewind_m2/streaming.py": "4c1018c41a8a22ba4245a9e6732950cf41fad92902c5490038927405e97dafa4"
+    },
+    "config_sha256": "341676c0ac58b188f0949f84b8bc88964a814225a21220aacd0fc0750d0986fb",
+    "input_checksums_sha256": "8b466adaa818e4b354678a223121a3bda22e8d12ad88b6287b72bdc28201b9c8",
+    "initialization": "seed43 fresh random weights; no parent checkpoint loaded",
+    "precision": "FP32",
+    "device": "Tesla T4",
+    "python": "3.13.16",
+    "torch": "2.14.1+cu130",
+    "cuda": "13.0",
+    "training_frames": [
+      18,
+      100
+    ],
+    "updates_each": 400,
+    "evaluation_noise_seed": 10043,
+    "evaluation_steps": 10
+  },
+  "initial_state_sha256": {
+    "model": "87c94306fe535428ec1576a9121ad56e014175cd590dc1c799f10a119bb43ba9",
+    "optimizer": "c1d59bbacfd423ae8b490ea853665437933e4b7000736e22489df9abf9b892a9",
+    "scheduler": "56cf47199b0cb7d7c0b962614d142d6e56a9e739309f4e60d9f795dcf0131362",
+    "rng": "87cb43afff125c4ad3a89dec4e7c8cb34361454043b78cc3c159dd268bafe2cf"
+  },
+  "initial_state_matches_baseline": {
+    "model": true,
+    "optimizer": true,
+    "scheduler": true,
+    "rng": true
+  },
+  "initialization": "fresh seed43; no baseline weights loaded for training",
+  "training_frames": 300,
+  "updates": 400,
+  "final_checkpoint_preselected": 400,
+  "anchor_draws": 3200,
+  "expected_draws_per_frame": 10.666666666666666,
+  "evaluation_noise_seed": 10043,
+  "ddim_steps": 10
+}

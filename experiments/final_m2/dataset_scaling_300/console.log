@@ -1,0 +1,43 @@
+{"model": "train300", "step": 100, "loss": 0.06256726384162903, "x0_loss": 0.03125041350722313, "aux_position_loss": 0.0313168503344059, "lr_used": 0.001, "lr_next": 0.001, "elapsed_seconds": 6.117303232999802}
+{"model": "train300", "step": 200, "loss": 0.020630866289138794, "x0_loss": 0.0096353804692626, "aux_position_loss": 0.010995485819876194, "lr_used": 0.001, "lr_next": 0.0005, "elapsed_seconds": 10.68748764699967}
+{"model": "train300", "step": 300, "loss": 0.018152255564928055, "x0_loss": 0.008232148364186287, "aux_position_loss": 0.009920108132064342, "lr_used": 0.0005, "lr_next": 0.0005, "elapsed_seconds": 14.687182240999846}
+{"model": "train300", "step": 400, "loss": 0.010547391138970852, "x0_loss": 0.004622606560587883, "aux_position_loss": 0.005924784578382969, "lr_used": 0.0005, "lr_next": 0.00025, "elapsed_seconds": 18.674204967999685}
+{"evaluation": {"split": "opening130", "model": "train300", "frames": 130, "joints": 22, "edges": 21, "gt_mean_bone_length_raw": 18.527898824960616, "pred_mean_bone_length_raw": 17.02381899078401, "bone_length_ratio_pct": 91.88208091815397, "mean_individual_bone_ratio_pct": 93.59423102762563, "gt_joint_spread_rms_raw": 47.09965787192727, "pred_joint_spread_rms_raw": 48.438324101567254, "joint_spread_ratio_pct": 102.84219947686258, "mean_frame_spread_ratio_pct": 102.8430159300189, "global_joint_error_raw": 7.907848734085485, "root_relative_error_22_raw": 7.665293447027585, "root_relative_error_nonroot_21_raw": 8.030307420695564, "pelvis_position_error_raw": 3.4216884092321274, "gt_mean_displacement_raw": 0.7046735537677824, "pred_mean_displacement_raw": 0.64766422445384, "motion_magnitude_ratio_pct": 91.9098242002808, "frame_displacement_error_raw": 0.24949269682369188, "root_relative_motion_ratio_pct": 71.10799069334071, "gt_displacement_rms_raw": 1.035933370066571, "valid_bone_observations": 2730, "valid_adjacent_joint_pairs": 2838}}
+{"evaluation": {"split": "gunplay47", "model": "train300", "frames": 47, "joints": 22, "edges": 21, "gt_mean_bone_length_raw": 18.52787966489895, "pred_mean_bone_length_raw": 17.856794545003265, "bone_length_ratio_pct": 96.377971294972, "mean_individual_bone_ratio_pct": 100.35968174790165, "gt_joint_spread_rms_raw": 43.45674679197032, "pred_joint_spread_rms_raw": 52.255451930880824, "joint_spread_ratio_pct": 120.24704053672117, "mean_frame_spread_ratio_pct": 120.28718444849365, "global_joint_error_raw": 17.994550651733515, "root_relative_error_22_raw": 17.12577856767618, "root_relative_error_nonroot_21_raw": 17.941291832803614, "pelvis_position_error_raw": 4.252886653733615, "gt_mean_displacement_raw": 1.6390777821092397, "pred_mean_displacement_raw": 1.490209451018323, "motion_magnitude_ratio_pct": 90.91755542562805, "frame_displacement_error_raw": 0.9064632729275861, "root_relative_motion_ratio_pct": 77.74499474453948, "gt_displacement_rms_raw": 2.7199546426607646, "valid_bone_observations": 987, "valid_adjacent_joint_pairs": 1012}}
+{"evaluation": {"split": "gunplay47", "model": "train18", "frames": 47, "joints": 22, "edges": 21, "gt_mean_bone_length_raw": 18.52787966489895, "pred_mean_bone_length_raw": 18.735047059671967, "bone_length_ratio_pct": 101.11813871052658, "mean_individual_bone_ratio_pct": 106.93604911059502, "gt_joint_spread_rms_raw": 43.45674679197032, "pred_joint_spread_rms_raw": 46.072759808097764, "joint_spread_ratio_pct": 106.01980868160803, "mean_frame_spread_ratio_pct": 106.0784139804033, "global_joint_error_raw": 19.914658823878202, "root_relative_error_22_raw": 19.59147905828285, "root_relative_error_nonroot_21_raw": 20.524406632486794, "pelvis_position_error_raw": 9.246535206873457, "gt_mean_displacement_raw": 1.6390777821092397, "pred_mean_displacement_raw": 1.0562064448279016, "motion_magnitude_ratio_pct": 64.4390678927224, "frame_displacement_error_raw": 1.2059962688710562, "root_relative_motion_ratio_pct": 58.0512651229966, "gt_displacement_rms_raw": 2.7199546426607646, "valid_bone_observations": 987, "valid_adjacent_joint_pairs": 1012}}
+{"evaluation": {"split": "gunplay47", "model": "train100", "frames": 47, "joints": 22, "edges": 21, "gt_mean_bone_length_raw": 18.52787966489895, "pred_mean_bone_length_raw": 16.150907054645263, "bone_length_ratio_pct": 87.17083307294541, "mean_individual_bone_ratio_pct": 92.57194003877018, "gt_joint_spread_rms_raw": 43.45674679197032, "pred_joint_spread_rms_raw": 43.52655199615866, "joint_spread_ratio_pct": 100.16063145389712, "mean_frame_spread_ratio_pct": 100.18805355693796, "global_joint_error_raw": 14.728635032859113, "root_relative_error_22_raw": 16.84583184297457, "root_relative_error_nonroot_21_raw": 17.648014311687643, "pelvis_position_error_raw": 6.724727504788472, "gt_mean_displacement_raw": 1.6390777821092397, "pred_mean_displacement_raw": 1.1984610014652244, "motion_magnitude_ratio_pct": 73.11800663437646, "frame_displacement_error_raw": 0.9941247199959338, "root_relative_motion_ratio_pct": 62.062183698895524, "gt_displacement_rms_raw": 2.7199546426607646, "valid_bone_observations": 987, "valid_adjacent_joint_pairs": 1012}}
+{
+  "execution_status": "PASS",
+  "quality": {
+    "status": "PARTIAL",
+    "all_predeclared_gates_pass": false,
+    "primary_three_errors_improved": true,
+    "gates": {
+      "global_joint_error_raw": true,
+      "root_relative_error_22_raw": true,
+      "frame_displacement_error_raw": true,
+      "motion_magnitude_ratio_pct": true,
+      "root_relative_motion_ratio_pct": true,
+      "pelvis_no_more_than_2pct_worse": true,
+      "bone_distortion_no_more_than_2pp_worse": false,
+      "spread_no_more_than_2pp_farther": true
+    },
+    "interpretation": "Exploratory single seed; no statistical significance claim; all metrics reported."
+  },
+  "additional_validation_quality": {
+    "status": "PARTIAL",
+    "all_predeclared_gates_pass": false,
+    "primary_three_errors_improved": false,
+    "gates": {
+      "global_joint_error_raw": false,
+      "root_relative_error_22_raw": false,
+      "frame_displacement_error_raw": true,
+      "motion_magnitude_ratio_pct": true,
+      "root_relative_motion_ratio_pct": true,
+      "pelvis_no_more_than_2pct_worse": true,
+      "bone_distortion_no_more_than_2pp_worse": true,
+      "spread_no_more_than_2pp_farther": false
+    },
+    "interpretation": "Exploratory single seed; no statistical significance claim; all metrics reported."
+  }
+}

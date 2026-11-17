@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "actual_T4_execution": "PASS",
+  "quality": "PARTIAL",
+  "checkpoint_files": [
+    "train300_100.pt",
+    "train300_200.pt",
+    "train300_300.pt",
+    "train300_400.pt"
+  ],
+  "prediction_groups": 6,
+  "training_csv_rows": 400,
+  "training_jsonl_rows": 400,
+  "full_random_trace": true,
+  "missing_files": [],
+  "raw_archive": {
+    "bytes": 6453141,
+    "sha256": "b2aadfa73796da5292cf31f98c76497ffedbc714aef318824848e540a7ffaecc",
+    "crc_entries": 22,
+    "checksummed_files": 21
+  },
+  "baseline_checkpoints_reused": [
+    "train18_400.pt",
+    "train100_400.pt"
+  ],
+  "privacy": "Private Pose/NPZ/PT are excluded from GitHub"
+}

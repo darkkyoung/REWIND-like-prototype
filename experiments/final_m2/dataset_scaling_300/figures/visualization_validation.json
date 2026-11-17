@@ -1,0 +1,231 @@
+{
+  "status": "PASS",
+  "axes": {
+    "opening130_skeleton": {
+      "limits": [
+        [
+          -91.81813049316406,
+          76.67843627929688
+        ],
+        [
+          -70.11247253417969,
+          98.38409423828125
+        ],
+        [
+          -5.513664245605469,
+          162.98291015625
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "opening130_root_relative": {
+      "limits": [
+        [
+          -91.04827117919922,
+          75.93502044677734
+        ],
+        [
+          -65.00885009765625,
+          101.97444152832031
+        ],
+        [
+          -67.26968383789062,
+          99.71360778808594
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "gunplay47_skeleton": {
+      "limits": [
+        [
+          -97.43309783935547,
+          87.3866958618164
+        ],
+        [
+          -100.68441772460938,
+          84.1353759765625
+        ],
+        [
+          -21.273056030273438,
+          163.54673767089844
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    },
+    "gunplay47_root_relative": {
+      "limits": [
+        [
+          -89.6744155883789,
+          94.25470733642578
+        ],
+        [
+          -77.76405334472656,
+          106.16506958007812
+        ],
+        [
+          -84.52587127685547,
+          99.40325164794922
+        ]
+      ],
+      "uses_prior_three_arm_limits": false,
+      "view": "inherited axes_style elev18 azim-70",
+      "equal_xyz_scale": true,
+      "aligned": false
+    }
+  },
+  "files": {
+    "gunplay47_bone_length.png": {
+      "frames": 1,
+      "size": [
+        1560,
+        1170
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "gunplay47_comparison_motion.gif": {
+      "frames": 47,
+      "size": [
+        1200,
+        300
+      ],
+      "durations_ms": [
+        100
+      ]
+    },
+    "gunplay47_frame_comparison.png": {
+      "frames": 1,
+      "size": [
+        1690,
+        1040
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "gunplay47_joint_spread.png": {
+      "frames": 1,
+      "size": [
+        1430,
+        520
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "gunplay47_root_relative.png": {
+      "frames": 1,
+      "size": [
+        1760,
+        1760
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "gunplay47_skeleton.png": {
+      "frames": 1,
+      "size": [
+        1760,
+        1760
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "opening130_bone_length.png": {
+      "frames": 1,
+      "size": [
+        1560,
+        1170
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "opening130_comparison_motion.gif": {
+      "frames": 130,
+      "size": [
+        1200,
+        300
+      ],
+      "durations_ms": [
+        100
+      ]
+    },
+    "opening130_frame_comparison.png": {
+      "frames": 1,
+      "size": [
+        1690,
+        1040
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "opening130_joint_spread.png": {
+      "frames": 1,
+      "size": [
+        1430,
+        520
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "opening130_root_relative.png": {
+      "frames": 1,
+      "size": [
+        1760,
+        1760
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "opening130_skeleton.png": {
+      "frames": 1,
+      "size": [
+        1760,
+        1760
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "quantitative_comparison.png": {
+      "frames": 1,
+      "size": [
+        2100,
+        840
+      ],
+      "durations_ms": [
+        null
+      ]
+    },
+    "training_loss.png": {
+      "frames": 1,
+      "size": [
+        1430,
+        520
+      ],
+      "durations_ms": [
+        null
+      ]
+    }
+  },
+  "source": "actual saved prediction arrays",
+  "rotation_scaling_alignment": "none",
+  "display_fps": 10,
+  "capture_fps": "NOT VERIFIED"
+}
