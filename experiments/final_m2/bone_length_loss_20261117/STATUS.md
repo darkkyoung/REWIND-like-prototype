@@ -1,5 +1,7 @@
 # 상태 — 2026-11-17
 
+2026-11-19 통제 실험 실행본은 [Work 인계](WORK.md)와 [Colab 노트북](Control800_T4.ipynb)을 따른다. [기존 결과 사전 진단](PARENT_DIAGNOSIS.md)과 CPU 검사 20개를 완료했다. 아래는 이전 Phase 1 기록이다. T4 성능은 **NOT VERIFIED**.
+
 - 기준 원격 브랜치와 커밋 `cf767233172e2fe7c9514954f177bcfd56c41d17` 확인.
 - Bone Length Loss, 2군 checkpoint 분기, Train-only gradient 가중치 고정, paired RNG trace, T4 실행 스크립트 작성.
 - CPU 검증 결과: Python 3.12 / torch 2.15.0+cpu에서 신규 6개 + 기존 `tests.test_m2` 10개, 총 16개 통과. `py_compile` 및 `git diff --check` 통과.

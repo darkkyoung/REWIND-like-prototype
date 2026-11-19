@@ -1,5 +1,7 @@
 # M2 Bone Length Loss Phase 1
 
+2026-11-19 통제 실험 실행본은 [Work 인계](WORK.md)와 [Colab 노트북](Control800_T4.ipynb)을 따른다. [기존 결과 사전 진단](PARENT_DIAGNOSIS.md)과 CPU 검사 20개를 완료했다. 아래는 이전 Phase 1 기록이다. T4 성능은 **NOT VERIFIED**.
+
 기준은 `cf767233172e2fe7c9514954f177bcfd56c41d17`의 Train300/400이다. 원본 checkpoint 및 기존 M2 코드를 변경하지 않는다. `loss.py`가 x0의 각 Body22 edge 길이와 GT 길이 차이의 제곱을 계산한다. 예측은 기존 `target_scale_raw=100`으로 정규화된 x0이며 GT만 같은 척도로 나눈다. 유효한 두 끝 관절과 time slot에 대해서만 (frame, edge) 관측 평균을 취한다. 관절 좌표를 덮어쓰거나 추론 출력을 보정하지 않는다.
 
 실험은 같은 Train300/400 상태에서 Control(Position)과 Improved(Position+Bone)를 각각 400 update 재개한다. 각 군에서 checkpoint RNG를 다시 복원하고 첫 상태 및 매 update의 anchor, diffusion timestep, noise hash를 비교한다. 가중치는 학습 전 **Train300만** 이용한 8개 결정적 배치에서 Position/Bone 파라미터 gradient norm 비율의 중앙값 × 0.1로 고정해 `calibration.json`에 남긴다. Opening/Gunplay/미사용 동작 값은 이 계산에 접근하지 않는다. 이 8개 배치는 가중치 측정 후 원본 RNG로 다시 복원하므로 군별 학습 draw가 일치한다.
