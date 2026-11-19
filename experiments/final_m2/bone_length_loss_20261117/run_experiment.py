@@ -54,7 +54,7 @@ def draw(model,ck,schedule,data,frames,sequences,device):
     p,f=model(schedule.q_sample(clean,noise,k),x,torch.zeros(8,8,2,9,device=device),k,t)
     existing,main,aux=position_losses(p,f,y,m,t,cfg['target_scale_raw'],cfg['frame_loss_weight'])
     bone,pairs=bone_length_loss(p,y,m,t,ck['manifest']['edges'],cfg['target_scale_raw'])
-    trace={'anchors':ids.tolist(),'timesteps':k.cpu().tolist(),'noise_sha256':state_hash(noise),
+    trace={'input_sha256':state_hash([x,y,m,t]),'anchors':ids.tolist(),'timesteps':k.cpu().tolist(),'noise_sha256':state_hash(noise),
            'frames_sha256':state_hash(frames[ids]),'sequences_sha256':state_hash(sequences[ids])}
     return existing,main,aux,bone,pairs,trace
 
@@ -66,10 +66,10 @@ def calibrate(ck,data,schedule,frames,sequences,device,settings):
         gp=grad_norm(torch.autograd.grad(existing,params,retain_graph=True,allow_unused=True))
         gb=grad_norm(torch.autograd.grad(bone,params,allow_unused=True))
         if gp<=0 or gb<=0 or pairs<=0:raise ValueError('calibration_gradient')
-        ratios.append(gp/gb);trace.append(row)
+        ratios.append(gp/gb);trace.append({**row,'position_loss':existing.item(),'bone_loss':bone.item(),'position_gradient':gp,'bone_gradient':gb})
     weight=float(settings['calibration_fraction']*np.median(ratios))
     if not np.isfinite(weight) or weight<=0:raise ValueError('calibration_weight')
-    return weight,{'train_only_gradient_ratios':ratios,'weight':weight,'draw_trace_sha256':state_hash(trace)}
+    return weight,{'train_only_gradient_ratios':ratios,'weight':weight,'batches':trace,'draw_trace_sha256':state_hash(trace)}
 
 
 def train_arm(arm,ck,data,schedule,frames,sequences,device,weight,out,settings):
@@ -151,9 +151,9 @@ def quality_checks(rows):
         c=next(r for r in rows if r['split']==split and r['model']=='control')
         i=next(r for r in rows if r['split']==split and r['model']=='improved')
         gates={'bone_distortion_decreases':i['mean_abs_bone_ratio_deviation_pp']<c['mean_abs_bone_ratio_deviation_pp']}
-        for key in ('global_joint_error_raw','root_relative_error_22_raw','pelvis_position_error_raw'):
+        for key in ('global_joint_error_raw','root_relative_error_22_raw','pelvis_position_error_raw','frame_displacement_error_raw'):
             gates[key]=None if c[key] is None or i[key] is None else i[key]<=1.02*c[key]
-        for key in ('motion_magnitude_ratio_pct','joint_spread_ratio_pct'):
+        for key in ('motion_magnitude_ratio_pct','joint_spread_ratio_pct','root_relative_motion_ratio_pct'):
             gates[key]=None if c[key] is None or i[key] is None else abs(i[key]-100)<=abs(c[key]-100)+2
         result[split]=gates
     return {'gates':result,'all_pass':all(v is True for gates in result.values() for v in gates.values()),
@@ -178,6 +178,12 @@ def run(input_dir,checkpoint_dir,unused_path,output):
     unused=read_npz(Path(unused_path));data['unused_motion_preselected']=unused
     selection=load(Path(unused_path).with_suffix('.selection.json'))
     if selection['npz_sha256']!=sha(unused_path) or selection['selected_before_training'] is not True:raise ValueError('unused_selection_lock')
+    if selection['sequence_id'] != settings['candidate_sequence'] or not np.array_equal(unused['frame_ids'], np.arange(57)):
+        raise ValueError('preselected_candidate')
+    source_hashes = selection.get('source_pose_sha256', [])
+    used_hashes = {row['pose_sha256'] for row in manifest['frames'] + manifest['additional_evaluation']['gunplay47']}
+    if len(source_hashes)!=57 or len(set(source_hashes))!=57 or used_hashes.intersection(source_hashes):
+        raise ValueError('candidate_source_overlap_or_missing')
     validate_evaluation(data,selection)
     train_keys=set(zip(map(str,data['train300']['sequence_ids']),map(int,data['train300']['frame_ids'])))
     other=set()
@@ -195,6 +201,8 @@ def run(input_dir,checkpoint_dir,unused_path,output):
               'input_sha256':{name:sha(inp/f'{name}.npz') for name in ('train300','opening130','gunplay47')},
               'unused_selection':selection,'unused_selection_sha256':sha(Path(unused_path).with_suffix('.selection.json'))}
     write(out/'experiment_identity.json',identity)
+    from experiments.final_m2.bone_length_loss_20261117.diagnostics import measure
+    measure(ck,schedule,data,Path(checkpoint_dir),out,load(HERE.parent/'dataset_scaling_300/checksums.json'))
     weight,calibration=calibrate(ck,data['train300'],schedule,train_frames,train_sequences,'cuda',settings)
     write(out/'calibration.json',calibration)
     arms=[train_arm(arm,ck,data['train300'],schedule,train_frames,train_sequences,'cuda',weight,out,settings) for arm in ('control','improved')]

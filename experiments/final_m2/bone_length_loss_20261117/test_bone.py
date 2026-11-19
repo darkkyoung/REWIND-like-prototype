@@ -128,7 +128,7 @@ class BoneTests(unittest.TestCase):
         result=bone_metrics(z,[(0,1),(0,2)])
         self.assertEqual(result['mean_abs_bone_ratio_deviation_pp'],50.)
         c={'split':'s','model':'control',**result,'global_joint_error_raw':10.,'root_relative_error_22_raw':10.,
-           'pelvis_position_error_raw':10.,'motion_magnitude_ratio_pct':90.,'joint_spread_ratio_pct':110.}
+           'frame_displacement_error_raw':1.,'root_relative_motion_ratio_pct':90.,'pelvis_position_error_raw':10.,'motion_magnitude_ratio_pct':90.,'joint_spread_ratio_pct':110.}
         i={**c,'model':'improved','mean_abs_bone_ratio_deviation_pp':40.}
         self.assertTrue(quality_checks([c,i])['all_pass'])
         i['pelvis_position_error_raw']=10.3

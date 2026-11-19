@@ -8,5 +8,14 @@
   "weight_rule": "0.1 * median(position gradient norm / bone gradient norm) on first 8 deterministic Train300 draws, frozen before arm training and evaluation",
   "calibration_batches": 8,
   "calibration_fraction": 0.1,
-  "evaluation": ["opening130", "gunplay47", "unused_motion_preselected"]
+  "evaluation": [
+    "opening130",
+    "gunplay47",
+    "unused_motion_preselected"
+  ],
+  "candidate_sequence": "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/001/Joyful_Jump__16_",
+  "candidate_frame_range_inclusive": [
+    0,
+    56
+  ]
 }

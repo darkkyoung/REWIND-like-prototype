@@ -1,0 +1,33 @@
+test_bone_metric_masks_and_gate (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_bone_metric_masks_and_gate) ... ok
+test_draw_randomness_and_restore (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_draw_randomness_and_restore) ... ok
+test_evaluation_boundary_and_motion_rejection (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_evaluation_boundary_and_motion_rejection) ... ok
+test_formula_scale_and_gradient (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_formula_scale_and_gradient) ... ok
+test_frame_independence_and_partial_edge (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_frame_independence_and_partial_edge) ... /workspace/REWIND-like-prototype/experiments/final_m2/bone_length_loss_20261117/test_bone.py:39: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+  self.assertEqual((n,m),(1,1));self.assertEqual(float(base),float(changed))
+ok
+test_mask_and_zero (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_mask_and_zero) ... ok
+test_parent_schema_matches_actual_writer (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_parent_schema_matches_actual_writer) ... ok
+test_position_regression_zero_weight (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_position_regression_zero_weight) ... ok
+test_window_gap_boundary_future (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_window_gap_boundary_future) ... ok
+test_zero_length_and_nan_mask_backward (experiments.final_m2.bone_length_loss_20261117.test_bone.BoneTests.test_zero_length_and_nan_mask_backward) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.810s
+
+OK
+test_camera_skeleton_contract_and_mask_packing (test_m2.M2Tests.test_camera_skeleton_contract_and_mask_packing) ... ok
+test_checkpoint_exact_resume_full_state_and_identity_guards (test_m2.M2Tests.test_checkpoint_exact_resume_full_state_and_identity_guards) ... ok
+test_cli_periodic_resume_evaluation_and_recovery (test_m2.M2Tests.test_cli_periodic_resume_evaluation_and_recovery) ... ok
+test_config_and_test_gates (test_m2.M2Tests.test_config_and_test_gates) ... ok
+test_denoiser_and_sampler_future_perturbation_padding_rope_shift (test_m2.M2Tests.test_denoiser_and_sampler_future_perturbation_padding_rope_shift) ... ok
+test_frame_keyed_noise_independent_of_future_order_and_anchor (test_m2.M2Tests.test_frame_keyed_noise_independent_of_future_order_and_anchor) ... ok
+test_masked_nan_before_q_sample_and_loss_gradient (test_m2.M2Tests.test_masked_nan_before_q_sample_and_loss_gradient) ... ok
+test_schedule_q_sample_endpoints_and_oracle_ddim (test_m2.M2Tests.test_schedule_q_sample_endpoints_and_oracle_ddim) ... ok
+test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history (test_m2.M2Tests.test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history) ... ok
+test_synthetic_overfit_gradient_and_eval_does_not_consume_rng (test_m2.M2Tests.test_synthetic_overfit_gradient_and_eval_does_not_consume_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.325s
+
+OK
