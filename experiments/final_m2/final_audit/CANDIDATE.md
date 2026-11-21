@@ -1,0 +1,2 @@
+# 신규 후보 사전 고정
+2026-11-22. Drive UnrealEgoData2_test_pose / CityPark_Showcase/Day/rp_sophia_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/024/Taunt__2_ / json/frame_0..15.json. 폴더 19A0wUe3QiqRBB9sDOUNJKGNv5GSCb_jG. 결과 미관측 상태에서 짧은 연속 smoke 범위를 고정한다. 정상 원본 GT2D 한 조건. Control800 고정, Phase 2/3/4(Combined) 무변경. seed 10043, Window8/DDIM10/zero-camera. 각 정책은 그 자체 이전 사전 판정을 유지하고, 새 클립에 대해서는 Control 대비 JPE·RR·FDE·골격 왜곡 모두 감소하고 fast motion ratio의 100% 편차가 증가하지 않아야 후보 통과로 기록한다. 단일 16프레임은 진단이다. 상위 원본 mocap ID와 train·기존 Validation의 독립성 확인 전에는 독립 Test로 분류하지 않는다.
