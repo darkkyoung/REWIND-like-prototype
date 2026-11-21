@@ -1,0 +1,31 @@
+test_coherent_fast_noop (experiments.final_m2.kinematic_phase3.test_gate.GateTests.test_coherent_fast_noop) ... ok
+test_future_gap_sequence_and_gt (experiments.final_m2.kinematic_phase3.test_gate.GateTests.test_future_gap_sequence_and_gt) ... ok
+test_off_always_exact (experiments.final_m2.kinematic_phase3.test_gate.GateTests.test_off_always_exact) ... ok
+test_prior_only_after_reliable_history (experiments.final_m2.kinematic_phase3.test_gate.GateTests.test_prior_only_after_reliable_history) ... ok
+test_subtree_and_release (experiments.final_m2.kinematic_phase3.test_gate.GateTests.test_subtree_and_release) ... ok
+test_direction_root_subtree (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_direction_root_subtree) ... ok
+test_dp_against_exhaustive_search (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_dp_against_exhaustive_search) ... ok
+test_fast_translation (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_fast_translation) ... ok
+test_masked_train_lengths (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_masked_train_lengths) ... ok
+test_prefix_reset_and_no_gt (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_prefix_reset_and_no_gt) ... ok
+test_unavailable_joint_local_strength (experiments.final_m2.kinematic_phase2.test_phase2.Phase2Tests.test_unavailable_joint_local_strength) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.111s
+
+OK
+test_camera_skeleton_contract_and_mask_packing (test_m2.M2Tests.test_camera_skeleton_contract_and_mask_packing) ... ok
+test_checkpoint_exact_resume_full_state_and_identity_guards (test_m2.M2Tests.test_checkpoint_exact_resume_full_state_and_identity_guards) ... ok
+test_cli_periodic_resume_evaluation_and_recovery (test_m2.M2Tests.test_cli_periodic_resume_evaluation_and_recovery) ... ok
+test_config_and_test_gates (test_m2.M2Tests.test_config_and_test_gates) ... ok
+test_denoiser_and_sampler_future_perturbation_padding_rope_shift (test_m2.M2Tests.test_denoiser_and_sampler_future_perturbation_padding_rope_shift) ... ok
+test_frame_keyed_noise_independent_of_future_order_and_anchor (test_m2.M2Tests.test_frame_keyed_noise_independent_of_future_order_and_anchor) ... ok
+test_masked_nan_before_q_sample_and_loss_gradient (test_m2.M2Tests.test_masked_nan_before_q_sample_and_loss_gradient) ... ok
+test_schedule_q_sample_endpoints_and_oracle_ddim (test_m2.M2Tests.test_schedule_q_sample_endpoints_and_oracle_ddim) ... ok
+test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history (test_m2.M2Tests.test_streaming_matches_independent_anchor_windows_reset_gap_and_bounded_history) ... ok
+test_synthetic_overfit_gradient_and_eval_does_not_consume_rng (test_m2.M2Tests.test_synthetic_overfit_gradient_and_eval_does_not_consume_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 4.145s
+
+OK

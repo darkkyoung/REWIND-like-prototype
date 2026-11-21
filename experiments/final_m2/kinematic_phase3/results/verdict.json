@@ -1,0 +1,14 @@
+{
+  "gates": {
+    "fast": false,
+    "protection": true,
+    "global": true,
+    "retention": false
+  },
+  "verdict": "FAIL",
+  "retained": {
+    "rr": 0.1952504765072563,
+    "fde": 0.2191237926547219,
+    "bone_pp": 0.09770224839331151
+  }
+}
