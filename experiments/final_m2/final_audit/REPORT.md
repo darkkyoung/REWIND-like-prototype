@@ -1,6 +1,6 @@
 # REWIND M2 최종 기술 감사 | 2026-11-23 발표
 
-**세 Validation에서 골격 일관성은 개선할 수 있었다. 그 보정이 특정 관절의 3D 위치와 다음 프레임의 움직임을 함께 개선할지는 지속 길이 편차만으로 판별하기 어려웠다.** Phase 4는 사전 종합 기준 FAIL이다. 이번 감사에서는 동결된 예측에 사후 분석만 추가했다. 신규 Taunt16은 전처리까지 검증했고 모델 결과와 원본 mocap 독립성은 미확인이다.
+**세 Validation에서 골격 일관성은 개선할 수 있었다. 그 보정이 특정 관절의 3D 위치와 다음 프레임의 움직임을 함께 개선할지는 지속 길이 편차만으로 판별하기 어려웠다.** Phase 4는 사전 종합 기준 FAIL이다. 추가 동작 Taunt16의 실제 T4 추론에서도 Phase 2·3·4는 사전 기준을 통과하지 못했다. 상위 원본 mocap 독립성은 미확인이다.
 
 ## 무엇을 통제했는가
 
@@ -56,13 +56,42 @@ Opening130/Gunplay47/Joyful57 × clean/jitter/spike/short missing/long missing 1
 
 ![동일 축의 실제 예측과 GT](results/clean_failure.png)
 
-## 독립 평가 준비와 Work 인계
+## 추가 동작 선정과 중복 검사
 
 동료 저장소의 ArchVis 준비 문서는 train 1,000 및 validation 2,236 프레임을 기록한다. 별도 V12 문서는 CityPark Gunplay13·Kneeling Inspecting1과 Downtown Reloading·Quarterback Pass 각 0–49를 다룬다. 해당 모델의 predicted 2D·카메라·mm 평가 계약이 M2와 달라 결과 수치는 합산하지 않았다. [동료 데이터 목록](https://github.com/BattleMarine/REWIND-like-prototype/blob/12ba5e4b2f9f56c4cc1164430674fd969ac094a6/docs/FULL_TRAINING_READINESS.md) · [교차 장면 기록](https://github.com/BattleMarine/REWIND-like-prototype/blob/12ba5e4b2f9f56c4cc1164430674fd969ac094a6/docs/V12_CROSS_SCENARIO_RESULTS.md)
 
 Drive의 UnrealEgoData2_test_pose에서 CityPark Taunt__2_ 0–15를 선정하고 추론 전에 후보·범위·정책·판정을 커밋 7949e2d에 고정했다. 16개 JSON의 SHA/내부 frame을 검증하고 기존 변환기를 사용했다. Train300 + Opening130 + Gunplay47 + Joyful57 = 534 anchor와 motion 이름 및 float32 anchor GT/입력의 정확한 중복은 0개였다. world→camera 최대 불일치 2.91×10⁻¹² raw, stereo baseline 12.00063 raw. 상위 mocap ID, 좌우 반전·리타게팅 등 변형 중복은 미확인이다. 공식 폴더명만으로 새로운 독립 Test를 선언할 수 없다. [고정 조건](CANDIDATE.md) · [원본 파일 ID와 SHA](raw_manifest.json) · [CPU 결과](results/candidate_audit.json)
 
-Work는 새 Colab T4에서 노트북을 한 번 실행한다. 입력 ZIP과 동결 결과 ZIP 읽기 및 16개 원본에 접근할 수 있는 Drive 계정이 필요하다. 체크아웃한 코드, 두 ZIP, 내부 체크포인트, 개별 JSON을 검사하고 입력 전처리를 재현한다. 예산은 clean 16프레임 × DDIM10 Control 한 번, 같은 출력에 기존 세 후처리 적용이다. T4/해시/계약 불일치 시 중단한다. Drive의 rewind_final_audit 아래 실행별 receipt.json, archive_identity.json, results/{candidate_audit.json,evaluation.json,poses.npz,taunt16.npz}를 회수한다. 사전 기준에 따라 각 정책을 판정하고 mocap provenance 확인은 별도 과제로 남긴다. [Work 실행 노트북](Taunt16_T4.ipynb)
+## Taunt16 실제 T4 실행과 사전 판정
+
+CityPark Taunt__2_의 clean 0–15번을 동결 Control800으로 한 번 추론했다. Colab Tesla T4, FP32, batch 1, GT Stereo2D, zero-camera, Body22, Window8, DDIM10, seed 10043이다. 세 후처리가 같은 Control 출력을 받았다. 사전에 고정한 통과 조건은 Control 대비 Global·RR·FDE·Bone 네 오차가 모두 엄격히 감소하고 fast motion ratio와 100%의 차이가 증가하지 않는 것이다. Control은 비교 기준이다. [사전 기록](CANDIDATE.md) · [실제 결과 ZIP](https://drive.google.com/file/d/1hWxIrPHkVmpSB32PPEI06R-Plrxv-trk/view)
+
+|정책|Global JPE raw|RR JPE raw|FDE raw|Bone 왜곡 %|FastGap pp|수정 프레임|판정|
+|---|---:|---:|---:|---:|---:|---:|---|
+|Control800|7.8023896854|10.9003456409|0.6829773351|14.8677900434|29.2153000832|0/16|기준|
+|Phase 2|7.5416602070|11.0542125690|0.6666158005|13.2275134325|29.1900813580|16/16|FAIL · RR|
+|Phase 3|7.8023896854|10.9003456409|0.6829773351|14.8677900434|29.2153000832|0/16|FAIL · 동률|
+|Phase 4 결합|7.7071783594|10.9549004181|0.6936059080|14.2371565104|28.8850426674|12/16|FAIL · RR, FDE|
+
+Phase 2는 16프레임 모두 전역 오차를 줄였고 16프레임 모두 상대 자세 오차가 커졌다. 네 정책의 pelvis 오차는 10.1682 raw였다. 골반을 같은 위치에 고정해도 다른 관절의 이동이 전역 좌표에서 골반 위치 편향을 일부 상쇄할 수 있다. 골반을 뺀 RR에서는 상쇄 효과가 사라진다. 이 설명은 기하적으로 가능한 기전이다. Phase 3의 저장 좌표는 Control과 원소별로 일치했다. Phase 4는 12프레임에서 전역 오차가 감소했고 11프레임에서 RR이 악화됐다. FastGap의 GT 기준 상위 사분위 전이는 15개 중 4개(도착 11·12·14·15번)다.
+
+### 기존 세 동작과 비교
+
+그림과 CSV에서 음수는 각 평가의 Control보다 오차가 낮다는 뜻이다. 기존 값은 세 Validation × 다섯 조건 동일 가중 평균이고, 신규 값은 한 clean 클립이다. 이 비교로 오염 효과와 동작 효과를 분리할 수 없다. Phase 2의 RR 효과는 기존 −0.254에서 Taunt +0.154 raw로 부호가 바뀌었다. Phase 4 FDE는 두 평가에서 모두 증가했다. [정책별 변화량 CSV](release/comparison.csv)
+
+![기존 Validation과 Taunt16의 Control 대비 변화량](release/comparison.png)
+
+**13번 프레임.** Phase 2의 RR 악화가 가장 컸다(+0.2380 raw). 같은 프레임에서 Global JPE는 0.3716 감소했다.
+
+![프레임 13 다섯 자세 동일 축](release/harm.png)
+
+**15번 프레임.** Phase 2의 Global 개선이 가장 컸다(−0.5646 raw). RR JPE는 0.1245 증가했다. 두 그림은 ZIP의 동일 축·동일 시점 원본이다. 주황색은 Control에서 끝점이 이동한 연결이다.
+
+![프레임 15 다섯 자세 동일 축](release/help.png)
+
+### 비용과 해석 범위
+
+CUDA 동기화한 infer_frame의 첫 프레임은 868.89 ms, 후속 15프레임 평균은 60.37 ms였다. 16프레임 평균은 110.90 ms다. 별도 warm-up이 없었고 모델 로드, RGB frontend, prior 산출은 측정 밖이다. CPU 재생에서 후처리 평균은 Phase 2/3/4 순서로 0.225/0.944/0.299 ms였다. 단일 짧은 실행으로 전체 시스템의 지속 처리량이나 실시간 성능을 결정할 수 없다. 실제 RGB·카메라 일반화, 독립 motion, One-step Student와 Adaptive DDIM 계산 절감은 미검증이다. [실측 검증 체크리스트](release/VERIFICATION.md)
 
 ## 재현 경로와 증거 수준
 
@@ -75,7 +104,7 @@ Work는 새 Colab T4에서 노트북을 한 번 실행한다. 입력 ZIP과 동�
 |RQ1/RQ2 T4 ZIP · 이번 감사에서 바이트 검증|6d8e29d88a4e6b1735244b5f302ecf26159841b87d3c7c7a39871312a32d82ee|
 |학습 입력 ZIP / Taunt16 전처리 NPZ|d786d36034f7c430d7eb7d3aa6bbee1a26b08308f7f75162623bceb67cec8082 / 3dce98899fcb0eaaa281d3089031ee66621c0245767bef7c2ed374c83677abd7|
 
-저장소 루트에서 아래 명령으로 새 출력 디렉터리에 사후 분석을 재현한다. 이번 실행 범위는 CPU 회귀 26개 및 실제 저장 예측 재생·신규 원본 변환이다. 이전 T4 결과는 원본 ZIP에서 읽었다. 새 T4 실행·가중치 재로드 및 Taunt 성능은 미검증이다. [CPU 검사 로그](results/cpu.log) · [T4 결과 ZIP](https://drive.google.com/file/d/1a-J6-HpaQpXGYS_Je_trfosH9bdGnNCC/view) · [입력 ZIP](https://drive.google.com/file/d/1V11xsktR_TNybTYXDD6RDF45ZgjiVnqZ/view) · [동결 결과 ZIP](https://drive.google.com/file/d/1MBVYoI0L77N4fc0ZQfrLKiFfKFNyz5AC/view)
+저장소 루트에서 아래 명령으로 새 출력 디렉터리에 사후 분석을 재현한다. 이번 실행 범위는 CPU 회귀 26개 및 실제 저장 예측 재생·신규 원본 변환이다. 이전 T4 결과는 원본 ZIP에서 읽었다. 이후 Work가 실행한 Taunt16 T4 실측은 위 별도 섹션에 수록했다. [CPU 검사 로그](results/cpu.log) · [T4 결과 ZIP](https://drive.google.com/file/d/1a-J6-HpaQpXGYS_Je_trfosH9bdGnNCC/view) · [입력 ZIP](https://drive.google.com/file/d/1V11xsktR_TNybTYXDD6RDF45ZgjiVnqZ/view) · [동결 결과 ZIP](https://drive.google.com/file/d/1MBVYoI0L77N4fc0ZQfrLKiFfKFNyz5AC/view)
 
 ```bash
 python -m experiments.final_m2.final_audit.audit REWIND_M2_Selective_T4_20261121_VERIFIED.zip audit_replay

@@ -1,0 +1,25 @@
+evaluation,policy,metric,delta_vs_control
+Validation (15 conditions),phase2,jpe,0.007362737863374491
+Validation (15 conditions),phase3,jpe,-0.03760981223091697
+Validation (15 conditions),phase4,jpe,-0.040986641499980436
+Taunt16 (clean),phase2,jpe,-0.26072947837848126
+Taunt16 (clean),phase3,jpe,0.0
+Taunt16 (clean),phase4,jpe,-0.09521132604891935
+Validation (15 conditions),phase2,rr,-0.2536834254713831
+Validation (15 conditions),phase3,rr,-0.049531809705280594
+Validation (15 conditions),phase4,rr,-0.11151504743603802
+Taunt16 (clean),phase2,rr,0.15386692805094704
+Taunt16 (clean),phase3,rr,0.0
+Taunt16 (clean),phase4,rr,0.05455477719257473
+Validation (15 conditions),phase2,fde,-0.0558369150420881
+Validation (15 conditions),phase3,fde,-0.012235196594161835
+Validation (15 conditions),phase4,fde,0.01017334520679647
+Taunt16 (clean),phase2,fde,-0.016361534659722676
+Taunt16 (clean),phase3,fde,0.0
+Taunt16 (clean),phase4,fde,0.010628572828314309
+Validation (15 conditions),phase2,bone,-5.043393999999999
+Validation (15 conditions),phase3,bone,-0.49275093333333686
+Validation (15 conditions),phase4,bone,-1.5970640666666647
+Taunt16 (clean),phase2,bone,-1.6402766108512878
+Taunt16 (clean),phase3,bone,0.0
+Taunt16 (clean),phase4,bone,-0.630633533000946
