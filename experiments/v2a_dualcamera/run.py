@@ -60,7 +60,6 @@ def split_audit(records, selected):
     keys = {(seq,f) for _,(seq,start) in selected for f in range(start,start+50)}
     train_hash = set()
     motions = set()
-    verdict.update(stage="paired_evaluation",candidate_strict_load="PASS")
     rows = []
     for row in records:
         seq = row["sequence_id"]

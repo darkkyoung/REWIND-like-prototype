@@ -103,3 +103,39 @@ class ModeTests(unittest.TestCase):
         v = decide("strict",self.rows)
         self.assertTrue(v["parity_allows_candidate"])
         self.assertEqual((v["historical_release"],v["strict_release"]),("FAIL","PASS"))
+
+
+class SplitAuditTests(unittest.TestCase):
+    def setUp(self):
+        from .run import split_audit
+        self.audit = split_audit
+        self.selected = [("scene", ("validation_person/walk", 10))]
+        def row(split, sequence, frame):
+            files = {role: {"sha256": hashlib.sha256(f"{sequence}/{frame}/{role}".encode()).hexdigest()}
+                     for role in ("left", "right", "pose")}
+            return {"split": split, "sequence_id": sequence, "frame_index": frame, "files": files}
+        self.train = row("train", "train_person/walk", 10)
+        self.validation = [row("validation", "validation_person/walk", f) for f in range(10, 60)]
+
+    def test_selected_frames_and_distinct_train_files(self):
+        result = self.audit([self.train, *self.validation], self.selected)
+        self.assertEqual(result["frames"], 50)
+        self.assertEqual(result["exact_train_file_overlap"], {"left": 0, "right": 0, "pose": 0})
+        self.assertEqual(result["train_motion_name_overlap"], ["walk"])
+
+    def test_selected_frame_from_train_is_rejected(self):
+        self.validation[0]["split"] = "train"
+        with self.assertRaisesRegex(ValueError, "validation membership"):
+            self.audit([self.train, *self.validation], self.selected)
+
+    def test_missing_or_duplicate_frame_is_rejected(self):
+        for rows in (self.validation[1:], self.validation[1:] + [self.validation[-1]]):
+            with self.subTest(), self.assertRaisesRegex(ValueError, "validation membership"):
+                self.audit([self.train, *rows], self.selected)
+
+    def test_sha_overlap_is_rejected_for_each_file_role(self):
+        for role in self.train["files"]:
+            rows = deepcopy(self.validation)
+            rows[-1]["files"][role] = self.train["files"][role]
+            with self.subTest(role=role), self.assertRaisesRegex(ValueError, "exact train file overlap"):
+                self.audit([self.train, *rows], self.selected)
