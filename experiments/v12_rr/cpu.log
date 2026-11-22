@@ -1,0 +1,23 @@
+test_causal_teacher_prefix (experiments.v12_rr.test_rr.RRTests.test_causal_teacher_prefix) ... ok
+test_exact_pair_denominator_and_mm (experiments.v12_rr.test_rr.RRTests.test_exact_pair_denominator_and_mm) ... ok
+test_frozen_selection_and_failure_rule (experiments.v12_rr.test_rr.RRTests.test_frozen_selection_and_failure_rule) ... ok
+test_gap_and_eval_leakage_rejected (experiments.v12_rr.test_rr.RRTests.test_gap_and_eval_leakage_rejected) ... ok
+test_no_valid_pair_zero_gradient (experiments.v12_rr.test_rr.RRTests.test_no_valid_pair_zero_gradient) ... ok
+test_paired_steps_and_actual_body_gradient (experiments.v12_rr.test_rr.RRTests.test_paired_steps_and_actual_body_gradient) ... ok
+test_resume_replays_next_update_and_rejects_wrong_binding (experiments.v12_rr.test_rr.RRTests.test_resume_replays_next_update_and_rejects_wrong_binding) ... ok
+test_translation_padding_invalid_root_and_nan (experiments.v12_rr.test_rr.RRTests.test_translation_padding_invalid_root_and_nan) ... ok
+test_zero_weight_original_value_and_both_head_gradients (experiments.v12_rr.test_rr.RRTests.test_zero_weight_original_value_and_both_head_gradients) ... ok
+test_bad_inputs_fail_closed (experiments.v12_m2.test_integration.IntegrationTests.test_bad_inputs_fail_closed) ... ok
+test_baseline_exact_all_outputs (experiments.v12_m2.test_integration.IntegrationTests.test_baseline_exact_all_outputs) ... ok
+test_confidence_is_separate_from_availability (experiments.v12_m2.test_integration.IntegrationTests.test_confidence_is_separate_from_availability) ... ok
+test_future_perturbation_reset_and_pelvis (experiments.v12_m2.test_integration.IntegrationTests.test_future_perturbation_reset_and_pelvis) ... ok
+test_metric_identity_and_partial_masks (experiments.v12_m2.test_integration.IntegrationTests.test_metric_identity_and_partial_masks) ... ok
+test_mm_identity_and_directed_mapping (experiments.v12_m2.test_integration.IntegrationTests.test_mm_identity_and_directed_mapping) ... ok
+test_noop_all_policies (experiments.v12_m2.test_integration.IntegrationTests.test_noop_all_policies) ... ok
+test_strict_synthetic_state_and_frozen_weights (experiments.v12_m2.test_integration.IntegrationTests.test_strict_synthetic_state_and_frozen_weights) ... ok
+test_upper_reaches_hand_and_wrist_added_once (experiments.v12_m2.test_integration.IntegrationTests.test_upper_reaches_hand_and_wrist_added_once) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 3.273s
+
+OK

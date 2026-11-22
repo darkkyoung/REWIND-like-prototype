@@ -1,0 +1,16 @@
+{
+  "frames": {
+    "train": 300,
+    "validation": 100
+  },
+  "distinct_people": {
+    "train": 6,
+    "validation": 1
+  },
+  "exact_cross_split_files": {
+    "left": 0,
+    "right": 0,
+    "pose": 0
+  },
+  "total_source_bytes": 940817816
+}

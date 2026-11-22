@@ -1,0 +1,1 @@
+{"scope": "synthetic CPU, random initialization, diagnostic weight 0.1", "hidden": 512, "frames": 50, "seconds": 1.1744997070018144, "finite_loss": 3.5536420345306396, "parameter_count": 15010822, "cuda_available": false}
