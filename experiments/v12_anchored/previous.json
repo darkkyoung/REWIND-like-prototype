@@ -1,0 +1,138 @@
+{
+  "source_sha256": "c18eae3da8eee45f7b4239588f0197743bd26a1fb3ccc98a647cb242f402ed6b",
+  "lambda_rr": 0.08310449710117396,
+  "draws": [
+    {
+      "trace": {
+        "key": [
+          "ArchVisInterior_ArchVis_RT/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/005/Singing__16_",
+          0
+        ],
+        "k": 167,
+        "noise": "19379c7bf492a7281fa8faa34efd44bcbe50873a60bcb2342429ccea1c2c327a",
+        "features": "747b32d60c0d538fea72d4621b61fcb65cf6ef97720ac3bef51cc4106ca33af6",
+        "target": "0a753900afeb7b17c7112b3796b59b0d2039c1cf5295a1d60fdefbc2cfc57e33",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "54cf88eabe28f1519fb5fa58bb688d2ac1db6ae606272b32e6bef3f46ec7e703"
+      },
+      "position_grad": 24.809062957763672,
+      "rr_grad": 17.71521759033203
+    },
+    {
+      "trace": {
+        "key": [
+          "ArchVisInterior_ArchVis_RT/Day/rp_carla_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/012/Crouch_To_Stand__17_",
+          0
+        ],
+        "k": 64,
+        "noise": "b0a41a1deee593fcd4ba02571f8de38be5d775e25ad9844878c8ab3cf9653958",
+        "features": "f867cada679a0e52d734fdfb6b6f2d58e3a2dabb03ffc4408700c042114c1c04",
+        "target": "0dae876ce978539933197ef552387ff9b154fbb036f90cf9c00b72bd3369b5c7",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "24b9c99c9c3d9ec222738416cd90fe566dab80d8272e313700cb30b4fa8dde1b"
+      },
+      "position_grad": 26.043197631835938,
+      "rr_grad": 25.159503936767578
+    },
+    {
+      "trace": {
+        "key": [
+          "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/001/Joyful_Jump__16_",
+          0
+        ],
+        "k": 762,
+        "noise": "4253b9c74ed59837661845a2462ac61a7d71ef0934e069599981f2105fae391f",
+        "features": "2b7c8c81907746a29c2d41bde37eff65a7edddda55733016ccbb2d6fa6bf5b29",
+        "target": "146411646cb9a460682c369e6103d34639cca2c38c4077df16033d0936baacd0",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "4e60bb65867f37813360cbfb2fdea47cae5aa9d6ddec8670488315a1ae073996"
+      },
+      "position_grad": 26.3891658782959,
+      "rr_grad": 50.118309020996094
+    },
+    {
+      "trace": {
+        "key": [
+          "ArchVisInterior_ArchVis_RT/Day/rp_claudia_rigged_002_ue4/SKM_MenReadingGlasses_Shape_01/004/Pulling_A_Rope__10_",
+          0
+        ],
+        "k": 286,
+        "noise": "fed9dc3d077ace54d75419ae8dcb1c34ef63b9a3602af90eb44ee01f75820e72",
+        "features": "5f9aa78d5ee162db49861c4c2068920fdecd4796451d56bd1acb6ce26efde2eb",
+        "target": "1cb0b57404c1c74f2fd82c95c2bd5ccc803489be36c000c1023858b2f35d6b08",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "6a96287d654160d01c36d09c648daac4af4ce421ce1e6cf424d0379f3e83cb09"
+      },
+      "position_grad": 40.216339111328125,
+      "rr_grad": 64.14434051513672
+    }
+  ],
+  "device": "Tesla T4",
+  "torch": "2.14.1+cu130",
+  "decisions": [
+    {
+      "sequence": "Standing__1_",
+      "decision": "FAIL",
+      "percent_change": {
+        "rr_jpe_mm": -2.265506953607488,
+        "body_mpjpe_mm": 0.7326884562591118,
+        "pelvis_mm": 6.229342408094407,
+        "wrist_mm": -1.3889339367966769,
+        "hand_global_mpjpe_mm": -0.7311973203102284,
+        "whole_mpjpe_mm": -0.25000859680028853
+      },
+      "criteria": {
+        "rr_jpe_mm": true,
+        "body_mpjpe_mm": true,
+        "pelvis_mm": false,
+        "wrist_mm": true,
+        "hand_global_mpjpe_mm": true,
+        "whole_mpjpe_mm": true
+      },
+      "frame_counts_better_worse_tie": {
+        "global": [
+          10,
+          40,
+          0
+        ],
+        "rr": [
+          37,
+          13,
+          0
+        ]
+      }
+    },
+    {
+      "sequence": "Petting_Animal__13_",
+      "decision": "FAIL",
+      "percent_change": {
+        "rr_jpe_mm": 3.781862908900613,
+        "body_mpjpe_mm": 1.4373487867582746,
+        "pelvis_mm": 12.075563917659803,
+        "wrist_mm": -0.4174333800985308,
+        "hand_global_mpjpe_mm": -0.3149632483214426,
+        "whole_mpjpe_mm": 0.02500341573241638
+      },
+      "criteria": {
+        "rr_jpe_mm": false,
+        "body_mpjpe_mm": true,
+        "pelvis_mm": false,
+        "wrist_mm": true,
+        "hand_global_mpjpe_mm": true,
+        "whole_mpjpe_mm": true
+      },
+      "frame_counts_better_worse_tie": {
+        "global": [
+          10,
+          40,
+          0
+        ],
+        "rr": [
+          9,
+          41,
+          0
+        ]
+      }
+    }
+  ]
+}

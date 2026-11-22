@@ -1,0 +1,127 @@
+{
+  "scope": "synthetic CPU; random weights; not experiment calibration",
+  "hidden": 512,
+  "coefficient": 0.04109786989544608,
+  "draws": [
+    {
+      "draw": 0,
+      "clip_index": 4,
+      "trace": {
+        "key": [
+          "4",
+          0
+        ],
+        "k": 167,
+        "noise": "19379c7bf492a7281fa8faa34efd44bcbe50873a60bcb2342429ccea1c2c327a",
+        "features": "2c6bb804eef1ac39d64af71b036315c7634bd9d55dd105c819ecbf07d7c86c28",
+        "target": "fd239de25f0c96749be58689fca2be3a2f3f7cb4cac7539b7f1369686c584989",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "bcc7c67209b8646f980df97cf1f96d9f7af39c98d604c600658cf492197489c3"
+      },
+      "norms": [
+        23.45985610954052,
+        14.567614531928408,
+        65.12587107190214
+      ],
+      "cos_position_rr": 0.10690740530435862,
+      "cos_position_pelvis": 0.6485272605021952,
+      "cos_rr_pelvis": 0.14490221658308988,
+      "combined_norm": {
+        "control": 23.45985610954052,
+        "rr": 23.619972563556498,
+        "pelvis": 25.277899179743144,
+        "anchored": 25.44502892070378
+      }
+    },
+    {
+      "draw": 1,
+      "clip_index": 2,
+      "trace": {
+        "key": [
+          "2",
+          0
+        ],
+        "k": 64,
+        "noise": "b0a41a1deee593fcd4ba02571f8de38be5d775e25ad9844878c8ab3cf9653958",
+        "features": "a8b9a599bb01a6384275ffad4558d5a00456d4cfdc1e9cc9d39961ddbb17d6f6",
+        "target": "e85da7fcd5e5b6c674b6dc9e68729e19a87be514a1e53db014b43a56ef1c611b",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "1475b34cf86fa81e48ec8f9f6a2e4a410103c4570ebb45a05ceba0e5df9cd422"
+      },
+      "norms": [
+        42.08016865608872,
+        16.000158469011648,
+        119.32508141893929
+      ],
+      "cos_position_rr": 0.06897766413842704,
+      "cos_position_pelvis": 0.816643873851348,
+      "cos_rr_pelvis": 0.0956427012154494,
+      "combined_norm": {
+        "control": 42.08016865608872,
+        "rr": 42.19274490671272,
+        "pelvis": 46.17182546988372,
+        "anchored": 46.28792420046249
+      }
+    },
+    {
+      "draw": 2,
+      "clip_index": 0,
+      "trace": {
+        "key": [
+          "0",
+          0
+        ],
+        "k": 762,
+        "noise": "4253b9c74ed59837661845a2462ac61a7d71ef0934e069599981f2105fae391f",
+        "features": "4a5d1aca16a02433f2ef30b5d6d588863cfe61603cf5edd4f7b18af77c2f4643",
+        "target": "8b7f10becec59df33949a3286222c1eea5d090f0ef15b2f5db3654e408f3cfdb",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "29db5bc5c5736f0b4d8f08c6143fefd8ffa2d4dfa954a47cb696dbf81d1cbc9c"
+      },
+      "norms": [
+        45.482698552793366,
+        8.136448864150806,
+        98.50409279431119
+      ],
+      "cos_position_rr": -0.00407242770351752,
+      "cos_position_pelvis": 0.8340582158177245,
+      "cos_rr_pelvis": 0.015593709820717302,
+      "combined_norm": {
+        "control": 45.482698552793366,
+        "rr": 45.48497105337231,
+        "pelvis": 48.91024017877634,
+        "anchored": 48.91322612380085
+      }
+    },
+    {
+      "draw": 3,
+      "clip_index": 3,
+      "trace": {
+        "key": [
+          "3",
+          0
+        ],
+        "k": 286,
+        "noise": "fed9dc3d077ace54d75419ae8dcb1c34ef63b9a3602af90eb44ee01f75820e72",
+        "features": "8c5d476346947bd16d9ecc330ac1315455fdaa024f0b5842b1491741c6aa673f",
+        "target": "addfe0c3c90b9fadd62d35ca94b1b9d48073710fd29e821940b70aaea0804913",
+        "mask": "9993c9e9d4a54bcc090c7dd00d435d282de31e07bc359a0b356b1a729907345e",
+        "camera": "81aaec68ad4f3ea3f6b37b07685210e43fb4c406341e79b38b89e6b3270da047"
+      },
+      "norms": [
+        34.208209551727975,
+        14.654413135174256,
+        54.22230818018317
+      ],
+      "cos_position_rr": 0.07347575816651518,
+      "cos_position_pelvis": 0.28113170109334007,
+      "cos_rr_pelvis": 0.1653850795331446,
+      "combined_norm": {
+        "control": 34.208209551727975,
+        "rr": 34.31919012220822,
+        "pelvis": 34.90027182150591,
+        "anchored": 35.02187677551387
+      }
+    }
+  ]
+}

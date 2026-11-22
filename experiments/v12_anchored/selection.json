@@ -1,0 +1,69 @@
+{
+  "train": [
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/001/Joyful_Jump__16_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_amit_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Crouch_Look_Around_Corner",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_carla_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/012/Crouch_To_Stand__17_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_claudia_rigged_002_ue4/SKM_MenReadingGlasses_Shape_01/004/Pulling_A_Rope__10_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_eric_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/005/Singing__16_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_janna_rigged_002_ue4/SKM_MenReadingGlasses_Shape_01/002/Dying__2_",
+      0
+    ]
+  ],
+  "validation": [
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/012/Standing__1_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Petting_Animal__13_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_manuel_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/010/Military_Signaling__6_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_maya_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/016/Standing_2H_Magic_Attack_01",
+      0
+    ]
+  ],
+  "manifest": "fc78e2a43e3b178f8b86abbe64c6221755ed4aa5bb309ea13e34d8cc08cb8877",
+  "plan": "d24bcb85d96509d279b914bf3059153f47ffc8df99eb07bb31fe002fc1e26cb3",
+  "diagnostic": [
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/012/Standing__1_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/017/Petting_Animal__13_",
+      0
+    ]
+  ],
+  "new": [
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_manuel_rigged_001_ue4/SKM_MenReadingGlasses_Shape_01/010/Military_Signaling__6_",
+      0
+    ],
+    [
+      "ArchVisInterior_ArchVis_RT/Day/rp_maya_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/016/Standing_2H_Magic_Attack_01",
+      0
+    ]
+  ],
+  "selected_file_identity": "3437cd985d740747b23da01865f03e622a1d437e64e04e4eb93f70c8062fbea4"
+}
