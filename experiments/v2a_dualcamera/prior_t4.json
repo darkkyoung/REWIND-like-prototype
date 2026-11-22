@@ -1,0 +1,116 @@
+{
+  "zip_sha256": "f849916e5b9c052fa9cf60451d4471183aafe6709e4848c320cbf4e05891dd52",
+  "manifest_entries": 23,
+  "verified_input_pins": 1239,
+  "execution": {
+    "gpu": "Tesla T4",
+    "cuda": "13.0",
+    "torch": "2.14.1+cu130",
+    "adapter": "cbf98aa93970b55518bd7afc6a999e3d1c37f609",
+    "published": "3a6a51a512c2b4f4c651d9d548531e3ed7dbfec3",
+    "owner": "darkk0729@ajou.ac.kr",
+    "status": "incomplete"
+  },
+  "published_environment": {
+    "cuda_runtime": "13.0",
+    "device": "NVIDIA A100-SXM4-40GB",
+    "precision": "fp32",
+    "torch": "2.14.1+cu130",
+    "vram_bytes": 42405855232
+  },
+  "prior_strict": {
+    "mode": "strict",
+    "historical_release": "FAIL",
+    "same_runtime_exact": true,
+    "strict_release": "FAIL",
+    "published_reference": "FAIL",
+    "parity_allows_candidate": false,
+    "reason": "published_reference_mismatch"
+  },
+  "observed": {
+    "ArchVisInterior_ArchVis_RT": {
+      "published_pass": false,
+      "xy_pass": false,
+      "xyz_pass": false,
+      "same_runtime_exact": true
+    },
+    "CityPark_Showcase": {
+      "published_pass": false,
+      "xy_pass": false,
+      "xyz_pass": false,
+      "same_runtime_exact": true
+    },
+    "DowntownWest_Demo_Environment": {
+      "published_pass": false,
+      "xy_pass": false,
+      "xyz_pass": true,
+      "same_runtime_exact": true
+    }
+  },
+  "deltas": {
+    "ArchVisInterior_ArchVis_RT": {
+      "predicted_2d_px": {
+        "max_abs_delta": 0.09970855712890625,
+        "mean_abs_delta": 0.006082527983573175,
+        "comparison_tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "predicted_3d_mm": {
+        "max_abs_delta": 0.831787109375,
+        "mean_abs_delta": 0.04936016463133837,
+        "comparison_tolerance": 0.5,
+        "within_tolerance": false
+      },
+      "status": "outside_tolerance"
+    },
+    "CityPark_Showcase": {
+      "predicted_2d_px": {
+        "max_abs_delta": 0.13286209106445312,
+        "mean_abs_delta": 0.01160528559838572,
+        "comparison_tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "predicted_3d_mm": {
+        "max_abs_delta": 0.8089714050292969,
+        "mean_abs_delta": 0.09925837477679134,
+        "comparison_tolerance": 0.5,
+        "within_tolerance": false
+      },
+      "status": "outside_tolerance"
+    },
+    "DowntownWest_Demo_Environment": {
+      "predicted_2d_px": {
+        "max_abs_delta": 0.0576934814453125,
+        "mean_abs_delta": 0.003789433317799722,
+        "comparison_tolerance": 0.005,
+        "within_tolerance": false
+      },
+      "predicted_3d_mm": {
+        "max_abs_delta": 0.3404693603515625,
+        "mean_abs_delta": 0.0279870516702693,
+        "comparison_tolerance": 0.5,
+        "within_tolerance": true
+      },
+      "status": "outside_tolerance"
+    }
+  },
+  "binding_diff": {
+    "differences": [
+      {
+        "key": "/weight",
+        "expected": [
+          0.08310449710117396,
+          0.03768277692597375
+        ],
+        "observed": [
+          0.08310449710117396,
+          0.03768277692597375
+        ]
+      }
+    ],
+    "actual_step": 24,
+    "expected_step": 24,
+    "model_bytes_sha": "9241260268f099dc28b83640d713ac78778805401ebb7d5f7937900266f832e3"
+  },
+  "candidate_forward": "not run"
+}

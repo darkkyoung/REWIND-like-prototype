@@ -2,6 +2,7 @@
 from dataclasses import dataclass
 import hashlib
 import json
+import math
 from pathlib import Path
 
 import torch
@@ -94,6 +95,19 @@ def predict(policy, stages, body, hand, features, cameras, time_valid, identity,
     return dict(body=b[0], hand_local=local[0], hand_global=global_hand[0], whole=whole[0])
 
 
+def normalized_binding(binding):
+    """Only /weight has a documented JSON ↔ checkpoint representation difference."""
+    if not isinstance(binding, dict):
+        raise ValueError("anchored binding must be a mapping")
+    weight = binding.get("weight")
+    if type(weight) not in (list, tuple) or len(weight) != 2:
+        raise ValueError("anchored binding requires two ordered weights")
+    if any(type(v) not in (int, float) or abs(v) > 2**53 and isinstance(v, int)
+           or not math.isfinite(v) for v in weight):
+        raise ValueError("anchored binding requires finite numeric weights")
+    return {**binding, "weight": tuple(map(float, weight))}
+
+
 def mixed_stages(stages, frozen_hand, path):
     """Separate inference instance binds the genuine candidate upper to unchanged A hand weights."""
     path = Path(path)
@@ -102,7 +116,7 @@ def mixed_stages(stages, frozen_hand, path):
             raise ValueError("anchored.pt SHA")
         stream.seek(0)
         state = torch.load(stream, map_location="cpu", weights_only=True)
-    if state["binding"] != PINS["root_binding"] or state["step"] != 24:
+    if normalized_binding(state["binding"]) != normalized_binding(PINS["root_binding"]) or state["step"] != 24:
         raise ValueError("anchored experiment binding")
     body = stages.make("body")
     expected = body.model.state_dict()

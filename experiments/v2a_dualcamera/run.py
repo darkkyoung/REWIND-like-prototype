@@ -1,10 +1,14 @@
-"""Fixed official 3-clip paired comparison. Abort before candidate scoring on any parity failure."""
+"""Fixed official 3-clip paired comparison. Strict release replay or explicitly exploratory same-T4 comparison."""
 import argparse
 import csv
 import hashlib
+import io
 import json
+import os
+import platform
 from pathlib import Path
 import time
+import zipfile
 
 import numpy as np
 import torch
@@ -18,11 +22,29 @@ from rewind_v1.full_data import FeatureStore
 from scripts.v2_gpu_training_pipeline import CommonEvaluation
 from experiments.v12_m2.evaluate import metrics
 from .adapter import DualCamera, ORIGINS, PINS, digest, mixed_stages, predict
+from .decision import MODES, decide
 from .witness import WITNESS, check
 
 
 def write(path, data):
     path.write_text(json.dumps(data,indent=2,allow_nan=False)+"\n")
+
+
+def shared_hashes(args):
+    features,cams,time_valid,_,noise = args
+    return {"feature_sha256":digest(features),"camera_sha256":[digest(cams.first_midpoint),digest(cams.absolute)],
+            "time_valid_sha256":digest(time_valid),"noise_sha256":list(map(digest,noise))}
+
+
+def reference_stage_deltas(reference_zip, scenario, current):
+    """Descriptive output differences on the already authenticated comparison member."""
+    with zipfile.ZipFile(reference_zip) as archive:
+        raw = archive.read(scenario+".npz")
+    with np.load(io.BytesIO(raw),allow_pickle=False) as prior:
+        xy = np.abs(current["predicted_2d_px"].astype(np.float64)-prior["predicted_2d_px"])
+        xyz = np.abs(current["predicted_3d_mm"].astype(np.float64)-prior["predicted_3d_mm"])
+    return {"left_xy_max_px":float(xy[:,0].max()),"right_xy_max_px":float(xy[:,1].max()),
+            "body22_max_mm":float(xyz[:,:22].max()),"global_hand40_max_mm":float(xyz[:,22:].max())}
 
 
 def timed(call):
@@ -38,6 +60,7 @@ def split_audit(records, selected):
     keys = {(seq,f) for _,(seq,start) in selected for f in range(start,start+50)}
     train_hash = set()
     motions = set()
+    verdict.update(stage="paired_evaluation",candidate_strict_load="PASS")
     rows = []
     for row in records:
         seq = row["sequence_id"]
@@ -58,7 +81,7 @@ def split_audit(records, selected):
 
 
 @torch.inference_mode()
-def evaluate(bundle, anchored, out):
+def evaluate(bundle, anchored, out, mode, verdict):
     p = bundle.pipeline
     pins = {role:v["sha256"] for role,v in PINS["selected"].items()}
     binding = bundle.comparison["binding"]
@@ -86,6 +109,12 @@ def evaluate(bundle, anchored, out):
               "published_binding":binding,"anchored_sha256":PINS["anchored"],"frontend_feature_identity":identity,
               "camera_origins":{"body":ORIGINS,"hand":"first_midpoint"},"scale_mm":100,
               "device":torch.cuda.get_device_name(),"torch":str(torch.__version__),"clips":{}}
+    report.update(mode=mode, published_environment=bundle.diagnostic.get("environment"),
+                  python=platform.python_version(), cuda=torch.version.cuda, cudnn=torch.backends.cudnn.version(),
+                  deterministic=torch.are_deterministic_algorithms_enabled(), cudnn_benchmark=torch.backends.cudnn.benchmark,
+                  cudnn_deterministic=torch.backends.cudnn.deterministic,
+                  cublas_workspace=os.environ.get("CUBLAS_WORKSPACE_CONFIG"),
+                  tf32_matmul=torch.backends.cuda.matmul.allow_tf32, tf32_cudnn=torch.backends.cudnn.allow_tf32)
     cache = {}
     for name,key in selected:
         seq,start = key
@@ -99,6 +128,7 @@ def evaluate(bundle, anchored, out):
             check(cams)
         noise = (stages._noise(key,22,100),stages._noise(key,40,200))
         args = (clip.features,cams,clip.time_valid,identity,noise)
+        hashes = shared_hashes(args)
         base,baseline_time = timed(lambda: predict("baseline",stages,body,hand,*args))
         local_output = []
         class ObserveLocal:
@@ -113,24 +143,33 @@ def evaluate(bundle, anchored, out):
         official_xy = 2*xy / xy.new_tensor([127,127])-1
         feat_xy = clip.features[0].reshape(50,62,2,7).transpose(1,2)[...,:2]
         reference = compare_predictions(bundle.comparison_path,name,ref)
+        stage_deltas = reference_stage_deltas(bundle.comparison_path,name,ref)
         same_xy = torch.equal(feat_xy,official_xy)
         same_xyz = np.array_equal(base["whole"].numpy(),ref["predicted_3d_mm"])
         report["clips"][name] = {"sequence":seq,"frames":frames,"camera_anchor_world_mm":cams.anchor_world_mm,
-            "feature_sha256":digest(clip.features),"camera_sha256":[digest(cams.first_midpoint),digest(cams.absolute)],
-            "noise_sha256":list(map(digest,noise)),"published_parity":reference,"same_environment_xy_exact":same_xy,
+            **hashes,"evaluation_mask_sha256":digest(clip.target_valid),"published_parity":reference,"published_stage_deltas":stage_deltas,"same_environment_xy_exact":same_xy,
             "same_environment_local_hand_exact":same_local,"same_environment_whole62_exact":same_xyz,"prepare_rgb_cache_and_frontend":feature_times[name],
             "baseline_body_hand":baseline_time}
         write(out/"parity.json",report)
-        if not same_local or not same_xy or not same_xyz or reference["status"] != "within_tolerance":
-            raise ValueError("original A parity failed; see parity.json")
+        if hashes != shared_hashes(args):
+            raise ValueError("baseline inputs changed")
         cache[name] = args,base
+    verdict.update(decide(mode,report["clips"]))
+    write(out/"strict_parity.json",{"decision":dict(verdict),"evidence":report})
+    write(out/"verdict.json",verdict)
+    if not verdict["parity_allows_candidate"]:
+        raise ValueError(verdict["reason"])
+    verdict["stage"] = "candidate_strict_load"
     cand,cond_hand = mixed_stages(stages,hand,anchored)
+    verdict.update(stage="paired_evaluation",candidate_strict_load="PASS")
     rows = []
     for name,key in selected:
         args,base = cache[name]
-        result,latency = timed(lambda: predict("anchored",stages,cand,cond_hand,*args))
         record = report["clips"][name]
-        if (record["noise_sha256"] != list(map(digest,args[-1])) or record["feature_sha256"] != digest(args[0])):
+        if any(record[k] != v for k,v in shared_hashes(args).items()):
+            raise ValueError("candidate inputs changed")
+        result,latency = timed(lambda: predict("anchored",stages,cand,cond_hand,*args))
+        if any(record[k] != v for k,v in shared_hashes(args).items()):
             raise ValueError("shared inputs changed")
         clip = clips[key]
         gt,mask = clip.target_mm[0],clip.target_valid[0]
@@ -158,6 +197,8 @@ def evaluate(bundle, anchored, out):
         if hashlib.file_digest(stream,"sha256").hexdigest() != PINS["anchored"]:
             raise ValueError("candidate checkpoint changed")
     report["checkpoint_readback"] = "exact"
+    if mode == "exploratory":
+        write(out/"exploratory_comparison.json",report)
     write(out/"results.json",report)
 
 
@@ -165,12 +206,25 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     for arg in ("bundle","anchored","work","output"):
         parser.add_argument("--"+arg,required=True,type=Path)
+    parser.add_argument("--mode",choices=MODES,default="strict")
     a = parser.parse_args()
-    if not torch.cuda.is_available() or "T4" not in torch.cuda.get_device_name():
-        raise RuntimeError("Tesla T4 required")
-    torch.use_deterministic_algorithms(True)
-    torch.backends.cuda.matmul.allow_tf32 = False
-    torch.backends.cudnn.allow_tf32 = False
     a.output.mkdir(exist_ok=False)
-    with open_bundle(a.bundle,a.work,seconds=3600,device="cuda") as bundle:
-        evaluate(bundle,a.anchored,a.output)
+    verdict = dict(mode=a.mode,historical_release="FAIL",strict_release="NOT VERIFIED",
+                   candidate_strict_load="NOT VERIFIED",stage="preflight",run_status="incomplete")
+    try:
+        if not torch.cuda.is_available() or "T4" not in torch.cuda.get_device_name():
+            raise RuntimeError("Tesla T4 required")
+        torch.use_deterministic_algorithms(True)
+        torch.backends.cuda.matmul.allow_tf32 = False
+        torch.backends.cudnn.allow_tf32 = False
+        verdict["stage"] = "original_models_and_parity"
+        with open_bundle(a.bundle,a.work,seconds=3600,device="cuda") as bundle:
+            evaluate(bundle,a.anchored,a.output,a.mode,verdict)
+        verdict.update(run_status="completed",stage="done")
+    except Exception as error:
+        if verdict["stage"] == "candidate_strict_load":
+            verdict["candidate_strict_load"] = "FAIL"
+        verdict.update(run_status="stopped",error=str(error))
+        raise
+    finally:
+        write(a.output/"verdict.json",verdict)
