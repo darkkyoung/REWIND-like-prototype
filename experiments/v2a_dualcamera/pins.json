@@ -1,0 +1,89 @@
+{
+  "selected": {
+    "body": {
+      "bytes": 60086895,
+      "name": "best-body-e003.pt",
+      "sha256": "1bc0295ee994a7c6e453cb596adb91e3c9cc3182b7f02bf1a9367a3674e0083f"
+    },
+    "frontend": {
+      "bytes": 1625399,
+      "name": "best-frontend-e003.pt",
+      "sha256": "576d83ef17dbdbad9dbc91fea0ac4b3a8e7c70968309b568be7103598c141380"
+    },
+    "hand": {
+      "bytes": 62337383,
+      "name": "best-hand-e002.pt",
+      "sha256": "92b3816a2e042ee7cf575ee223896a89ff23522e03e35f606e422d8a428b6fd5"
+    }
+  },
+  "anchored": "9241260268f099dc28b83640d713ac78778805401ebb7d5f7937900266f832e3",
+  "root_binding": {
+    "initial": "ec52f392cbb7acbefe6baefc5c365d8b56a0274ed956dd7ce671e905e7d89955",
+    "parent": "94a072551fd3da40621da5a589fbc3d6f919d3e7b52d29ea1c7f6099ef681305",
+    "spec": "32f1cfda25bc2b05745d2b534f0fd21eec0defbd379cd1d865c152e52c74b187",
+    "selection": "d5d2b3f6f90130c1b3d176b09426c4a6769dfed98f6fbda97b0f5cad348ad399",
+    "package": "fbf1adda7fb63007d799545278e513be7f0a32ae09a9453bad70f675312274a0",
+    "frozen": {
+      "frontend": "3e428edebfbab588fc425979a0f58fe5fa82db6309f87902105e550e8e3b4aa2",
+      "hand": "c9e009c6feddb32e045e84b478600f95ce186cb1c3ff95f2693c77e7ff1f1d67"
+    },
+    "cfg": {
+      "attention_past_frames": 20,
+      "beta_end": 0.02,
+      "beta_start": 0.0001,
+      "diffusion_steps": 1000,
+      "dropout": 0.0,
+      "frame_loss_weight": 1.0,
+      "graph_layers": 3,
+      "heads": 4,
+      "hidden": 512,
+      "learning_rate": 5e-05,
+      "sampling_steps": 10,
+      "scheduler_gamma": 1.0,
+      "scheduler_step": 1,
+      "target_scale_mm": 100.0,
+      "temporal_layers": 3,
+      "velocity_loss_weight": 0.0
+    },
+    "seed": 20261122,
+    "steps": 24,
+    "learning_rate": 1e-05,
+    "implementation": {
+      "trainer.py": "78e647a46e2bb6aceac9acee3da8ce742fa4dd94d4af21f810aabaefbf1cdd5c",
+      "run.py": "8a025c206b60aa9ea7f0932316a57cfb89ba4aac9486d93b2f74a8711199be77",
+      "data.py": "f521562def2c689e5ac30bd495f3c8176a74b917bf97eeabb2b0ca1bc310993d",
+      "evaluation.py": "c0e4741382ec9794b61dce5ae632436c19655cfa647069d1703843d724b4c609",
+      "CRITERIA.md": "136027be9c5955e385f48a1c69078c1c208291a841ba7ba86c8434478974c6aa"
+    },
+    "experiment": "root_anchored_2x2",
+    "arm": "anchored",
+    "weight": [
+      0.08310449710117396,
+      0.03768277692597375
+    ]
+  },
+  "source": "9a68d8e45bcf3abf6fab3004740faa6805d4ce3fda5118c3a7102011937849d8",
+  "tools": {
+    "v2_gpu128_a_bundle_edit.py": "e46597ad25ac225ecd9193dc2173022e0131d62e07443c12317fba8e270eaa87",
+    "v2_gpu128_a_bundle_tune.py": "5b90dea579cc8d93c5c684da55d6885032e0ace343888976895a094c6cac078f",
+    "v2_gpu128_a_bundle_format.py": "8bb81f573dc55c56f7c82dc10c51aa9d8644ae78a1526f07079e8156f4851081",
+    "v2_gpu128_a_bundle_train_full.py": "571da6b219a249ab1d511a22bcd05a8d384d032b0b379de8610298a670e1b906",
+    "v2_gpu128_a_bundle_predict.py": "de85727ed54d284e39dce40fd1e3e7cca4388133a12f199b0aaa9dd09b911c55",
+    "v2_gpu128_a_bundle_local.py": "99e9ef2f1912a2cd90cbeccf092827972717f162647dd9aa3189ef69792415db"
+  },
+  "clips": {
+    "ArchVisInterior_ArchVis_RT": [
+      "ArchVisInterior_ArchVis_RT/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/012/Standing__1_",
+      0
+    ],
+    "CityPark_Showcase": [
+      "CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Gunplay__13_",
+      0
+    ],
+    "DowntownWest_Demo_Environment": [
+      "DowntownWest_Demo_Environment/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/020/Reloading",
+      0
+    ]
+  },
+  "spec": "32f1cfda25bc2b05745d2b534f0fd21eec0defbd379cd1d865c152e52c74b187"
+}

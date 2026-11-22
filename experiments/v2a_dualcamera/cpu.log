@@ -1,0 +1,16 @@
+test_both_official_encoders (experiments.v2a_dualcamera.test_adapter.CameraTests.test_both_official_encoders) ... ok
+test_chunk_and_prefix (experiments.v2a_dualcamera.test_adapter.CameraTests.test_chunk_and_prefix) ... ok
+test_future_perturbation (experiments.v2a_dualcamera.test_adapter.CameraTests.test_future_perturbation) ... ok
+test_gap_sequence_and_explicit_clip_reset (experiments.v2a_dualcamera.test_adapter.CameraTests.test_gap_sequence_and_explicit_clip_reset) ... ok
+test_reject_bad_camera_transactionally (experiments.v2a_dualcamera.test_adapter.CameraTests.test_reject_bad_camera_transactionally) ... ok
+test_translation_and_rotation_channels (experiments.v2a_dualcamera.test_adapter.CameraTests.test_translation_and_rotation_channels) ... ok
+test_bad_identity_shape_and_mask (experiments.v2a_dualcamera.test_adapter.CascadeTests.test_bad_identity_shape_and_mask) ... ok
+test_candidate_routes_selected_upper_and_shared_noise (experiments.v2a_dualcamera.test_adapter.CascadeTests.test_candidate_routes_selected_upper_and_shared_noise) ... ok
+test_full_size_frozen_weights_and_noise_unchanged (experiments.v2a_dualcamera.test_adapter.CascadeTests.test_full_size_frozen_weights_and_noise_unchanged) ... ok
+test_future_observations_leave_prefix_unchanged (experiments.v2a_dualcamera.test_adapter.CascadeTests.test_future_observations_leave_prefix_unchanged) ... ok
+test_official_predict_parity_fixture (experiments.v2a_dualcamera.test_adapter.CascadeTests.test_official_predict_parity_fixture) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 13.528s
+
+OK

@@ -1,0 +1,90 @@
+{
+  "row": {
+    "files": {
+      "left": {
+        "path": "CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Gunplay__13_/fisheye_final_image/camera_left/final_0.png",
+        "sha256": "ecab003c6a3238cefee4344ffb0728222da8091c83f3d5c95f3ae18267d6a880",
+        "size_bytes": 825006
+      },
+      "pose": {
+        "path": "CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Gunplay__13_/json/frame_0.json",
+        "sha256": "87ddf4fe2aa62abd7f998c1c9c6b2b5c0603bc5ba01e2548f38da27be23741ec",
+        "size_bytes": 85959
+      },
+      "right": {
+        "path": "CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Gunplay__13_/fisheye_final_image/camera_right/final_0.png",
+        "sha256": "333d397bd3bc1ceb2df4d742bca8cb3128fa16b6e7c02d4e7e7c525ab41ccf08",
+        "size_bytes": 951595
+      }
+    },
+    "frame_index": 0,
+    "sequence_id": "CityPark_Showcase/Day/rp_adanna_rigged_003_ue4/SKM_MenReadingGlasses_Shape_01/010/Gunplay__13_",
+    "split": "validation"
+  },
+  "shard": "reports/cache/v2_bulk_cache_041837Z/shard-00185-c1f766d7af9cdaac3f5fb767e8c85e7cba34e742203c865f7334c9172431b245.zip",
+  "shard_pin": {
+    "bytes": 50627410,
+    "sha256": "c1f766d7af9cdaac3f5fb767e8c85e7cba34e742203c865f7334c9172431b245"
+  },
+  "slot": 120,
+  "anchor_world_mm": [
+    48896.46499999998,
+    -257638.74999999994,
+    2217.9400000000005
+  ],
+  "absolute_camera": [
+    [
+      [
+        -0.38398176431655884,
+        -0.898633599281311,
+        -0.21216891705989838,
+        -0.9215310215950012,
+        0.3873540163040161,
+        0.027156619355082512,
+        -2188.348876953125,
+        1432.8062744140625,
+        195.37518310546875
+      ],
+      [
+        -0.38398176431655884,
+        -0.898633599281311,
+        -0.21216891705989838,
+        -0.9215310215950012,
+        0.3873540163040161,
+        0.027156619355082512,
+        -2187.14892578125,
+        1432.8062744140625,
+        195.37510681152344
+      ]
+    ]
+  ],
+  "v2_camera": [
+    [
+      [
+        -0.38398176431655884,
+        -0.898633599281311,
+        -0.21216891705989838,
+        -0.9215310215950012,
+        0.3873540163040161,
+        0.027156619355082512,
+        -0.5999696850776672,
+        2.1386586013250053e-05,
+        3.867390114464797e-05
+      ],
+      [
+        -0.38398176431655884,
+        -0.898633599281311,
+        -0.21216891705989838,
+        -0.9215310215950012,
+        0.3873540163040161,
+        0.027156619355082512,
+        0.5999696850776672,
+        -2.1386586013250053e-05,
+        -3.867390114464797e-05
+      ]
+    ]
+  ],
+  "max_translation_delta_mm": 218774.90625,
+  "rotation_equal": true,
+  "pose_file_id": "1FkXyHX1rqVvZ_uGfI9jN1i57L4QzMKUa"
+}

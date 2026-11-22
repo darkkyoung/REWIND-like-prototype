@@ -1,0 +1,15 @@
+{
+  "frames": 150,
+  "exact_train_file_overlap": {
+    "left": 0,
+    "pose": 0,
+    "right": 0
+  },
+  "train_motion_name_overlap": [
+    "Gunplay__13_",
+    "Reloading"
+  ],
+  "original_mocap_independence": "unknown",
+  "root_train300_manifest_rows": 300,
+  "root_train300_exact_overlap": 0
+}

@@ -1,0 +1,24 @@
+test_body_boundary_hand_midpoint_and_complete_resume_exact (test_v15_camera_training.CameraTrainingTests.test_body_boundary_hand_midpoint_and_complete_resume_exact) ... ok
+test_cumulative_budget_does_not_reset_on_resume (test_v15_camera_training.CameraTrainingTests.test_cumulative_budget_does_not_reset_on_resume) ... ok
+test_final_eval_paired_shift_prefix_and_separate_train_fit (test_v15_camera_training.CameraTrainingTests.test_final_eval_paired_shift_prefix_and_separate_train_fit) ... ok
+test_fresh_runtime_eval_raw_rebuild_reuses_features (test_v15_camera_training.CameraTrainingTests.test_fresh_runtime_eval_raw_rebuild_reuses_features) ... ok
+test_interrupt_after_cursor_commit_rolls_back_history_and_position (test_v15_camera_training.CameraTrainingTests.test_interrupt_after_cursor_commit_rolls_back_history_and_position) ... ok
+test_notebook_defaults_compile_and_bounded_interrupt (test_v15_camera_training.CameraTrainingTests.test_notebook_defaults_compile_and_bounded_interrupt) ... ok
+test_operational_stage_failure_always_retains_once_no_retry (test_v15_camera_training.CameraTrainingTests.test_operational_stage_failure_always_retains_once_no_retry) ... ok
+test_origin_shift_stream_save_reset_and_no_future (test_v15_camera_training.CameraTrainingTests.test_origin_shift_stream_save_reset_and_no_future) ... ok
+test_partial_snapshot_is_not_committed_and_resume_recreates_both (test_v15_camera_training.CameraTrainingTests.test_partial_snapshot_is_not_committed_and_resume_recreates_both) ... ok
+test_pilot_resets_models_and_rng_for_main (test_v15_camera_training.CameraTrainingTests.test_pilot_resets_models_and_rng_for_main) ... ok
+test_recovery_restores_checkpoint_and_features_excludes_raw (test_v15_camera_training.CameraTrainingTests.test_recovery_restores_checkpoint_and_features_excludes_raw) ... ok
+test_resume_environment_anchor_and_missing_snapshot_rejected (test_v15_camera_training.CameraTrainingTests.test_resume_environment_anchor_and_missing_snapshot_rejected) ... ok
+test_same_initial_state_same_noise_and_pair_failure_rollback (test_v15_camera_training.CameraTrainingTests.test_same_initial_state_same_noise_and_pair_failure_rollback) ... ok
+test_selected_part_restore_never_fetches_unselected_parts_and_checks_reuse (test_v15_camera_training.CameraTrainingTests.test_selected_part_restore_never_fetches_unselected_parts_and_checks_reuse) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 7.515s
+
+OK
+verified backup {'status': 'complete'}
+{'status': 'complete'}
+verified backup {'status': 'complete'}
+retention failed; keep local /tmp/dcam/code/outputs/test_tmp/tmpofq_taf_/op-package-888eaa05b31a4e87bc41c1089653f2b5.zip RuntimeError fixture package
+retention failed; keep local /tmp/dcam/code/outputs/test_tmp/tmpofq_taf_/op-publish-95841e57153b4d86bc1b0552440021c3.zip RuntimeError fixture publish

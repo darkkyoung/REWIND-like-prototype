@@ -1,0 +1,10 @@
+{
+  "input_translation_delta_mm": 218774.90625,
+  "anchor_world_mm": [
+    48896.46499999998,
+    -257638.74999999994,
+    2217.9400000000005
+  ],
+  "pose_sha256": "87ddf4fe2aa62abd7f998c1c9c6b2b5c0603bc5ba01e2548f38da27be23741ec",
+  "both_encoded_tensors": "exact"
+}
