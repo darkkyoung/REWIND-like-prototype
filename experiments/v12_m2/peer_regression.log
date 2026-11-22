@@ -1,0 +1,13 @@
+test_causality_sequence_reset_and_no_optimizer (test_cross_scenario.CrossScenarioTests.test_causality_sequence_reset_and_no_optimizer) ... ok
+test_missing_wrist_local_mask_keeps_global_metric_and_joint_weighting (test_cross_scenario.CrossScenarioTests.test_missing_wrist_local_mask_keeps_global_metric_and_joint_weighting) ... ok
+test_notebook_default_noop_and_all_cells_compile (test_cross_scenario.CrossScenarioTests.test_notebook_default_noop_and_all_cells_compile) ... ok
+test_payload_geometry_failure_does_not_replace_selected_sequence (test_cross_scenario.CrossScenarioTests.test_payload_geometry_failure_does_not_replace_selected_sequence) ... ok
+test_positive_prepare_infer_gif_and_local_copy_readback (test_cross_scenario.CrossScenarioTests.test_positive_prepare_infer_gif_and_local_copy_readback) ... ok
+test_recovery_excludes_raw_tensors_model_and_hashes_reports (test_cross_scenario.CrossScenarioTests.test_recovery_excludes_raw_tensors_model_and_hashes_reports) ... ok
+test_self_sealed_test_membership_bad_roles_and_model_pins_rejected (test_cross_scenario.CrossScenarioTests.test_self_sealed_test_membership_bad_roles_and_model_pins_rejected) ... ok
+test_validation_only_sealed_selection_quota_gap_and_overlap (test_cross_scenario.CrossScenarioTests.test_validation_only_sealed_selection_quota_gap_and_overlap) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 24.243s
+
+OK
